@@ -1,0 +1,12 @@
+- hosts: 192.168.200.101
+
+  vars:
+    loop_list:
+      - one
+      - two
+      - three
+  tasks:
+    - debug:
+        msg: "{{ item }}"
+      loop:
+        "{{ loop_list }}"

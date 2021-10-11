@@ -1,0 +1,8 @@
+- hosts: 192.168.200.101
+  tasks:
+    - debug:
+        msg: "{{ item }}"
+      loop:
+        - one
+        - two
+        - three

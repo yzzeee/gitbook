@@ -1,0 +1,929 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>10. 암호화 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Part11/note.html" />
+    
+    
+    <link rel="prev" href="../Part9/note.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Part1/note.html">
+            
+                <a href="../Part1/note.html">
+            
+                    
+                    1. IaC 개요
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Part2/note.html">
+            
+                <a href="../Part2/note.html">
+            
+                    
+                    2. Ansible 개요
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Part3/note.html">
+            
+                <a href="../Part3/note.html">
+            
+                    
+                    3. Ansible 기본
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Part4/note.html">
+            
+                <a href="../Part4/note.html">
+            
+                    
+                    4. 플레이북
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Part5/note.html">
+            
+                <a href="../Part5/note.html">
+            
+                    
+                    5. 변수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Part6/note.html">
+            
+                <a href="../Part6/note.html">
+            
+                    
+                    6. 작업 제어 - 기본
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Part7/note.html">
+            
+                <a href="../Part7/note.html">
+            
+                    
+                    7. 작업 제어 - 고급
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Part8/note.html">
+            
+                <a href="../Part8/note.html">
+            
+                    
+                    8. 아티팩트 재사용 - 파일
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Part9/note.html">
+            
+                <a href="../Part9/note.html">
+            
+                    
+                    9. 아티팩트 재사용 - 역할
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11" data-path="note.html">
+            
+                <a href="note.html">
+            
+                    
+                    10. 암호화
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../Part11/note.html">
+            
+                <a href="../Part11/note.html">
+            
+                    
+                    11. AWX(AnsibleWorks)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../Part12/note.html">
+            
+                <a href="../Part12/note.html">
+            
+                    
+                    12. Terraform 기본
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../Part13/note.html">
+            
+                <a href="../Part13/note.html">
+            
+                    
+                    13. AWS CLI 및 Terraform 설치
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../Part14/note.html">
+            
+                <a href="../Part14/note.html">
+            
+                    
+                    14. 구성파일 작성
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../Part15/note.html">
+            
+                <a href="../Part15/note.html">
+            
+                    
+                    15. 리소스 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../Part16/note.html">
+            
+                <a href="../Part16/note.html">
+            
+                    
+                    16. 변수 및 값
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../Part17/note.html">
+            
+                <a href="../Part17/note.html">
+            
+                    
+                    17. 구성 관리 및 프로비저너
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../Part18/note.html">
+            
+                <a href="../Part18/note.html">
+            
+                    
+                    18. 모듈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../Part19/note.html">
+            
+                <a href="../Part19/note.html">
+            
+                    
+                    19. 반복
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../Part20/note.html">
+            
+                <a href="../Part20/note.html">
+            
+                    
+                    20. 원격 상태 저장
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >10. 암호화</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="10-&#xC554;&#xD638;&#xD654;">10. &#xC554;&#xD638;&#xD654;</h1>
+<h2 id="101">10.1</h2>
+<h4 id="1-&#xB2E8;&#xC77C;-&#xBCFC;&#xD2B8;-&#xD328;&#xC2A4;&#xC6CC;&#xB4DC;">1) &#xB2E8;&#xC77C; &#xBCFC;&#xD2B8; &#xD328;&#xC2A4;&#xC6CC;&#xB4DC;</h4>
+<h2 id="102-&#xD30C;&#xC77C;-&#xC218;&#xC900;-&#xC554;&#xD638;&#xD654;-&#xAD00;&#xB9AC;">10.2 &#xD30C;&#xC77C; &#xC218;&#xC900; &#xC554;&#xD638;&#xD654; &#xAD00;&#xB9AC;</h2>
+<h4 id="1-&#xC554;&#xD638;&#xD654;-&#xB41C;-&#xD30C;&#xC77C;-&#xC0DD;&#xC131;">1) &#xC554;&#xD638;&#xD654; &#xB41C; &#xD30C;&#xC77C; &#xC0DD;&#xC131;</h4>
+<ul>
+<li><p>&#xC0DD;&#xC131;</p>
+<pre><code class="lang-shell">ansible-vault create encrypt.yaml
+New Vault password: 
+Confirm New Vault password: 
+$ ls
+encrypt.yaml
+</code></pre>
+</li>
+<li><p>&#xD30C;&#xC77C; &#xB0B4;&#xC6A9; &#xC4F0;&#xACE0;&#xC11C; &#xBCF4;&#xBA74; aes256 &#xC73C;&#xB85C; &#xC554;&#xD638;&#xD654;&#xB41C; &#xAC83;&#xC744; &#xBCFC;&#xC218; &#xC788;&#xC74C;</p>
+<pre><code class="lang-shell">$ cat encrypt.yaml 
+$ANSIBLE_VAULT;1.1;AES256
+36653234326666363436646233343936366536633064393535386438646430643863383435636166
+6264663336366162336436653934303864626363323264320a386364363630656265373333643963
+34353139633337346432343639616364613066653665373466653763643438613730323361376639
+6338396632636635370a393861646265366131643437653862336438323763323831353663646332
+32353864303364633634343163656534623163316435353663653266663537316431
+</code></pre>
+</li>
+<li><p>&#xC218;&#xC815; &#xD558;&#xAE30;</p>
+<pre><code class="lang-shell">$ ansible-vault edit encrypt.yaml
+Vault password:
+</code></pre>
+</li>
+<li><p>&#xC554;&#xD638; &#xD480;&#xAE30;
+```shell
+$ ansible-vault decrypt encrypt.yaml
+Vault password: 
+Decryption successful
+$ ls
+encrypt.yaml
+$ cat encrypt.yaml </p>
+</li>
+<li><p>hosts: 192.168.200.101
+```</p>
+</li>
+<li><p>&#xC554;&#xD638;&#xD654;&#xB41C; yaml &#xD30C;&#xC77C; &#xC2E4;&#xD589;
+```shell
+$ ansible-playbook encrypt.yaml --ask-vault-pass
+Vault password: </p>
+</li>
+</ul>
+<p>PLAY [192.168.200.101] <strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></p>
+<p>TASK [Gathering Facts] <strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>
+ok: [192.168.200.101]</p>
+<p>PLAY RECAP <strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>
+192.168.200.101            : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   </p>
+<pre><code>
+* &#xD328;&#xC2A4;&#xC6CC;&#xB4DC; &#xBCC0;&#xACBD;
+```shell
+$ ansible-vault rekey encrypt.yaml 
+Vault password: 
+New Vault password: 
+Confirm New Vault password: 
+Rekey successful
+</code></pre><ul>
+<li>&#xD328;&#xC2A4;&#xC6CC;&#xB4DC;&#xAC00; &#xC800;&#xC7A5;&#xB418;&#xC5B4; &#xC788;&#xB294; &#xD30C;&#xC77C; &#xC9C0;&#xC815;&#xD558;&#xAE30;<pre><code class="lang-shell">echo &quot;pass123&quot; &gt; vpass
+ansible-playbook encrypt.yaml --vault-password-file vpass
+</code></pre>
+</li>
+</ul>
+<p>&#xBCF4;&#xC548;&#xC0C1; &#xC88B;&#xC740; &#xBC29;&#xBC95; &#xC544;&#xB2D8;</p>
+<ul>
+<li>ansible.cfg &#xC5D0;&#xB2E4;&#xAC00; &#xCC38;&#xC870;&#xD560; &#xBE44;&#xBC00;&#xBC88;&#xD638; &#xC801;&#xC5B4;&#xB193;&#xC73C;&#xBA74;.. &#xC778;&#xD06C;&#xB9BD;&#xD2B8; &#xC548;&#xD574;&#xB3C4; &#xC4F8; &#xC218; &#xC788;&#xC74C;<pre><code class="lang-ini"><span class="hljs-section">[defaults]</span>
+<span class="hljs-attr">vault_password_file</span> = vpass
+<span class="hljs-attr">inventory</span> = inventory
+</code></pre>
+</li>
+<li>inventory<pre><code class="lang-text">192.168.200.1
+</code></pre>
+</li>
+<li>encrypt &#xD30C;&#xC77C; &#xC0DD;&#xC131; (&#xBE44;&#xBC00;&#xBC88;&#xD638;: pass123)<pre><code class="lang-shell">ansible-vault create encrypt.yaml
+</code></pre>
+</li>
+<li>vpass<pre><code class="lang-text">pass123
+</code></pre>
+</li>
+<li>Run <pre><code class="lang-shell">ansible-playbook encrypt.yaml
+</code></pre>
+</li>
+</ul>
+<h2 id="103-&#xAC00;&#xBCC0;-&#xC218;&#xC900;-&#xC554;&#xD638;&#xD654;">10.3 &#xAC00;&#xBCC0; &#xC218;&#xC900; &#xC554;&#xD638;&#xD654;</h2>
+<p>&#xD30C;&#xC77C; &#xC804;&#xCCB4;&#xAC00; &#xC544;&#xB2CC; &#xC77C;&#xBD80;&#xB9CC; &#xC554;&#xD638;&#xD654; &#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<pre><code class="lang-shell">ansible-vault encrypt_string --vault-password-file vault_pass &apos;foobar&apos; --name the_secret &apos;abc&apos;
+</code></pre>
+<ul>
+<li>vi valut_exec.yaml
+```yaml</li>
+<li><p>hosts: 192.168.200.101
+var_files: vars.yaml
+vars:
+  the_secret: !valt | </p>
+<pre><code>193808108394718381092489018908091839082904819080184098309819481038378957283794
+325029375825823847284729882374827857294829859289482094820482385925728578782758
+847925788572384234792829823492492872834028948058294892384275874190810489014894
+</code></pre><p>tasks:</p>
+<ul>
+<li>debug:
+  msg: &quot;&quot;
+```</li>
+</ul>
+</li>
+<li><p>&#xC2E4;&#xC2B5;</p>
+</li>
+</ul>
+<p>~/test/vault &#xD3F4;&#xB354;&#xC5D0;&#xC11C; &#xC2E4;&#xC2B5; <br></p>
+<pre><code class="lang-shell">cd test/vault/
+echo &quot;P@ssw0rd&quot; &gt; passdev
+echo &quot;123&quot; &gt; passprod
+chmod 400 passdev passprod
+vi valut_exec.yml
+ansible-vault create taskdev.yml --vault-password-file=passdev
+vi taskdev.yaml
+ansible-vault create taskprod.yml --vault-password-file=passprod
+ansible-playbook valut_exec.yml --vault-password-file=passprod --vault-password-file=passdev
+</code></pre>
+<p>--vault-password-file &#xC774;&#xAC70; &#xC635;&#xC158; &#xC6D0;&#xB798; &#xC5EC;&#xB7EC;&#xAC1C; &#xC548; &#xB410;&#xC5C8;&#xB294;&#xB370; &#xC0AC;&#xC6A9;&#xC790;&#xB4E4;&#xC758; &#xC6D0;&#xC131;&#xC73C;&#xB85C; --vault-id &#xC0DD;&#xACBC;&#xACE0; &#xADF8; &#xC774;&#xD6C4;&#xC5D0; file&#xC5D0;&#xB3C4; &#xC801;&#xC6A9;</p>
+<ul>
+<li>test.yml
+```yaml</li>
+<li><p>hosts: 192.168.200.101
+tasks:</p>
+<ul>
+<li>import_tasks: taskdev.yml</li>
+<li>import_tasks: taskprod.yml
+```</li>
+</ul>
+</li>
+<li><p>taskdev.yml
+```yaml</p>
+</li>
+<li><p>ping:
+```</p>
+</li>
+<li><p>taskprod.yml
+```yaml</p>
+</li>
+<li><p>debug:
+```</p>
+</li>
+<li><p>&#xB450;&#xBC88;&#xC9F8; &#xC2E4;&#xC2B5;</p>
+</li>
+<li><p>&#xC0AC;&#xC6A9;&#xC790; &#xC544;&#xC774;&#xB514;&#xD654; &#xC554;&#xD638; &#xC0AC;&#xC6A9;</p>
+<pre><code class="lang-shell">$ ansible-vault create a.yml --vault-id user1@prompt
+New vault password (user1): 
+Confirm new vault password (user1): 
+$ ansible-vault decrypt a.yml --vault-id user1@prompt
+Vault password (user1):
+</code></pre>
+</li>
+<li><p>&#xC0AC;&#xC6A9;&#xC790; &#xC544;&#xC774;&#xB514;&#xD654; &#xD328;&#xC2A4;&#xC6CC;&#xB4DC; &#xD30C;&#xC77C; (&#xB808;&#xC774;&#xBE14;) &#xC0AC;&#xC6A9;</p>
+<pre><code class="lang-shell">azwell@azwell-KVM:~/test/vault$ ansible-vault encrypt a.yml --vault-id devuer@passdev
+Encryption successful
+azwell@azwell-KVM:~/test/vault$ cat a.yml
+$ANSIBLE_VAULT;1.2;AES256;devuer
+63666633626631323736333830323836623461353337383132613135646662313262653939353464
+6365613032373361333831343865643736326335343533350a343339343866613365666234336463
+64386437383634313066643639316566653833353339636435316632613863616431653833656663
+6332376631306464610a626533386164326334636337653839333761383266393166636135666130
+6138
+azwell@azwell-KVM:~/test/vault$ ansible-vault decrypt a.yml --vault-id produser@passdev
+Decryption successful # &#xB808;&#xC774;&#xBE14;&#xC740; &#xC548;&#xB9DE;&#xC544;&#xB3C4; &#xD328;&#xC2A4;&#xC6CC;&#xB4DC;&#xB9CC; &#xB9DE;&#xC73C;&#xBA74; &#xC131;&#xACF5;&#xD55C;. &#xB808;&#xC774;&#xBE14;&#xC740; &#xB808;&#xC774;&#xBE14;&#xC77C; &#xBFD0;&#xBFD0;
+</code></pre>
+</li>
+</ul>
+<pre><code class="lang-shell">azwell@azwell-KVM:~/test/vault$ rm taskdev.yml taskprod.yml 
+azwell@azwell-KVM:~/test/vault$ cat valut_exec.yml 
+- hosts: 192.168.200.101
+  tasks:
+  - import_tasks: taskdev.yml
+  - import_tasks: taskprod.yml
+
+azwell@azwell-KVM:~/test/vault$ ansible-vault create taskdev.yml --vault-id=devuser@passdev
+azwell@azwell-KVM:~/test/vault$ cat taskdev.yml 
+$ANSIBLE_VAULT;1.2;AES256;devuser
+31666234633765623839333834396438313332363966666162346630613864323938306538383365
+3137383433396561343165343061323432366336643662650a323665373039383735336337353464
+39656533326135333933303065633133646439653234316236333266636231353035626566343037
+3061656330343665620a653564346363306265303762626530313934333935366665383933316334
+3438
+azwell@azwell-KVM:~/test/vault$ ansible-vault create taskprod.yml --vault-id=produser@passprod
+azwell@azwell-KVM:~/test/vault$ ansible-playbook valut_exec.yml --vault-id=devuser@passdev --vault-id=devprod@passprod
+
+PLAY [192.168.200.101] ************************************************************
+
+TASK [Gathering Facts] ************************************************************
+ok: [192.168.200.101]
+
+TASK [ping] ***********************************************************************
+ok: [192.168.200.101]
+
+TASK [debug] **********************************************************************
+ok: [192.168.200.101] =&gt; {
+    &quot;msg&quot;: &quot;Hello world!&quot;
+}
+
+PLAY RECAP ************************************************************************
+192.168.200.101            : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+</code></pre>
+<ul>
+<li>&#xC554;&#xD638; &#xD574;&#xC81C;&#xD574;&#xC11C; &#xBCF4;&#xAE30;
+```shell
+ansible-vault view taskprod.yml --vault-id=@passprod</li>
+<li><p>debug:
+```
+@ &#xC55E;&#xC740; &#xB77C;&#xBCA8;&#xB85C; &#xC544;&#xBB34;&#xAC70;&#xB098; &#xC801;&#xC5B4;&#xB3C4; &#xAD1C;&#xCD98; &#xAC4D; &#xC2DD;&#xBCC4;&#xC6A9;</p>
+</li>
+<li><p>&#xC720;&#xC6A9;&#xD55C; &#xCF5C;&#xBC31;&#xB4E4; &#xC870;&#xD68C;&#xD574;&#xC11C; &#xBCF4;&#xBA74;&#xC11C; &#xC4F0;&#xC790;</p>
+<pre><code class="lang-shell">azwell@azwell-KVM:~/test/vault$ ansible-doc -t callback -l
+actionable           shows only items that need attention                     
+aws_resource_actions summarizes all &quot;resource:actions&quot; completed              
+cgroup_memory_recap  Profiles maximum memory usage of tasks and full execution...
+cgroup_perf_recap    Profiles system activity of tasks and full execution usin...
+context_demo         demo callback that adds play/task context                
+counter_enabled      adds counters to the output items (tasks and hosts/task) 
+debug                formatted stdout/stderr display                          
+default              default Ansible screen output                            
+dense                minimal stdout output                                    
+foreman              Sends events to Foreman                                  
+full_skip            suppresses tasks if all hosts skipped                    
+grafana_annotations  send ansible events as annotations on charts to grafana o...
+hipchat              post task events to hipchat                              
+jabber               post task events to a jabber server                      
+json                 Ansible screen output as JSON                            
+junit                write playbook output to a JUnit file                    
+log_plays            write playbook output to log file                        
+logdna               Sends playbook logs to LogDNA                            
+logentries           Sends events to Logentries                               
+logstash             Sends events to Logstash                                 
+mail                 Sends failure events via email
+</code></pre>
+</li>
+<li><p>&#xC5F0;&#xACB0; &#xC815;&#xBCF4; &#xB514;&#xBC84;&#xAE45; &#xD558;&#xAE30; v 4&#xAC1C; &#xAE4C;&#xC9C0;&#xB3C4; &#xC4F8; &#xC218; &#xC788;&#xC74C;.
+<code>``shell
+$ ansible 192.168.200.101 -m command -a ls -vvv
+ansible [core 2.11.5] 
+config file = /home/$USER/.ansible.cfg
+configured module search path = [&apos;/home/$USER/.ansible/plugins/modules&apos;, &apos;/usr/share/ansible/plugins/modules&apos;]
+ansible python module location = /usr/lib/python3/dist-packages/ansible
+ansible collection location = /home/$USER/.ansible/collections:/usr/share/ansible/collections
+executable location = /usr/bin/ansible
+python version = 3.9.5 (default, May 11 2021, 08:20:37) [GCC 10.3.0]
+jinja version = 2.11.2
+libyaml = True
+Using /home/$USER/.ansible.cfg as config file
+host_list declined parsing /home/$USER/inventory.ini as it did not pass its verify_file() method
+script declined parsing /home/$USER/inventory.ini as it did not pass its verify_file() method
+auto declined parsing /home/$USER/inventory.ini as it did not pass its verify_file() method
+yaml declined parsing /home/$USER/inventory.ini as it did not pass its verify_file() method
+toml declined parsing /home/$USER/inventory.ini as it did not pass its verify_file() method
+[WARNING]:  * Failed to parse /home/$USER/inventory.ini with ini plugin:
+/home/$USER/inventory.ini:5: Expected key=value host variable assignment, got: msg-node2
+File &quot;/usr/lib/python3/dist-packages/ansible/inventory/manager.py&quot;, line 290, in parse_source
+  plugin.parse(self._inventory, self._loader, source, cache=cache)
+File &quot;/usr/lib/python3/dist-packages/ansible/plugins/inventory/ini.py&quot;, line 136, in parse
+  raise AnsibleParserError(e)
+[WARNING]: Unable to parse /home/$USER/inventory.ini as an inventory source
+[WARNING]: No inventory was parsed, only implicit localhost is available
+Skipping callback &apos;default&apos;, as we already have a stdout callback.
+Skipping callback &apos;minimal&apos;, as we already have a stdout callback.
+Skipping callback &apos;oneline&apos;, as we already have a stdout callback.
+META: ran handlers
+&lt;192.168.200.101&gt; ESTABLISH SSH CONNECTION FOR USER: vagrant
+&lt;192.168.200.101&gt; SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o &apos;User=&quot;vagrant&quot;&apos; -o ConnectTimeout=10 -o ControlPath=/home/$USER/.ansible/cp/901d3d7e01 192.168.200.101 &apos;/bin/sh -c &apos;&quot;&apos;&quot;&apos;echo ~vagrant &amp;&amp; sleep 0&apos;&quot;&apos;&quot;&apos;&apos;
+&lt;192.168.200.101&gt; (0, b&apos;/home/vagrant\n&apos;, b&apos;&apos;)
+&lt;192.168.200.101&gt; ESTABLISH SSH CONNECTION FOR USER: vagrant
+&lt;192.168.200.101&gt; SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o &apos;User=&quot;vagrant&quot;&apos; -o ConnectTimeout=10 -o ControlPath=/home/$USER/.ansible/cp/901d3d7e01 192.168.200.101 &apos;/bin/sh -c &apos;&quot;&apos;&quot;&apos;( umask 77 &amp;&amp; mkdir -p &quot;</code> echo /home/vagrant/.ansible/tmp <code>&quot;&amp;&amp; mkdir &quot;</code> echo /home/vagrant/.ansible/tmp/ansible-tmp-1633567134.2989478-82758-66643459521045 <code>&quot; &amp;&amp; echo ansible-tmp-1633567134.2989478-82758-66643459521045=&quot;</code> echo /home/vagrant/.ansible/tmp/ansible-tmp-1633567134.2989478-82758-66643459521045 `&quot; ) &amp;&amp; sleep 0&apos;&quot;&apos;&quot;&apos;&apos;
+<192.168.200.101> (0, b&apos;ansible-tmp-1633567134.2989478-82758-66643459521045=/home/vagrant/.ansible/tmp/ansible-tmp-1633567134.2989478-82758-66643459521045\n&apos;, b&apos;&apos;)
+<192.168.200.101> Attempting python interpreter discovery
+<192.168.200.101> ESTABLISH SSH CONNECTION FOR USER: vagrant
+<192.168.200.101> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o &apos;User=&quot;vagrant&quot;&apos; -o ConnectTimeout=10 -o ControlPath=/home/$USER/.ansible/cp/901d3d7e01 192.168.200.101 &apos;/bin/sh -c &apos;&quot;&apos;&quot;&apos;echo PLATFORM; uname; echo FOUND; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;/usr/bin/python&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;python3.9&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;python3.8&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;python3.7&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;python3.6&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;python3.5&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;python2.7&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;python2.6&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;/usr/libexec/platform-python&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;/usr/bin/python3&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;python&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; echo ENDFOUND &amp;&amp; sleep 0&apos;&quot;&apos;&quot;&apos;&apos;
+<192.168.200.101> (0, b&apos;PLATFORM\nLinux\nFOUND\n/usr/bin/python3.8\n/usr/bin/python3\nENDFOUND\n&apos;, b&apos;&apos;)
+<192.168.200.101> ESTABLISH SSH CONNECTION FOR USER: vagrant
+<192.168.200.101> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o &apos;User=&quot;vagrant&quot;&apos; -o ConnectTimeout=10 -o ControlPath=/home/$USER/.ansible/cp/901d3d7e01 192.168.200.101 &apos;/bin/sh -c &apos;&quot;&apos;&quot;&apos;/usr/bin/python3.8 &amp;&amp; sleep 0&apos;&quot;&apos;&quot;&apos;&apos;
+<192.168.200.101> (0, b&apos;{&quot;platform_dist_result&quot;: [], &quot;osrelease_content&quot;: &quot;NAME=\&quot;Ubuntu\&quot;\nVERSION=\&quot;20.04.3 LTS (Focal Fossa)\&quot;\nID=ubuntu\nID_LIKE=debian\nPRETTY_NAME=\&quot;Ubuntu 20.04.3 LTS\&quot;\nVERSION_ID=\&quot;20.04\&quot;\nHOME_URL=\&quot;<a href="https://www.ubuntu.com/\\&quot;\\nSUPPORT_URL=\\&quot;https://help.ubuntu.com/\\&quot;\\nBUG_REPORT_URL=\\&quot;https://bugs.launchpad.net/ubuntu/\\&quot;\\nPRIVACY_POLICY_URL=\\&quot;https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\\&quot;\\nVERSION_CODENAME=focal\\nUBUNTU_CODENAME=focal\\n&quot;}\n" target="_blank">https://www.ubuntu.com/\\&quot;\\nSUPPORT_URL=\\&quot;https://help.ubuntu.com/\\&quot;\\nBUG_REPORT_URL=\\&quot;https://bugs.launchpad.net/ubuntu/\\&quot;\\nPRIVACY_POLICY_URL=\\&quot;https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\\&quot;\\nVERSION_CODENAME=focal\\nUBUNTU_CODENAME=focal\\n&quot;}\n</a>&apos;, b&apos;&apos;)
+Using module file /usr/lib/python3/dist-packages/ansible/modules/command.py
+<192.168.200.101> PUT /home/$USER/.ansible/tmp/ansible-local-827551n_ooga8/tmpvs9hfa00 TO /home/vagrant/.ansible/tmp/ansible-tmp-1633567134.2989478-82758-66643459521045/AnsiballZ_command.py
+<192.168.200.101> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o &apos;User=&quot;vagrant&quot;&apos; -o ConnectTimeout=10 -o ControlPath=/home/$USER/.ansible/cp/901d3d7e01 &apos;[192.168.200.101]&apos;
+<192.168.200.101> (0, b&apos;sftp&gt; put /home/$USER/.ansible/tmp/ansible-local-827551n_ooga8/tmpvs9hfa00 /home/vagrant/.ansible/tmp/ansible-tmp-1633567134.2989478-82758-66643459521045/AnsiballZ_command.py\n&apos;, b&apos;&apos;)
+<192.168.200.101> ESTABLISH SSH CONNECTION FOR USER: vagrant
+<192.168.200.101> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o &apos;User=&quot;vagrant&quot;&apos; -o ConnectTimeout=10 -o ControlPath=/home/$USER/.ansible/cp/901d3d7e01 192.168.200.101 &apos;/bin/sh -c &apos;&quot;&apos;&quot;&apos;chmod u+x /home/vagrant/.ansible/tmp/ansible-tmp-1633567134.2989478-82758-66643459521045/ /home/vagrant/.ansible/tmp/ansible-tmp-1633567134.2989478-82758-66643459521045/AnsiballZ_command.py &amp;&amp; sleep 0&apos;&quot;&apos;&quot;&apos;&apos;
+<192.168.200.101> (0, b&apos;&apos;, b&apos;&apos;)
+<192.168.200.101> ESTABLISH SSH CONNECTION FOR USER: vagrant
+<192.168.200.101> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o &apos;User=&quot;vagrant&quot;&apos; -o ConnectTimeout=10 -o ControlPath=/home/$USER/.ansible/cp/901d3d7e01 -tt 192.168.200.101 &apos;/bin/sh -c &apos;&quot;&apos;&quot;&apos;/usr/bin/python3 /home/vagrant/.ansible/tmp/ansible-tmp-1633567134.2989478-82758-66643459521045/AnsiballZ_command.py &amp;&amp; sleep 0&apos;&quot;&apos;&quot;&apos;&apos;
+<192.168.200.101> (0, b&apos;\r\n{&quot;changed&quot;: true, &quot;stdout&quot;: &quot;&quot;, &quot;stderr&quot;: &quot;&quot;, &quot;rc&quot;: 0, &quot;cmd&quot;: [&quot;ls&quot;], &quot;start&quot;: &quot;2021-10-07 00:38:54.559025&quot;, &quot;end&quot;: &quot;2021-10-07 00:38:54.561837&quot;, &quot;delta&quot;: &quot;0:00:00.002812&quot;, &quot;msg&quot;: &quot;&quot;, &quot;invocation&quot;: {&quot;module_args&quot;: {&quot;_raw_params&quot;: &quot;ls&quot;, &quot;_uses_shell&quot;: false, &quot;warn&quot;: false, &quot;stdin_add_newline&quot;: true, &quot;strip_empty_ends&quot;: true, &quot;argv&quot;: null, &quot;chdir&quot;: null, &quot;executable&quot;: null, &quot;creates&quot;: null, &quot;removes&quot;: null, &quot;stdin&quot;: null}}}\r\n&apos;, b&apos;Shared connection to 192.168.200.101 closed.\r\n&apos;)
+<192.168.200.101> ESTABLISH SSH CONNECTION FOR USER: vagrant
+<192.168.200.101> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o &apos;User=&quot;vagrant&quot;&apos; -o ConnectTimeout=10 -o ControlPath=/home/$USER/.ansible/cp/901d3d7e01 192.168.200.101 &apos;/bin/sh -c &apos;&quot;&apos;&quot;&apos;rm -f -r /home/vagrant/.ansible/tmp/ansible-tmp-1633567134.2989478-82758-66643459521045/ &gt; /dev/null 2&gt;&amp;1 &amp;&amp; sleep 0&apos;&quot;&apos;&quot;&apos;&apos;
+<192.168.200.101> (0, b&apos;&apos;, b&apos;&apos;)
+192.168.200.101 | CHANGED | rc=0 &gt;&gt;</192.168.200.101></192.168.200.101></192.168.200.101></192.168.200.101></192.168.200.101></192.168.200.101></192.168.200.101></192.168.200.101></192.168.200.101></192.168.200.101></192.168.200.101></192.168.200.101></192.168.200.101></192.168.200.101></192.168.200.101></192.168.200.101></192.168.200.101></192.168.200.101></192.168.200.101></192.168.200.101></p>
+</li>
+</ul>
+<p>META: ran handlers
+META: ran handlers</p>
+<pre><code>
+* &#xC5F0;&#xACB0; &#xC131;&#xB9BD;&#xB41C; &#xAC1C;&#xC218; &#xD655;&#xC778;
+```shell
+azwell@azwell-KVM:~/test/vault$ ansible 192.168.200.101 -m command -a ls -vvv | grep ESTA
+&lt;192.168.200.101&gt; ESTABLISH SSH CONNECTION FOR USER: vagrant
+&lt;192.168.200.101&gt; ESTABLISH SSH CONNECTION FOR USER: vagrant
+&lt;192.168.200.101&gt; ESTABLISH SSH CONNECTION FOR USER: vagrant
+&lt;192.168.200.101&gt; ESTABLISH SSH CONNECTION FOR USER: vagrant
+&lt;192.168.200.101&gt; ESTABLISH SSH CONNECTION FOR USER: vagrant
+&lt;192.168.200.101&gt; ESTABLISH SSH CONNECTION FOR USER: vagrant
+&lt;192.168.200.101&gt; ESTABLISH SSH CONNECTION FOR USER: vagrant
+</code></pre><ul>
+<li>v&#xC758; v &#xAC1C;&#xC218;&#xC5D0; &#xB530;&#xB77C; &#xC0C1;&#xC138; &#xD558;&#xAC8C;~~</li>
+<li><p>command&#xB97C; &#xBCF4;&#xB0B4;&#xAE30; &#xC704;&#xD574; &#xC800;&#xB807;&#xAC8C; &#xB9CE;&#xC740; &#xC138;&#xC158;&#xC744; &#xC5F0;&#xACB0;...</p>
+</li>
+<li><p>&#xBAA8;&#xB4C8;&#xC5D0;&#xC11C; &#xBB34;&#xC5C7;&#xC744; &#xC2E4;&#xD589;&#xD560;&#xAF2C;?? &#xAD81;&#xAE08;&#xC4F0; &#xD560;&#xB54C;</p>
+<pre><code class="lang-shell">$ ansible 192.168.200.101 -m apt -a &apos;name=apache2&apos; -vvvv | grep EXEC
+[WARNING]:  * Failed to parse /home/$USER/inventory.ini with ini plugin:
+/home/$USER/inventory.ini:5: Expected key=value host variable assignment,
+got: msg-node2
+[WARNING]: Unable to parse /home/$USER/inventory.ini as an inventory
+source
+[WARNING]: No inventory was parsed, only implicit localhost is available
+&lt;192.168.200.101&gt; SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o &apos;User=&quot;vagrant&quot;&apos; -o ConnectTimeout=10 -o ControlPath=/home/$USER/.ansible/cp/901d3d7e01 192.168.200.101 &apos;/bin/sh -c &apos;&quot;&apos;&quot;&apos;echo ~vagrant &amp;&amp; sleep 0&apos;&quot;&apos;&quot;&apos;&apos;
+&lt;192.168.200.101&gt; SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o &apos;User=&quot;vagrant&quot;&apos; -o ConnectTimeout=10 -o ControlPath=/home/$USER/.ansible/cp/901d3d7e01 192.168.200.101 &apos;/bin/sh -c &apos;&quot;&apos;&quot;&apos;( umask 77 &amp;&amp; mkdir -p &quot;` echo /home/vagrant/.ansible/tmp `&quot;&amp;&amp; mkdir &quot;` echo /home/vagrant/.ansible/tmp/ansible-tmp-1633567317.6268528-82949-46309180230873 `&quot; &amp;&amp; echo ansible-tmp-1633567317.6268528-82949-46309180230873=&quot;` echo /home/vagrant/.ansible/tmp/ansible-tmp-1633567317.6268528-82949-46309180230873 `&quot; ) &amp;&amp; sleep 0&apos;&quot;&apos;&quot;&apos;&apos;
+&lt;192.168.200.101&gt; SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o &apos;User=&quot;vagrant&quot;&apos; -o ConnectTimeout=10 -o ControlPath=/home/$USER/.ansible/cp/901d3d7e01 192.168.200.101 &apos;/bin/sh -c &apos;&quot;&apos;&quot;&apos;echo PLATFORM; uname; echo FOUND; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;/usr/bin/python&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;python3.9&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;python3.8&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;python3.7&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;python3.6&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;python3.5&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;python2.7&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;python2.6&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;/usr/libexec/platform-python&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;/usr/bin/python3&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;python&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; echo ENDFOUND &amp;&amp; sleep 0&apos;&quot;&apos;&quot;&apos;&apos;
+&lt;192.168.200.101&gt; SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o &apos;User=&quot;vagrant&quot;&apos; -o ConnectTimeout=10 -o ControlPath=/home/$USER/.ansible/cp/901d3d7e01 192.168.200.101 &apos;/bin/sh -c &apos;&quot;&apos;&quot;&apos;/usr/bin/python3.8 &amp;&amp; sleep 0&apos;&quot;&apos;&quot;&apos;&apos;
+&lt;192.168.200.101&gt; SSH: EXEC sftp -b - -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o &apos;User=&quot;vagrant&quot;&apos; -o ConnectTimeout=10 -o ControlPath=/home/$USER/.ansible/cp/901d3d7e01 &apos;[192.168.200.101]&apos;
+&lt;192.168.200.101&gt; SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o &apos;User=&quot;vagrant&quot;&apos; -o ConnectTimeout=10 -o ControlPath=/home/$USER/.ansible/cp/901d3d7e01 192.168.200.101 &apos;/bin/sh -c &apos;&quot;&apos;&quot;&apos;chmod u+x /home/vagrant/.ansible/tmp/ansible-tmp-1633567317.6268528-82949-46309180230873/ /home/vagrant/.ansible/tmp/ansible-tmp-1633567317.6268528-82949-46309180230873/AnsiballZ_apt.py &amp;&amp; sleep 0&apos;&quot;&apos;&quot;&apos;&apos;
+&lt;192.168.200.101&gt; SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o &apos;User=&quot;vagrant&quot;&apos; -o ConnectTimeout=10 -o ControlPath=/home/$USER/.ansible/cp/901d3d7e01 -tt 192.168.200.101 &apos;/bin/sh -c &apos;&quot;&apos;&quot;&apos;/usr/bin/python3 /home/vagrant/.ansible/tmp/ansible-tmp-1633567317.6268528-82949-46309180230873/AnsiballZ_apt.py &amp;&amp; sleep 0&apos;&quot;&apos;&quot;&apos;&apos;
+&lt;192.168.200.101&gt; SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o &apos;User=&quot;vagrant&quot;&apos; -o ConnectTimeout=10 -o ControlPath=/home/$USER/.ansible/cp/901d3d7e01 192.168.200.101 &apos;/bin/sh -c &apos;&quot;&apos;&quot;&apos;rm -f -r /home/vagrant/.ansible/tmp/ansible-tmp-1633567317.6268528-82949-46309180230873/ &gt; /dev/null 2&gt;&amp;1 &amp;&amp; sleep 0&apos;&quot;&apos;&quot;&apos;&apos;
+</code></pre>
+</li>
+<li><p>&#xBAA8;&#xB4C8;&#xC740; &#xC5B4;&#xB5BB;&#xAC8C; &#xC2E4;&#xD589;&#xC774; &#xB420;&#xAE4C;!? 
+&#xC784;&#xC2DC; &#xD3F4;&#xB354; &#xC0DD;&#xC131; -&gt; &#xD30C;&#xC774;&#xC36C; &#xC778;&#xD130;&#xD504;&#xB9AC;&#xD130; &#xD655;&#xC778; -&gt; &#xD30C;&#xC774;&#xC36C; &#xC778;&#xD130;&#xD504;&#xB9AC;&#xD130; &#xC2E4;&#xD589; -&gt; &#xBAA8;&#xB4C8; &#xBCF5;&#xC0AC; -&gt; &#xBAA8;&#xB4C8; &#xC2E4;&#xD589;&#xAD8C;&#xD55C; &#xC90C; -&gt; &#xBAA8;&#xB4C8; &#xC2E4;&#xD589; -&gt;
+&#xBAA8;&#xB4C8; &#xC0AD;&#xC81C;</p>
+</li>
+</ul>
+<p>apt &#xBAA8;&#xB4C8; &#xC2E4;&#xD589;&#xD558;&#xB2E4;&#xAC00; &#xC2E4;&#xD328;&#xD558;&#xBA74; ~/.ansible/tmp &#xD3F4;&#xB354; &#xB0B4;&#xC5D0; &#xCC0C;&#xAEBC;&#xAE30;&#xAC00; &#xB0A8;&#xC544;&#xC788;&#xC74C;
+&#xC9C4;&#xC9DC; &#xB098;&#xB294; &#xC8FD;&#xC5B4;&#xB3C4;(&#xC8FC;&#xACA8;!!) &#xD30C;&#xC774;&#xC36C; &#xD30C;&#xC77C;&#xC744; &#xAE4C;&#xBCF4;&#xACE0; &#xC2F6;&#xB2E4;!! &#xD558;&#xBA74; Ctrl+C &#xB9C8;&#xAD6C; &#xB54C;&#xB9AC;&#xC148;...</p>
+<pre><code class="lang-shell">azwell@azwell-KVM:~/test/vault$ ansible 192.168.200.101 -m apt -a &apos;name=apache2&apos; -vvv
+ansible 2.9.6
+  config file = /home/azwell/.ansible.cfg
+  configured module search path = [&apos;/home/azwell/.ansible/plugins/modules&apos;, &apos;/usr/share/ansible/plugins/modules&apos;]
+  ansible python module location = /usr/lib/python3/dist-packages/ansible
+  executable location = /usr/bin/ansible
+  python version = 3.8.10 (default, Sep 28 2021, 16:10:42) [GCC 9.3.0]
+Using /home/azwell/.ansible.cfg as config file
+host_list declined parsing /home/azwell/inventory.ini as it did not pass its verify_file() method
+script declined parsing /home/azwell/inventory.ini as it did not pass its verify_file() method
+auto declined parsing /home/azwell/inventory.ini as it did not pass its verify_file() method
+yaml declined parsing /home/azwell/inventory.ini as it did not pass its verify_file() method
+Parsed /home/azwell/inventory.ini inventory source with ini plugin
+META: ran handlers
+&lt;192.168.200.101&gt; ESTABLISH SSH CONNECTION FOR USER: vagrant
+&lt;192.168.200.101&gt; SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o &apos;User=&quot;vagrant&quot;&apos; -o ConnectTimeout=10 -o ControlPath=/home/azwell/.ansible/cp/901d3d7e01 192.168.200.101 &apos;/bin/sh -c &apos;&quot;&apos;&quot;&apos;echo ~vagrant &amp;&amp; sleep 0&apos;&quot;&apos;&quot;&apos;&apos;
+&lt;192.168.200.101&gt; (0, b&apos;/home/vagrant\n&apos;, b&apos;&apos;)
+&lt;192.168.200.101&gt; ESTABLISH SSH CONNECTION FOR USER: vagrant
+&lt;192.168.200.101&gt; SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o &apos;User=&quot;vagrant&quot;&apos; -o ConnectTimeout=10 -o ControlPath=/home/azwell/.ansible/cp/901d3d7e01 192.168.200.101 &apos;/bin/sh -c &apos;&quot;&apos;&quot;&apos;( umask 77 &amp;&amp; mkdir -p &quot;` echo /home/vagrant/.ansible/tmp/ansible-tmp-1633567808.6261299-59997632850364 `&quot; &amp;&amp; echo ansible-tmp-1633567808.6261299-59997632850364=&quot;` echo /home/vagrant/.ansible/tmp/ansible-tmp-1633567808.6261299-59997632850364 `&quot; ) &amp;&amp; sleep 0&apos;&quot;&apos;&quot;&apos;&apos;
+&lt;192.168.200.101&gt; (0, b&apos;ansible-tmp-1633567808.6261299-59997632850364=/home/vagrant/.ansible/tmp/ansible-tmp-1633567808.6261299-59997632850364\n&apos;, b&apos;&apos;)
+&lt;192.168.200.101&gt; Attempting python interpreter discovery
+&lt;192.168.200.101&gt; ESTABLISH SSH CONNECTION FOR USER: vagrant
+&lt;192.168.200.101&gt; SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o &apos;User=&quot;vagrant&quot;&apos; -o ConnectTimeout=10 -o ControlPath=/home/azwell/.ansible/cp/901d3d7e01 192.168.200.101 &apos;/bin/sh -c &apos;&quot;&apos;&quot;&apos;echo PLATFORM; uname; echo FOUND; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;/usr/bin/python&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;python3.7&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;python3.6&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;python3.5&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;python2.7&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;python2.6&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;/usr/libexec/platform-python&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;/usr/bin/python3&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; command -v &apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;python&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;&quot;&apos;; echo ENDFOUND &amp;&amp; sleep 0&apos;&quot;&apos;&quot;&apos;&apos;
+&lt;192.168.200.101&gt; (0, b&apos;PLATFORM\nLinux\nFOUND\n/usr/bin/python3\nENDFOUND\n&apos;, b&apos;&apos;)
+&lt;192.168.200.101&gt; ESTABLISH SSH CONNECTION FOR USER: vagrant
+&lt;192.168.200.101&gt; SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o &apos;User=&quot;vagrant&quot;&apos; -o ConnectTimeout=10 -o ControlPath=/home/azwell/.ansible/cp/901d3d7e01 192.168.200.101 &apos;/bin/sh -c &apos;&quot;&apos;&quot;&apos;/usr/bin/python3 &amp;&amp; sleep 0&apos;&quot;&apos;&quot;&apos;&apos;
+&lt;192.168.200.101&gt; (0, b&apos;{&quot;platform_dist_result&quot;: [], &quot;osrelease_content&quot;: &quot;NAME=\\&quot;Ubuntu\\&quot;\\nVERSION=\\&quot;20.04.3 LTS (Focal Fossa)\\&quot;\\nID=ubuntu\\nID_LIKE=debian\\nPRETTY_NAME=\\&quot;Ubuntu 20.04.3 LTS\\&quot;\\nVERSION_ID=\\&quot;20.04\\&quot;\\nHOME_URL=\\&quot;https://www.ubuntu.com/\\&quot;\\nSUPPORT_URL=\\&quot;https://help.ubuntu.com/\\&quot;\\nBUG_REPORT_URL=\\&quot;https://bugs.launchpad.net/ubuntu/\\&quot;\\nPRIVACY_POLICY_URL=\\&quot;https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\\&quot;\\nVERSION_CODENAME=focal\\nUBUNTU_CODENAME=focal\\n&quot;}\n&apos;, b&apos;&apos;)
+Using module file /usr/lib/python3/dist-packages/ansible/modules/packaging/os/apt.py
+&lt;192.168.200.101&gt; PUT /home/azwell/.ansible/tmp/ansible-local-35723d1tcbcg2/tmpljkmn1my TO /home/vagrant/.ansible/tmp/ansible-tmp-1633567808.6261299-59997632850364/AnsiballZ_apt.py
+&lt;192.168.200.101&gt; SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o &apos;User=&quot;vagrant&quot;&apos; -o ConnectTimeout=10 -o ControlPath=/home/azwell/.ansible/cp/901d3d7e01 &apos;[192.168.200.101]&apos;
+&lt;192.168.200.101&gt; (0, b&apos;sftp&gt; put /home/azwell/.ansible/tmp/ansible-local-35723d1tcbcg2/tmpljkmn1my /home/vagrant/.ansible/tmp/ansible-tmp-1633567808.6261299-59997632850364/AnsiballZ_apt.py\n&apos;, b&apos;&apos;)
+&lt;192.168.200.101&gt; ESTABLISH SSH CONNECTION FOR USER: vagrant
+&lt;192.168.200.101&gt; SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o &apos;User=&quot;vagrant&quot;&apos; -o ConnectTimeout=10 -o ControlPath=/home/azwell/.ansible/cp/901d3d7e01 192.168.200.101 &apos;/bin/sh -c &apos;&quot;&apos;&quot;&apos;chmod u+x /home/vagrant/.ansible/tmp/ansible-tmp-1633567808.6261299-59997632850364/ /home/vagrant/.ansible/tmp/ansible-tmp-1633567808.6261299-59997632850364/AnsiballZ_apt.py &amp;&amp; sleep 0&apos;&quot;&apos;&quot;&apos;&apos;
+&lt;192.168.200.101&gt; (0, b&apos;&apos;, b&apos;&apos;)
+&lt;192.168.200.101&gt; ESTABLISH SSH CONNECTION FOR USER: vagrant
+&lt;192.168.200.101&gt; SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o &apos;User=&quot;vagrant&quot;&apos; -o ConnectTimeout=10 -o ControlPath=/home/azwell/.ansible/cp/901d3d7e01 -tt 192.168.200.101 &apos;/bin/sh -c &apos;&quot;&apos;&quot;&apos;/usr/bin/python3 /home/vagrant/.ansible/tmp/ansible-tmp-1633567808.6261299-59997632850364/AnsiballZ_apt.py &amp;&amp; sleep 0&apos;&quot;&apos;&quot;&apos;&apos;
+&lt;192.168.200.101&gt; (0, b&apos;\r\n{&quot;changed&quot;: false, &quot;cache_updated&quot;: false, &quot;cache_update_time&quot;: 1633547113, &quot;invocation&quot;: {&quot;module_args&quot;: {&quot;name&quot;: &quot;apache2&quot;, &quot;package&quot;: [&quot;apache2&quot;], &quot;state&quot;: &quot;present&quot;, &quot;cache_valid_time&quot;: 0, &quot;purge&quot;: false, &quot;force&quot;: false, &quot;dpkg_options&quot;: &quot;force-confdef,force-confold&quot;, &quot;autoremove&quot;: false, &quot;autoclean&quot;: false, &quot;only_upgrade&quot;: false, &quot;force_apt_get&quot;: false, &quot;allow_unauthenticated&quot;: false, &quot;update_cache&quot;: null, &quot;deb&quot;: null, &quot;default_release&quot;: null, &quot;install_recommends&quot;: null, &quot;upgrade&quot;: null, &quot;policy_rc_d&quot;: null}}}\r\n&apos;, b&apos;Shared connection to 192.168.200.101 closed.\r\n&apos;)
+&lt;192.168.200.101&gt; ESTABLISH SSH CONNECTION FOR USER: vagrant
+&lt;192.168.200.101&gt; SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o &apos;User=&quot;vagrant&quot;&apos; -o ConnectTimeout=10 -o ControlPath=/home/azwell/.ansible/cp/901d3d7e01 192.168.200.101 &apos;/bin/sh -c &apos;&quot;&apos;&quot;&apos;rm -f -r /home/vagrant/.ansible/tmp/ansible-tmp-1633567808.6261299-59997632850364/ &gt; /dev/null 2&gt;&amp;1 &amp;&amp; sleep 0&apos;&quot;&apos;&quot;&apos;&apos;
+&lt;192.168.200.101&gt; (0, b&apos;&apos;, b&apos;&apos;)
+192.168.200.101 | SUCCESS =&gt; {
+    &quot;ansible_facts&quot;: {
+        &quot;discovered_interpreter_python&quot;: &quot;/usr/bin/python3&quot;
+    },
+    &quot;cache_update_time&quot;: 1633547113,
+    &quot;cache_updated&quot;: false,
+    &quot;changed&quot;: false,
+    &quot;invocation&quot;: {
+        &quot;module_args&quot;: {
+            &quot;allow_unauthenticated&quot;: false,
+            &quot;autoclean&quot;: false,
+            &quot;autoremove&quot;: false,
+            &quot;cache_valid_time&quot;: 0,
+            &quot;deb&quot;: null,
+            &quot;default_release&quot;: null,
+            &quot;dpkg_options&quot;: &quot;force-confdef,force-confold&quot;,
+            &quot;force&quot;: false,
+            &quot;force_apt_get&quot;: false,
+            &quot;install_recommends&quot;: null,
+            &quot;name&quot;: &quot;apache2&quot;,
+            &quot;only_upgrade&quot;: false,
+            &quot;package&quot;: [
+                &quot;apache2&quot;
+            ],
+            &quot;policy_rc_d&quot;: null,
+            &quot;purge&quot;: false,
+            &quot;state&quot;: &quot;present&quot;,
+            &quot;update_cache&quot;: null,
+            &quot;upgrade&quot;: null
+        }
+    }
+}
+META: ran handlers
+META: ran handlers
+</code></pre>
+<p><img src="../assets/ansible_cfg.png" alt="ansible_cfg.png"></p>
+<p>SSH &#xC138;&#xC158; &#xC904;&#xC774;&#xACE0; &#xC131;&#xB2A5; &#xB192;&#xC774;&#xAE30;<br>
+&#xB300;&#xD658;&#xACBD;&#xC5D0;&#xC11C; &#xC791;&#xC5C5;&#xD560; &#xB54C;&#xB294; &#xC774;&#xC810;&#xC788;&#xB370; &#xC870;&#xAE08; &#xD560;&#xB550; &#xADF8;&#xB2E5; ^^</p>
+<pre><code class="lang-config">[ssh_connection]
+pipelining = true
+</code></pre>
+<p>&#xC694;&#xB85C;&#xCF00; &#xC124;&#xC815;&#xD574;&#xC8FC;&#xBA74; ssh &#xC138;&#xC158;&#xC744; &#xB35C; &#xB9FA;&#xC74C;~</p>
+<p>&#xC644;&#xC131;&#xB41C; ~/.ansible.cfg &#xCC38;&#xACE0;</p>
+<pre><code class="lang-config">$ cat ~/.ansible.cfg 
+[defaults]
+remote_user = vagrant
+inventory = ~/inventory.ini
+ask_pass = false
+callback_whitelist = profile_tasks, profile_roles
+ansible_managed = Ansible managed: {file} modified on %Y-%m-%d %H:%M:%S by {uid} on {host} {file}
+
+[privilege_escalation]
+become = false
+become_method = sudo
+become_user = root
+become_ask_pass = false
+
+[ssh_connection]
+pipelining = true
+</code></pre>
+<p>profile_roles &#xAC00; &#xCD94;&#xAC00; &#xB418;&#xC5C8;&#xB294;&#xB370; &#xAC1C;&#xBCC4; &#xC5ED;&#xD560;&#xC774; &#xC218;&#xD589;&#xB420;&#xB54C; &#xC2DC;&#xAC04; &#xC815;&#xBCF4;&#xB97C; &#xD45C;&#xC2DC;&#xD574; &#xC900;&#xB2E4;&#xACE0; &#xD55C;&#xB2E4;.</p>
+<p>&#xADF8;&#xB807;&#xB2E4;!</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Part9/note.html" class="navigation navigation-prev " aria-label="Previous page: 9. 아티팩트 재사용 - 역할">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Part11/note.html" class="navigation navigation-next " aria-label="Next page: 11. AWX(AnsibleWorks)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"10. 암호화","level":"1.11","depth":1,"next":{"title":"11. AWX(AnsibleWorks)","level":"1.12","depth":1,"path":"pages/Part11/note.md","ref":"pages/Part11/note.md","articles":[]},"previous":{"title":"9. 아티팩트 재사용 - 역할","level":"1.10","depth":1,"path":"pages/Part9/note.md","ref":"pages/Part9/note.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/Part10/note.md","mtime":"2021-10-11T05:38:16.051Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-11T07:24:17.942Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

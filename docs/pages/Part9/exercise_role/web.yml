@@ -1,0 +1,47 @@
+- name: Simple Web Deploy
+  hosts: 192.168.200.101
+  force_handlers: true
+  vars_files:
+  - vars/web_vars.yml
+
+  tasks:
+  - import_tasks: tasks/ubuntu_web_package.yml
+    when: ansible_distribution == "Ubuntu"
+
+  - import_tasks: tasks/centos_web_package.yml
+    when: ansible_distribution == "CentOS"
+
+  - name: Copy PHP Contents
+    copy:
+      src: 'files/{{ contents_file }}'
+      dest: '/var/www/html/{{ contents_file }}'
+      backup: true
+
+  - name: Configure Apache Port
+    template:
+      src: jinja/ports.conf.j2
+      dest: '/etc/apache2/ports.conf'
+    notify:
+    - Restart Service
+
+  - name: Start Service
+    service:
+      name: apache2
+      state: started
+
+  handlers:
+  - name: Restart Service
+    service:
+      name: apache2
+      state: restarted
+      enabled: true
+
+- hosts: 192.168.200.102
+  gather_facts: no
+  tasks:
+  - name: Include variables
+    include_vars: vars/web_vars.yml
+  - name: Checking
+    uri:
+      url: "http://192.168.200.101:{{ apache_port }}/{{ contents_file }}"
+    ignore_errors: true

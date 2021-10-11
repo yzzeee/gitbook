@@ -1,0 +1,10 @@
+- hosts: local
+  gather_facts: no
+  serial: 3
+  tasks:
+  - name: T1
+    command: sleep 5
+  - name: T2
+    command: sleep 5
+  - name: T3
+    command: sleep 5

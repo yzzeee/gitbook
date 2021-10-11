@@ -1,0 +1,609 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>20. 원격 상태 저장 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../Part19/note.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Part1/note.html">
+            
+                <a href="../Part1/note.html">
+            
+                    
+                    1. IaC 개요
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Part2/note.html">
+            
+                <a href="../Part2/note.html">
+            
+                    
+                    2. Ansible 개요
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Part3/note.html">
+            
+                <a href="../Part3/note.html">
+            
+                    
+                    3. Ansible 기본
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Part4/note.html">
+            
+                <a href="../Part4/note.html">
+            
+                    
+                    4. 플레이북
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Part5/note.html">
+            
+                <a href="../Part5/note.html">
+            
+                    
+                    5. 변수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Part6/note.html">
+            
+                <a href="../Part6/note.html">
+            
+                    
+                    6. 작업 제어 - 기본
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Part7/note.html">
+            
+                <a href="../Part7/note.html">
+            
+                    
+                    7. 작업 제어 - 고급
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Part8/note.html">
+            
+                <a href="../Part8/note.html">
+            
+                    
+                    8. 아티팩트 재사용 - 파일
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Part9/note.html">
+            
+                <a href="../Part9/note.html">
+            
+                    
+                    9. 아티팩트 재사용 - 역할
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Part10/note.html">
+            
+                <a href="../Part10/note.html">
+            
+                    
+                    10. 암호화
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../Part11/note.html">
+            
+                <a href="../Part11/note.html">
+            
+                    
+                    11. AWX(AnsibleWorks)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../Part12/note.html">
+            
+                <a href="../Part12/note.html">
+            
+                    
+                    12. Terraform 기본
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../Part13/note.html">
+            
+                <a href="../Part13/note.html">
+            
+                    
+                    13. AWS CLI 및 Terraform 설치
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../Part14/note.html">
+            
+                <a href="../Part14/note.html">
+            
+                    
+                    14. 구성파일 작성
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../Part15/note.html">
+            
+                <a href="../Part15/note.html">
+            
+                    
+                    15. 리소스 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../Part16/note.html">
+            
+                <a href="../Part16/note.html">
+            
+                    
+                    16. 변수 및 값
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../Part17/note.html">
+            
+                <a href="../Part17/note.html">
+            
+                    
+                    17. 구성 관리 및 프로비저너
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../Part18/note.html">
+            
+                <a href="../Part18/note.html">
+            
+                    
+                    18. 모듈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../Part19/note.html">
+            
+                <a href="../Part19/note.html">
+            
+                    
+                    19. 반복
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.21" data-path="note.html">
+            
+                <a href="note.html">
+            
+                    
+                    20. 원격 상태 저장
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >20. 원격 상태 저장</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="20-&#xC6D0;&#xACA9;-&#xC0C1;&#xD0DC;-&#xC800;&#xC7A5;">20. &#xC6D0;&#xACA9; &#xC0C1;&#xD0DC; &#xC800;&#xC7A5;</h1>
+<h2 id="201-&#xBC31;&#xC564;&#xB4DC;-&#xC885;&#xB958;">20.1 &#xBC31;&#xC564;&#xB4DC; &#xC885;&#xB958;</h2>
+<ul>
+<li>&#xD45C;&#xC900; &#xBC31;&#xC564;&#xB4DC;</li>
+<li>artifactory</li>
+<li>azurerm</li>
+<li>consul</li>
+<li>etcd</li>
+<li>s3
+&#xB4F1;&#xB4F1;</li>
+</ul>
+<p>&#xD45C;&#xC900; &#xBC31;&#xC564;&#xB4DC;&#xB294; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; terraform.tfstate &#xB9CC; &#xC800;&#xC7A5; &#xAC00;&#xB2A5; </p>
+<ul>
+<li>&#xD5A5;&#xC0C1;&#xB41C; &#xBC31;&#xC564;&#xB4DC;
+1.local(&#xAE30;&#xBCF8; &#xBC31;&#xC5D4;&#xB4DC;) : &#xB85C;&#xCEEC; &#xC2DC;&#xC2A4;&#xD15C;&#xC740; &#xD14C;&#xB77C;&#xD3FC; &#xBA85;&#xB839;&#xC5B4;&#xB97C; &#xC2E4;&#xD589;&#xAC00;&#xB2A5;&#xD558;&#xB2C8;&#xAE50; &#xD5A5;&#xC0C1;&#xB41C; !</li>
+<li>remote: terraform cloud</li>
+</ul>
+<h2 id="202-&#xBC31;&#xC564;&#xB4DC;-&#xAD6C;&#xC131;">20.2 &#xBC31;&#xC564;&#xB4DC; &#xAD6C;&#xC131;</h2>
+<p>&#xC608;</p>
+<pre><code class="lang-shell">terraform {
+  backend &quot;remote&quot; { # remote&#xB294; terraform cloud&#xB97C; &#xC758;&#xBBF8;
+    organization = &quot;example_corp&quot;
+
+    workspace {
+      name = &quot;my-app-prod&quot;
+    }
+  }
+}
+</code></pre>
+<h2 id="203-terraform-cloud&#xB97C;-&#xC774;&#xC6A9;&#xD55C;-&#xC6D0;&#xACA9;-&#xBC31;&#xC560;&#xB4DC;-&#xAD6C;&#xC131;">20.3 Terraform Cloud&#xB97C; &#xC774;&#xC6A9;&#xD55C; &#xC6D0;&#xACA9; &#xBC31;&#xC560;&#xB4DC; &#xAD6C;&#xC131;</h2>
+<p><a href="https://app.terraform.io/" target="_blank">https://app.terraform.io/</a><br>
+&#xC704; &#xC0AC;&#xC774;&#xD2B8;&#xC5D0; &#xAC00;&#xC11C; Terraform Cloud &#xC5D0; &#xAC00;&#xC785;&#xD55C;&#xB2E4;.</p>
+<p>&#xAC00;&#xC785; &#xC644;&#xB8CC;&#xD6C4; &#xC774;&#xBA54;&#xC77C; &#xC778;&#xC99D;&#xD558;&#xACE0;<br>
+&#xD130;&#xBBF8;&#xB110; &#xB744;&#xC6CC;&#xC11C; &#xC544;&#xB798; &#xBA85;&#xB839;&#xC744; &#xC2E4;&#xD589;&#xD55C;&#xB2E4;.</p>
+<pre><code class="lang-shell">$ terraform login
+Terraform will request an API token for app.terraform.io using your browser.
+
+If login is successful, Terraform will store the token in plain text in
+the following file for use by subsequent commands:
+    /home/$USER/.terraform.d/credentials.tfrc.json
+
+Do you want to proceed?
+  Only &apos;yes&apos; will be accepted to confirm.
+
+  Enter a value: yes
+</code></pre>
+<p>yes &#xB97C; &#xCE58;&#xACE0; &#xB098;&#xBA74; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xAC00; &#xB728;&#xBA74;&#xC11C; Token &#xC0DD;&#xC131;&#xD558;&#xB294; &#xD398;&#xC774;&#xC9C0;&#xB85C; &#xC811;&#xC18D;&#xB41C;&#xB2E4;.<br>
+Token &#xC0DD;&#xC131;&#xD558;&#xACE0; &#xD130;&#xBBF8;&#xB110;&#xC5D0; &#xBD99;&#xC5EC;&#xB123;&#xAE30;&#xD55C;&#xB2E4;.</p>
+<pre><code class="lang-shell">---------------------------------------------------------------------------------
+
+Terraform must now open a web browser to the tokens page for app.terraform.io.
+
+If a browser does not open this automatically, open the following URL to proceed:
+    https://app.terraform.io/app/settings/tokens?source=terraform-login
+
+
+---------------------------------------------------------------------------------
+
+Generate a token using your browser, and copy-paste it into this prompt.
+
+Terraform will store the token in plain text in the following file
+for use by subsequent commands:
+    /home/$USER/.terraform.d/credentials.tfrc.json
+
+Token for app.terraform.io:
+  Enter a value: [5941:5991:1008/163507.542562:ERROR:chrome_browser_main_extra_parts_metrics.cc(228)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+[5941:5991:1008/163507.542590:ERROR:chrome_browser_main_extra_parts_metrics.cc(231)] crbug.com/1216328: Checking Bluetooth availability ended.
+[5941:5991:1008/163507.542598:ERROR:chrome_browser_main_extra_parts_metrics.cc(234)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+[5941:5991:1008/163507.573195:ERROR:chrome_browser_main_extra_parts_metrics.cc(238)] crbug.com/1216328: Checking default browser status ended.
+</code></pre>
+<p>&#xB9C9; &#xBB50;&#xAC00; &#xB098;&#xC640;&#xC788;&#xC5B4;&#xC11C; &#xC774;&#xC0C1;&#xD558;&#xAE34; &#xD55C;&#xB370; &#xADF8;&#xB0E5; &#xBD99;&#xC5EC; &#xB123;&#xAE30; &#xD558;&#xACE0; &#xC5D4;&#xD130; &#xD558;&#xBA74;<br>
+Token &#xAC12; &#xC124;&#xC815;&#xC774; &#xB418;&#xBA74;&#xC11C; &#xC544;&#xB798; &#xCC98;&#xB7FC; &#xB098;&#xC628;&#xB2E4;.</p>
+<pre><code class="lang-shell">Retrieved token for user $USER
+
+
+---------------------------------------------------------------------------------
+
+                                          -                                
+                                          -----                           -
+                                          ---------                      --
+                                          ---------  -                -----
+                                           ---------  ------        -------
+                                             -------  ---------  ----------
+                                                ----  ---------- ----------
+                                                  --  ---------- ----------
+   Welcome to Terraform Cloud!                     -  ---------- -------
+                                                      ---  ----- ---
+   Documentation: terraform.io/docs/cloud             --------   -
+                                                      ----------
+                                                      ----------
+                                                       ---------
+                                                           -----
+                                                               -
+
+
+   New to TFC? Follow these steps to instantly apply an example configuration:
+
+   $ git clone https://github.com/hashicorp/tfc-getting-started.git
+   $ cd tfc-getting-started
+   $ scripts/setup.sh
+</code></pre>
+<p>provider.tf&#xC5D0; &#xC774;&#xAC70; &#xB123;&#xC5B4;&#xC8FC;&#xBA74; &#xD574;&#xB2F9; &#xC6CC;&#xD06C;&#xC2A4;&#xD398;&#xC774;&#xC2A4;&#xC5D0; terraform.tfstate&#xD30C;&#xC77C;&#xC774; &#xC800;&#xC7A5;&#xB428;<br>
+&#xADF8;&#xB7F0;&#xB370;,, variables&#xB294; &#xC800;&#xC7A5; &#xC548;&#xB418;&#xBBC0;&#xB85C; &#xB530;&#xB85C; &#xC800;&#xC7A5; &#xAD00;&#xB9AC;&#xD574;&#xC8FC;&#xC5B4;&#xC57C;&#xD568;</p>
+<pre><code class="lang-shell">terraform {
+  backend &quot;remote&quot; { # remote&#xB294; terraform cloud&#xB97C; &#xC758;&#xBBF8;
+    organization = &quot;example_corp&quot;
+
+    workspace {
+      name = &quot;my-app-prod&quot;
+    }
+  }
+
+  required_providers {
+    aws = {
+      source  = &quot;hashicorp/aws&quot;
+      version = &quot;~&gt; 3.34&quot;
+    }
+  }
+}
+
+provider &quot;aws&quot; {
+  profile = &quot;default&quot;
+  region  = &quot;ap-northeast-2&quot;
+}
+</code></pre>
+<p><img src="../assets/variable.png" alt="variable.png"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Part19/note.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 19. 반복">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"20. 원격 상태 저장","level":"1.21","depth":1,"previous":{"title":"19. 반복","level":"1.20","depth":1,"path":"pages/Part19/note.md","ref":"pages/Part19/note.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/Part20/note.md","mtime":"2021-10-11T05:38:16.051Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-11T07:24:17.942Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

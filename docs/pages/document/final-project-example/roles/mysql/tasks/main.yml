@@ -1,0 +1,32 @@
+---
+# tasks file for mysql
+- name: install mysql package
+  apt:
+   name: mysql-server, mysql-client, python3-pymysql
+   state: present
+   update_cache: yes
+
+- name: start mysql service
+  service:
+    name: mysql
+    state: started
+
+- name: create wordpress database
+  mysql_db:
+    name: "{{ db['db'] }}"
+    state: present
+    login_unix_socket: "{{ mysql_socket }}"
+
+- name: create wordpress user
+  mysql_user:
+    name: "{{ db['user'] }}"
+    password: "{{ db['password'] }}"
+    state: present
+    priv: "{{ db['priv'] }}"
+    login_unix_socket: "{{ mysql_socket }}"
+
+- name: setting database config
+  template:
+    src: config-default.php.j2
+    dest: /etc/wordpress/config-default.php
+

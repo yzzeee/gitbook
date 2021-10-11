@@ -1,0 +1,23 @@
+---
+- name: Simple Web Deploy
+  hosts: 192.168.200.101
+  # become : true  모든 플레이에 해당 옵션 줌
+  tasks:
+  - name: Install Package
+    apt:
+      name: apache2, libapache2-mod-php
+      update_cache: true
+      state: present
+  - name: Copy PHP Contents
+    copy:
+      src: index.php
+      dest: /var/www/html/index.php
+      backup: true
+  - name: Start
+    service:
+      name: apache2
+      state: started
+      enabled: true
+  - name: service
+    uri:
+      url: "http://192.168.100.201/index.php"

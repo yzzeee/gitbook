@@ -1,0 +1,18 @@
+- hosts: 192.168.200.101
+
+  tasks:
+  - block:
+    - name: TASK1
+      debug:
+    - name: TASK2
+      debug:
+    - name: TASK3
+      debug:
+    rescue:
+      - name: RESCUE1
+        debug:
+      - name: RESCUE2
+        debug:
+    always:
+    - name: ALWAYS1
+      debug:

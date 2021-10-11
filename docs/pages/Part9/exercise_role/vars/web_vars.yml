@@ -1,0 +1,5 @@
+---
+
+contents_file: index.php
+http_port: "80"
+apache_port: "80"

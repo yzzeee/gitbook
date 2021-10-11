@@ -1,0 +1,1001 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>5. 변수 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Part6/note.html" />
+    
+    
+    <link rel="prev" href="../Part4/note.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Part1/note.html">
+            
+                <a href="../Part1/note.html">
+            
+                    
+                    1. IaC 개요
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Part2/note.html">
+            
+                <a href="../Part2/note.html">
+            
+                    
+                    2. Ansible 개요
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Part3/note.html">
+            
+                <a href="../Part3/note.html">
+            
+                    
+                    3. Ansible 기본
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Part4/note.html">
+            
+                <a href="../Part4/note.html">
+            
+                    
+                    4. 플레이북
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="note.html">
+            
+                <a href="note.html">
+            
+                    
+                    5. 변수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Part6/note.html">
+            
+                <a href="../Part6/note.html">
+            
+                    
+                    6. 작업 제어 - 기본
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Part7/note.html">
+            
+                <a href="../Part7/note.html">
+            
+                    
+                    7. 작업 제어 - 고급
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Part8/note.html">
+            
+                <a href="../Part8/note.html">
+            
+                    
+                    8. 아티팩트 재사용 - 파일
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Part9/note.html">
+            
+                <a href="../Part9/note.html">
+            
+                    
+                    9. 아티팩트 재사용 - 역할
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Part10/note.html">
+            
+                <a href="../Part10/note.html">
+            
+                    
+                    10. 암호화
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../Part11/note.html">
+            
+                <a href="../Part11/note.html">
+            
+                    
+                    11. AWX(AnsibleWorks)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../Part12/note.html">
+            
+                <a href="../Part12/note.html">
+            
+                    
+                    12. Terraform 기본
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../Part13/note.html">
+            
+                <a href="../Part13/note.html">
+            
+                    
+                    13. AWS CLI 및 Terraform 설치
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../Part14/note.html">
+            
+                <a href="../Part14/note.html">
+            
+                    
+                    14. 구성파일 작성
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../Part15/note.html">
+            
+                <a href="../Part15/note.html">
+            
+                    
+                    15. 리소스 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../Part16/note.html">
+            
+                <a href="../Part16/note.html">
+            
+                    
+                    16. 변수 및 값
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../Part17/note.html">
+            
+                <a href="../Part17/note.html">
+            
+                    
+                    17. 구성 관리 및 프로비저너
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../Part18/note.html">
+            
+                <a href="../Part18/note.html">
+            
+                    
+                    18. 모듈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../Part19/note.html">
+            
+                <a href="../Part19/note.html">
+            
+                    
+                    19. 반복
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../Part20/note.html">
+            
+                <a href="../Part20/note.html">
+            
+                    
+                    20. 원격 상태 저장
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >5. 변수</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="5-&#xBCC0;&#xC218;">5. &#xBCC0;&#xC218;</h1>
+<h2 id="51-&#xBCC0;&#xC218;">5.1 &#xBCC0;&#xC218;</h2>
+<h3 id="1-&#xBCC0;&#xC218;-&#xC774;&#xB984;">1) &#xBCC0;&#xC218; &#xC774;&#xB984;</h3>
+<h3 id="2-&#xBCC0;&#xC218;-&#xC815;&#xC758;-&#xBC0F;-&#xCC38;&#xC870;">2) &#xBCC0;&#xC218; &#xC815;&#xC758; &#xBC0F; &#xCC38;&#xC870;</h3>
+<p>&#xBCC0;&#xC218;&#xB97C; &#xCC38;&#xC870;&#xD560;&#xB584;&#xB294; &#xBC18;&#xB4DC;&#xC2DC; &#xC774;&#xC911; &#xC911;&#xAD04;&#xD638;&#xB97C; &#xC368;&#xC57C;&#xD568;</p>
+<p>&#xBCC0;&#xC218;&#xAC00; &#xCC38;&#xC870;&#xD558;&#xB294; &#xC0AC;&#xC804;&#xC758; &#xBAA8;&#xB4E0;&#xAC12;&#xC744; &#xB530;&#xC634;&#xD45C;&#xB85C; &#xAC10;&#xC308;<br>
+ex) &apos;/foo.cfg&apos;</p>
+<h4 id="1-&#xAE30;&#xBCF8;-&#xBCC0;&#xC218;">(1) &#xAE30;&#xBCF8; &#xBCC0;&#xC218;</h4>
+<ul>
+<li>&#xAE30;&#xBCF8; &#xBCC0;&#xC218; &#xC815;&#xC758;<pre><code class="lang-yaml"><span class="hljs-attr">remote_install_path:</span> /opt/my_app_config
+</code></pre>
+</li>
+<li>&#xAE30;&#xBCF8; &#xBCC0;&#xC218; &#xCC38;&#xC870;<pre><code class="lang-yaml"><span class="hljs-attr">template:</span>
+<span class="hljs-attr">src:</span> foo.cfg.j2
+<span class="hljs-attr">dest:</span> <span class="hljs-string">&apos;/foo.cfg&apos;</span>
+</code></pre>
+</li>
+</ul>
+<h4 id="2-&#xBAA9;&#xB85D;-&#xBCC0;&#xC218;">(2) &#xBAA9;&#xB85D; &#xBCC0;&#xC218;</h4>
+<ul>
+<li><p>&#xBAA9;&#xB85D; &#xBCC0;&#xC218; &#xC815;&#xC758;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">region:</span>
+<span class="hljs-bullet">-</span> north
+<span class="hljs-bullet">-</span> east
+<span class="hljs-bullet">-</span> south
+</code></pre>
+</li>
+<li><p>&#xBAA9;&#xB85D; &#xBCC0;&#xC218; &#xCC38;&#xC870;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">region:</span> <span class="hljs-string">&quot;&quot;</span>
+</code></pre>
+<p>&#xAC12;&#xC740; &apos;northeast&apos; &#xB2E4;</p>
+</li>
+</ul>
+<h4 id="3-&#xC0AC;&#xC804;-&#xBCC0;&#xC218;">(3) &#xC0AC;&#xC804; &#xBCC0;&#xC218;</h4>
+<ul>
+<li><p>&#xC0AC;&#xC804; &#xBCC0;&#xC218; &#xC815;&#xC758;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">foo:</span>
+<span class="hljs-attr">field1:</span> one
+<span class="hljs-attr">filed2:</span> two
+</code></pre>
+</li>
+<li><p>&#xC0AC;&#xC804; &#xBCC0;&#xC218; &#xCC38;&#xC870;</p>
+<pre><code class="lang-yaml">foo[<span class="hljs-string">&apos;field1&apos;</span>]
+foo.filed1
+</code></pre>
+<p>&#xC810;&#xD45C;&#xAE30;&#xBC95;&#xC740; &#xBAA8;&#xB4C8;&#xC5D0; &#xB530;&#xB77C; &#xC77C;&#xBD80; &#xD0A4;&#xAC00; Python &#xC5D0; &#xC815;&#xC758;&#xB41C; &#xC18D;&#xC131; &#xBC0F; &#xBA54;&#xC11C;&#xB4DC;&#xC640; &#xCDA9;&#xB3CC;&#xB0A0; &#xC704;&#xD5D8;&#xC774; &#xC788;&#xC74C;</p>
+</li>
+</ul>
+<h4 id="4-&#xB4F1;&#xB85D;-&#xBCC0;&#xC218;">(4) &#xB4F1;&#xB85D; &#xBCC0;&#xC218;</h4>
+<ul>
+<li>&#xB4F1;&#xB85D; &#xBCC0;&#xC218; &#xC0AC;&#xC6A9;
+&#xBC18;&#xD658; &#xAC12;&#xC744; &#xCC38;&#xC870;&#xD558;&#xB294; &#xC720;&#xC77C;&#xD55C; &#xBC29;&#xBC95;
+```yaml</li>
+<li><p>hosts: web_Servers
+tasks:</p>
+<ul>
+<li><p>name: Run a shell command and register its outputas a variable
+shell: /usr/bin/foo
+register: foo_result
+ignore_errors: true</p>
+</li>
+<li><p>name: Run a shell comand using output of the previous task
+shell: /usr/bin/bar
+when: foo_result.rc == 5
+```
+/usr/bin/foo &#xC758; &#xB9AC;&#xD134; value &#xAC00; foo_result &#xBCC0;&#xC218;&#xC5D0; &#xC800;&#xC7A5;&#xB428;</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-&#xBCC0;&#xC218;-&#xC815;&#xC758;-&#xC704;&#xCE58;">3) &#xBCC0;&#xC218; &#xC815;&#xC758; &#xC704;&#xCE58;</h3>
+<p>Ansible&#xC5D0;&#xC11C; &#xBCC0;&#xC218;&#xB97C; &#xC815;&#xC758;&#xD560; &#xC218; &#xC788;&#xB294; &#xACF3;&#xB9CC; 30&#xAD70;&#xB370;&#xAC00; &#xB428;..<br>
+&#xC5B4;&#xB5BB;&#xAC8C; &#xAE30;&#xC5B5;&#xD574;..! &#xADF8;&#xB798;&#xB3C4; &#xC6B0;&#xB9AC;&#xAC00; &#xBCC0;&#xC218;&#xAC00; &#xBBF8;&#xCE58;&#xB294; &#xBC94;&#xC704;&#xB97C; &#xAE30;&#xC5B5;&#xD574;&#xC57C;&#xD574;</p>
+<ul>
+<li>&#xC778;&#xBCA4;&#xD1A0;&#xB9AC;</li>
+<li>&#xD50C;&#xB808;&#xC774;&#xBD81;, &#xD50C;&#xB808;&#xC774;, &#xC791;&#xC5C5;</li>
+<li>&#xC7AC;&#xC0AC;&#xC6A9; &#xAC00;&#xB2A5; &#xD30C;&#xC77C;(&#xC678;&#xBD80; &#xCC38;&#xC870; &#xD30C;&#xC77C;)</li>
+<li>&#xC5ED;&#xD560;</li>
+<li>&#xBA85;&#xB839;&#xC758; -e &#xC635;&#xC158;</li>
+</ul>
+<p>&#xC778;&#xBCA4;&#xD1A0;&#xB9AC;&#xC640; &#xD50C;&#xB808;&#xC774;&#xBD81;&#xC5D0; &#xAC00;&#xC7A5; &#xB9CE;&#xC774; &#xC124;&#xC815;&#xD568;<br>
+&#xC778;&#xBCA4;&#xD1A0;&#xB9AC;&#xC5D0; &#xC120;&#xC5B8;&#xD558;&#xB294; &#xAC74; &#xD638;&#xC2A4;&#xD2B8;&#xB098; &#xADF8;&#xB8F9;&#xC744; &#xB530;&#xB77C;&#xAC10;</p>
+<h4 id="1-&#xC778;&#xBCA4;&#xD1A0;&#xB9AC;---&#xD638;&#xC2A4;&#xD2B8;-&#xBCC0;&#xC218;">(1) &#xC778;&#xBCA4;&#xD1A0;&#xB9AC; - &#xD638;&#xC2A4;&#xD2B8; &#xBCC0;&#xC218;</h4>
+<pre><code class="lang-ini">[atlanta]
+host1 http_port=80 maxRequestsPerChild=808
+host2 http_port=303 maxRequestsPerChild=909
+</code></pre>
+<pre><code class="lang-yaml"><span class="hljs-attr">atlanta:</span>
+<span class="hljs-attr"> host1:</span>
+<span class="hljs-attr">   http_port:</span> <span class="hljs-number">80</span>
+<span class="hljs-attr">   maxRequestsPerChild:</span> <span class="hljs-number">808</span>
+<span class="hljs-attr"> host2:</span>
+<span class="hljs-attr">  http_port:</span> <span class="hljs-number">303</span>
+<span class="hljs-attr">  maxRequestsPerChild:</span> <span class="hljs-number">909</span>
+</code></pre>
+<h4 id="2-&#xC778;&#xBCA4;&#xD1A0;&#xB9AC;---&#xADF8;&#xB8F9;-&#xBCC0;&#xC218;">(2) &#xC778;&#xBCA4;&#xD1A0;&#xB9AC; - &#xADF8;&#xB8F9; &#xBCC0;&#xC218;</h4>
+<ul>
+<li><p>INI &#xD615;&#xC2DD;</p>
+<pre><code class="lang-ini"><span class="hljs-section">[mgmt:vars]</span>
+<span class="hljs-attr">ntp_server</span>=ntp.mgmt.example.com
+<span class="hljs-attr">proxy</span>=proxy.mgmt.example.com
+</code></pre>
+</li>
+<li><p>YAML &#xD615;&#xC2DD;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">mgmt:</span>
+<span class="hljs-attr">hosts:</span>
+<span class="hljs-attr">  host1:</span> 
+<span class="hljs-attr">  host2:</span>
+<span class="hljs-attr">vars:</span>
+<span class="hljs-attr">  ntp_server:</span> ntp.mgmt.example.com
+<span class="hljs-attr">  proxy:</span> proxy.mgmt.example.com
+</code></pre>
+</li>
+</ul>
+<h4 id="3-&#xD50C;&#xB808;&#xC774;&#xBD81;---&#xBCC0;&#xC218;">(3) &#xD50C;&#xB808;&#xC774;&#xBD81; - &#xBCC0;&#xC218;</h4>
+<p>&#xAC00;&#xC7A5; &#xB9CE;&#xC774; &#xC4F0;&#xB294; &#xBC29;&#xC2DD;
+&#xD50C;&#xB808;&#xC774;&#xC5D0; vars &#xD0A4;&#xC6CC;&#xB4DC;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xBCC0;&#xC218;&#xB97C; &#xC9C0;&#xC815;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">- hosts:</span> webservers
+<span class="hljs-attr">  vars:</span>
+<span class="hljs-attr">    http_port:</span> <span class="hljs-number">80</span>
+<span class="hljs-attr">  tasks:</span>
+<span class="hljs-attr">    - name:</span> ensure apache is at latest version
+<span class="hljs-attr">      apt:</span>
+...
+</code></pre>
+<h4 id="4-&#xD50C;&#xB808;&#xC774;&#xBD81;---&#xBCC0;&#xC218;-&#xD30C;&#xC77C;-&#xD3EC;&#xD568;">(4) &#xD50C;&#xB808;&#xC774;&#xBD81; - &#xBCC0;&#xC218; &#xD30C;&#xC77C; &#xD3EC;&#xD568;</h4>
+<p>vars_files:</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">vars_files:</span>
+<span class="hljs-bullet">  -</span> vars/external_vars.yaml
+</code></pre>
+<h4 id="5-&#xB7F0;&#xD0C0;&#xC784;">(5) &#xB7F0;&#xD0C0;&#xC784;</h4>
+<p>ansible-playbook &#xBA85;&#xB839;&#xC5D0; --extra-vars &#xB610;&#xB294; -e &#xC635;&#xC158;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xBCC0;&#xC218; &#xC9C0;&#xC815;</p>
+<h3 id="4-&#xBCC0;&#xC218;-&#xC6B0;&#xC120;&#xC21C;&#xC704;">4) &#xBCC0;&#xC218; &#xC6B0;&#xC120;&#xC21C;&#xC704;</h3>
+<p><img src="../assets/variable_priority.png" alt="variable_priority"></p>
+<ul>
+<li>&#xBCC0;&#xC218; &#xCC38;&#xC870; &#xD14C;&#xC2A4;&#xD2B8; 1
+```yaml</li>
+<li>name: variables
+hosts: 192.168.200.101
+vars:
+   msg: hello world
+tasks:<ul>
+<li>debug:
+  var: msg # &#xAC12;&#xC73C;&#xB85C; &#xBCC0;&#xC218; &#xC774;&#xB984;&#xC744; &#xBC1B;&#xB294;&#xB2E4;. (&#xCC38;&#xC870;&#xAC00; &#xC544;&#xB2D8;!!)</li>
+<li>debug:
+  msg: &apos;&apos; # &#xBCC0;&#xC218;&#xC758; &#xAC12;&#xC744; &#xCC38;&#xC870;
+```</li>
+</ul>
+</li>
+</ul>
+<p>&#xC778;&#xBCA4;&#xD1A0;&#xB9AC;&#xC5D0;&#xC11C; vars &#xB97C; &#xC9C0;&#xC815;&#xD57B; playbook &#xC774; &#xC6B0;&#xC120;&#xC21C;&#xC704;&#xAC00; &#xB354; &#xB192;&#xAE30; &#xB584;&#xBB38;&#xC5D0;
+vars &#xBC14; &#xBC14;&#xB00C;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</p>
+<pre><code class="lang-shell">$ cat ~/inventory.ini
+192.168.200.101 ansible_connection=local
+192.168.200.102 ansible_connection=local
+
+[mgmt]
+192.168.200.101 msg=node1
+192.168.200.102 msg-node2
+</code></pre>
+<pre><code class="lang-shell">$ ansible-playbook vars.yaml 
+PLAY [variables] ***************************************************************************************
+
+TASK [Gathering Facts] *********************************************************************************
+ok: [192.168.200.101]
+
+TASK [debug] *******************************************************************************************
+ok: [192.168.200.101] =&gt; {
+    &quot;msg&quot;: &quot;hello world&quot;
+}
+
+TASK [debug] *******************************************************************************************
+ok: [192.168.200.101] =&gt; {
+    &quot;msg&quot;: &quot;hello world&quot;
+}
+
+PLAY RECAP *********************************************************************************************
+192.168.200.101            : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+</code></pre>
+<ul>
+<li>&#xBCC0;&#xC218; &#xCC38;&#xC870; &#xD14C;&#xC2A4;&#xD2B8; 2
+```yaml</li>
+<li>name: variables
+hosts: 192.168.200.101
+vars:
+   msg: hello world
+tasks:<ul>
+<li>copy:
+  src: /etc/hosts
+  dest: /tmp/hosts
+register: copy_result</li>
+<li>debug:
+  msg: &apos;&apos; # &#xBCC0;&#xC218;&#xC758; &#xAC12;&#xC744; &#xCC38;&#xC870;
+```</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-shell">$ ansible-playbook vars_register.yaml 
+PLAY [variables] ***************************************************************************************
+
+TASK [Gathering Facts] *********************************************************************************
+ok: [192.168.200.101]
+
+TASK [copy] ********************************************************************************************
+ok: [192.168.200.101]
+
+TASK [debug] *******************************************************************************************
+ok: [192.168.200.101] =&gt; {
+    &quot;msg&quot;: &quot;50100d015c43988b499b8a208bba744d9c44840b&quot;
+}
+
+PLAY RECAP*********************************************************************************************
+192.168.200.101            : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+</code></pre>
+<ul>
+<li><p>Part4&#xC5D0;&#xC11C; &#xD588;&#xB358; php &#xBC30;&#xD3EC; &#xC2E4;&#xC2B5; playbook&#xC744; &#xBCC0;&#xC218;&#xB85C; &#xC9C0;&#xC815;!</p>
+</li>
+<li><p>Simple Web Deploy
+```yaml</p>
+</li>
+<li><p>name: Simple Web Deploy
+hosts: 192.168.200.101
+vars:
+  contents_file: index.php</p>
+<p>tasks:</p>
+<ul>
+<li><p>name: Install Pacakge
+apt:
+  name: apache2, libapache2-mod-php
+  update_cache: true
+  state: present</p>
+</li>
+<li><p>name: Copy PHP Contents
+copy:
+  src: &apos;&apos;
+  dest: &apos;/var/www/html/&apos;
+  backup: true</p>
+</li>
+<li><p>name: Start Service
+service:
+  name: apache2
+  state: started
+  enabled: true</p>
+</li>
+<li><p>name: Checking
+uri:
+  url: &quot;<a href="http://192.168.200.101/" target="_blank">http://192.168.200.101/</a>&quot;</p>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>
+### 5) &#xBCC0;&#xC218;&#xC758; &#xBC94;&#xC704;
+&#xBCC0;&#xC218;&#xB97C; &#xC5B4;&#xB514;&#xC5D0; &#xC800;&#xC7A5;&#xD558;&#xB290;&#xB0D0;&#xC5D0; &#xB530;&#xB77C; &#xBCC0;&#xC218;&#xB97C; &#xCC38;&#xC870;&#xD560; &#xC218; &#xC788;&#xB294; &#xBC94;&#xC704;&#xAC00; &#xD55C;&#xC815;&#xB428;,
+
+- &#xC804;&#xC5ED;/&#xD50C;&#xB808;&#xC774;&#xBD81;: &#xAD6C;&#xC131;&#xD30C;&#xC77C;, &#xD658;&#xACBD;&#xBCC0;&#xC218;(ansible_*), &#xBA85;&#xB839;&#xC904; &#xC635;&#xC158;
+- &#xD638;&#xC2A4;&#xD2B8; &#xADF8;&#xB8F9;: &#xC778;&#xBCA4;&#xD1A0;&#xB9AC;&#xC758; &#xADF8;&#xB8F9; &#xBCC0;&#xC218;
+- &#xD638;&#xC2A4;&#xD2B8;: &#xC778;&#xBCA4;&#xD1A0;&#xB9AC;&#xC758; &#xD638;&#xC2A4;&#xD2B8; &#xBCC0;&#xC218;
+- &#xD50C;&#xB808;&#xC774;: vars, vars_files, vars_prompt &#xB4F1; &#xC9C0;&#xC2DC;&#xC5B4;, &#xC5ED;&#xD560;&#xC758; &#xAE30;&#xBCF8; &#xBCC0;&#xC218; (defaults) &#xBC0F; &#xBCC0;&#xC218; (vars)
+- &#xBE14;&#xB85D;
+- &#xC791;&#xC5C5;
+
+### 6) &#xBCC0;&#xC218; &#xC815;&#xC758; &#xC704;&#xCE58;&#xC5D0; &#xB300;&#xD55C; &#xD301;
+- group_vars/all: &#xBAA8;&#xB4E0; &#xD638;&#xC2A4;&#xD2B8;&#xC5D0; &#xACF5;&#xD1B5;&#xC801;&#xC73C;&#xB85C; &#xC801;&#xC6A9;&#xD560; &#xBCC0;&#xC218; &#xC124;&#xC815;
+- group_vars/&lt;specific_group&gt;: &#xD2B9;&#xC815; &#xD638;&#xC2A4;&#xD2B8; &#xADF8;&#xB8F9;&#xC5D0; &#xACF5;&#xD1B5;&#xC801;&#xC73C;&#xB85C; &#xC801;&#xC6A9;
+- host_vars/&lt;host&gt;: &#xD2B9;&#xC815; &#xD638;&#xC2A4;&#xD2B8;&#xC5D0;&#xB9CC; &#xC801;&#xC6A9;&#xD560; &#xBCC0;&#xC218; &#xC124;&#xC815;
+- &#xD2B9;&#xC815; &#xC791;&#xC5C5;&#xC5D0;&#xB9CC; &#xC801;&#xC6A9;&#xD560; &#xBCC0;&#xC218; &#xC124;&#xC815;
+
+## 5.2  &#xC870;&#xD68C;
+* &#xD50C;&#xB7EC;&#xADF8;&#xC778; &#xBAA9;&#xB85D;
+```shell
+ansible-doc -t lookip -l
+</code></pre><p>lookup &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC740; &#xBAA8;&#xB4C8;&#xC774; &#xC544;&#xB2D8;</p>
+<ul>
+<li>&#xD30C;&#xC77C; &#xC870;&#xD68C; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC744; &#xC774;&#xC6A9;
+```yaml</li>
+<li><p>hosts: databases
+vars:
+  auth_key: &quot;{{ &apos;lookup(&apos;file&apos;, &apos;/home/devops/.ssh/id_rsa.pub&apos;) }}&quot;</p>
+<p>tasks:</p>
+<ul>
+<li>name: set authrized keys
+authorized_key:
+  user: devops
+  state: present
+  key: &quot;&quot;
+```</li>
+</ul>
+</li>
+</ul>
+<h2 id="53-&#xD504;&#xB86C;&#xD504;&#xD2B8;">5.3 &#xD504;&#xB86C;&#xD504;&#xD2B8;</h2>
+<p>vars_prompt &#xB85C; &#xD0A4;&#xC6CC;&#xB4DC;&#xC5D0; &#xBCC0;&#xC218;&#xB97C; &#xC120;&#xC5B8;&#xC2DC; &#xC0AC;&#xC6A9;&#xC790;&#xC5D0;&#xAC8C; &#xC785;&#xB825;&#xAC12;&#xC744; &#xBC1B;&#xC744; &#xC218; &#xC788;&#xB3C4;&#xB85D; &#xD568;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">- hosts:</span> all
+<span class="hljs-attr">  vars_prompt:</span>
+<span class="hljs-attr">    - name:</span> username
+<span class="hljs-attr">      prompt:</span> Enter usernmae
+<span class="hljs-attr">      private:</span> <span class="hljs-literal">no</span>
+<span class="hljs-attr">      default:</span> admin
+<span class="hljs-attr">    - name:</span> hashed_password
+<span class="hljs-attr">      prompt:</span> Enter password
+<span class="hljs-attr">      private:</span> <span class="hljs-literal">yes</span>
+<span class="hljs-attr">      encrypt:</span> sha512_crypt
+<span class="hljs-attr">      confirm:</span> <span class="hljs-literal">yes</span>
+<span class="hljs-attr">      salt_size:</span> <span class="hljs-number">16</span>
+
+<span class="hljs-attr">  tasks:</span>
+<span class="hljs-attr">    - name:</span> create_user
+<span class="hljs-attr">      user:</span>
+<span class="hljs-attr">        name:</span> <span class="hljs-string">&quot;<span class="hljs-template-variable">{{ username }}</span>&quot;</span>
+<span class="hljs-attr">        password:</span> <span class="hljs-string">&quot;<span class="hljs-template-variable">{{ hashed_password }}</span>&quot;</span>
+</code></pre>
+<p>user &#xBAA8;&#xB4C8;&#xC740; &#xC0AC;&#xC6A9;&#xC790; &#xC0DD;&#xC131; &#xC0AD;&#xC81C;&#xD558;&#xB294; &#xBAA8;&#xB4C8;<br>
+name &#xC18D;&#xC131;&#xC740; &#xD544;&#xC218;&#xC774;&#xBA70; password &#xB294; Encrypted &#xB41C; &#xAC12;&#xC774; &#xB4E4;&#xC5B4;&#xAC00;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<h2 id="54-&#xD544;&#xD130;">5.4 &#xD544;&#xD130;</h2>
+<h3 id="1-&#xAE30;&#xBCF8;&#xAC12;-&#xC81C;&#xACF5;">1) &#xAE30;&#xBCF8;&#xAC12; &#xC81C;&#xACF5;</h3>
+<ul>
+<li>&#xD544;&#xD130;<br>
+<code>{{ &#xBCC0;&#xC218; | default(&apos;DEFAULT&apos;) }}</code></li>
+<li>&#xCD9C;&#xB825;<br>
+<code>DEFAULT</code><h3 id="2-&#xD544;&#xC218;&#xAC12;-&#xC815;&#xC758;">2) &#xD544;&#xC218;&#xAC12; &#xC815;&#xC758;</h3>
+</li>
+<li>&#xD544;&#xD130;<br>
+mandatory : &#xC774; &#xBCC0;&#xC218;&#xC5D0;&#xB294; &#xD544;&#xC218; &#xAC12;&#xC774; &#xB4E4;&#xC5B4;&#xAC00;&#xC57C; &#xD55C;&#xB2E4;!!&#xD558;&#xACE0; &#xC9C0;&#xC815;
+<code>{{ variable | mandatory }}</code></li>
+</ul>
+<h3 id="3-&#xC0AC;&#xC804;---&#xBAA9;&#xB85D;-&#xB370;&#xC774;&#xD130;-&#xBCC0;&#xD658;">3) &#xC0AC;&#xC804; - &#xBAA9;&#xB85D; &#xB370;&#xC774;&#xD130; &#xBCC0;&#xD658;</h3>
+<h3 id="4-json-&#xD034;&#xB9AC;">4) JSON &#xD034;&#xB9AC;</h3>
+<h3 id="5-ip-&#xC8FC;&#xC18C;-&#xD544;&#xD130;">5) IP &#xC8FC;&#xC18C; &#xD544;&#xD130;</h3>
+<p><code>{{ &apos;192.168.2.1/24&apos; | ipaddr(&apos;address&apos;) }}</code>
+address &#xAC12;&#xB9CC; &#xCD9C;&#xB825;&#xB41C;&#xB2E4;.<br>
+192.168.2.1</p>
+<p><code>{{ &apos;test1&apos; | hash(&apos;sha1&apos;) }}</code></p>
+<p>salt &#xAC12; &#xC9C0;&#xC815;
+<code>{{ &apos;test1&apos; | password_hash(&apos;sha256&apos;, &apos;myscretsalt&apos;) }}</code></p>
+<h3 id="7-&#x2B50;&#x2B50;&#x2B50;-&#xC8FC;&#xC11D;-&#xD544;&#xD130;">7) &#x2B50;&#x2B50;&#x2B50; &#xC8FC;&#xC11D; &#xD544;&#xD130;</h3>
+<ul>
+<li><p>&#xD544;&#xD130;
+<code>{{ &quot;Plain style (default)&quot; | comment }}</code></p>
+</li>
+<li><p>Ansible &#xD544;&#xD130; &#xC8FC;&#xC11D; &#xC0AC;&#xC6A9;
+<code>{{ ansible_manages | comment }}</code></p>
+</li>
+</ul>
+<h3 id="8-url-&#xD544;&#xD130;">8) URL &#xD544;&#xD130;</h3>
+<h3 id="9-&#xC815;&#xADDC;&#xD654;-&#xD45C;&#xD604;&#xC2DD;-&#xD544;&#xD130;">9) &#xC815;&#xADDC;&#xD654; &#xD45C;&#xD604;&#xC2DD; &#xD544;&#xD130;</h3>
+<h3 id="10-&#xACBD;&#xB85C;-&#xD544;&#xD130;">10) &#xACBD;&#xB85C; &#xD544;&#xD130;</h3>
+<h2 id="55-&#xD329;&#xD2B8;-&#xBCC0;&#xC218;">5.5 &#xD329;&#xD2B8; &#xBCC0;&#xC218;</h2>
+<h3 id="1-ad-hoc-&#xBA85;&#xB839;&#xC5D0;&#xC11C;-&#xD329;&#xD2B8;-&#xBCC0;&#xC218;-&#xD655;&#xC778;">1) Ad-hoc &#xBA85;&#xB839;&#xC5D0;&#xC11C; &#xD329;&#xD2B8; &#xBCC0;&#xC218; &#xD655;&#xC778;</h3>
+<p>Playbook &#xC774; &#xC2E4;&#xD589;&#xB418;&#xBA74; setup &#xBAA8;&#xB4C8;&#xC774; &#xC2E4;&#xD589;&#xB418;&#xBA74;&#xC11C;<br>
+&#xC2DC;&#xC2A4;&#xD15C; &#xC815;&#xBCF4;&#xB4E4;&#xC774; JSON &#xD615;&#xD0DC;&#xB85C; &#xBCC0;&#xC218; &#xC800;&#xC7A5;&#xB428;.</p>
+<p>&#xC544;&#xB798; &#xBA85;&#xB839;&#xC5B4; &#xCE58;&#xBA74; &#xD655;&#xC778; &#xD574; &#xBCFC; &#xC218; &#xC788;&#xC74C;.
+<code>ansible 192.168.200.101 -m setup</code></p>
+<h3 id="2-&#xD329;&#xD2B8;-&#xBCC0;&#xC218;-&#xCC38;&#xC870;">2) &#xD329;&#xD2B8; &#xBCC0;&#xC218; &#xCC38;&#xC870;</h3>
+<p><code>ansible_</code>&#xB85C; &#xC2DC;&#xC791;&#xD558;&#xB294; &#xBCC0;&#xC218;&#xB85C; &#xC811;&#xADFC; &#xAC00;&#xB2A5;</p>
+<p><code>{{ ansible_all_ipv4_address }}</code> : &#xC2DC;&#xC2A4;&#xD15C;&#xC5D0; &#xC124;&#xC815;&#xB41C; IPv4 &#xBAA9;&#xB85D; &#xAC00;&#xC838;&#xC634;</p>
+<p>ansible &lt;&#xC544;&#xC774;&#xD53C;&gt; -m setup &gt; factor.txt</p>
+<pre><code class="lang-yaml"><span class="hljs-meta">---</span>
+<span class="hljs-attr">- hosts:</span>
+<span class="hljs-attr">  tasks:</span>
+<span class="hljs-attr">    - debug:</span>
+<span class="hljs-attr">        msg:</span> <span class="hljs-string">&apos; <span class="hljs-template-variable">{{ ansible_enp0s8.ipv4.address }}</span>&apos;</span>
+</code></pre>
+<ul>
+<li>&#xAFC0;&#xD301;
+callback_whitelist = profile_tasks</li>
+</ul>
+<p>&#xC635;&#xD2F0;&#xB9C8;&#xC774;&#xC988; &#xD560;&#xB54C; cfg&#xC5D0; &#xC801;&#xC5B4;&#xC11C;..</p>
+<h2 id="57-&#xD15C;&#xD50C;&#xB9BF;">5.7 &#xD15C;&#xD50C;&#xB9BF;</h2>
+<p>&#xC911;&#xC694;&#xD558;&#xB2E4;! Ansible&#xC5D0;&#xC11C; &#xD15C;&#xD50C;&#xB9BF;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xC774;&#xC720;&#xB294; &#xC124;&#xC815;&#xD30C;&#xC77C;&#xB974; &#xB3D9;&#xC801;&#xC73C;&#xB85C; &#xC0DD;&#xC131;&#xD558;&#xAE30; &#xC704;&#xD568;
+&#xC8FC;&#xB85C; jinja&#xB97C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;! .j2, .jinja2 &#xD655;&#xC7A5;&#xC790;~</p>
+<p>~/ansible.cfg &#xC758; defaults &#xC139;&#xC158;&#xC5D0; &#xC544;&#xB798; &#xB0B4;&#xC6A9; &#xCD94;&#xAC00;&#xD558;&#xBA74;<br>
+&#xAE30;&#xBCF8; ansible_managed &#xC758; &#xC8FC;&#xC11D;&#xC744; &#xBC14;&#xAFC0;&#xC218; &#xC788;&#xC74C;.</p>
+<pre><code>ansible_managed = Ansible managed: {file} modified on %Y-%m-%d %H:%M:%S by {uid} on {host} {file}
+</code></pre><pre><code class="lang-ini"><span class="hljs-attr">remote_user</span> = vagrant
+<span class="hljs-attr">inventory</span> = ~/inventory.ini
+<span class="hljs-attr">ask_pass</span> = <span class="hljs-literal">false</span>
+<span class="hljs-attr">callback_whitelist</span> = profile_tasks
+<span class="hljs-attr">ansible_managed</span> = Ansible managed: {file} modified <span class="hljs-literal">on</span> %Y-%m-%d %H:%M:%s &lt;- &#xC774;&#xAC70; ansible.cfg&#xC5D0;&#xC11C; &#xAC00;&#xC838;&#xC628;&#xAC70;
+</code></pre>
+<hr>
+<ul>
+<li><p>&#xC2E4;&#xC2B5;
+/etc/apache2/ports.conf
+&#xD30C;&#xC77C;&#xC758; Listen &#xD3EC;&#xD2B8;&#xB97C; &#xBCC0;&#xC218;&#xCC98;&#xB9AC;&#xD558;&#xACE0; Ansible&#xC774; &#xAD00;&#xB9AC;&#xD558;&#xB294; &#xD15C;&#xD50C;&#xB9BF; &#xD30C;&#xC77C;&#xB85C; &#xB9CC;&#xB4E4;&#xC5B4; &#xBCF4;&#xC790;!</p>
+</li>
+<li><p>&#xAC1C;&#xC778; &#xC2E4;&#xC2B5; 1<br>
+&#xBA3C;&#xC800; apache2 &#xC124;&#xC815; &#xD30C;&#xC77C;&#xB4E4;&#xC744; &#xAC00;&#xC838;&#xC624;&#xC790;</p>
+<pre><code class="lang-shell">scp vagrant@192.168.200.101:/etc/apache2/ports.conf .
+scp vagrant@192.168.200.101:etc/apache2/sites-available/000-default.conf .
+</code></pre>
+</li>
+</ul>
+<p>ports.conf &#xB97C; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xC218;&#xC815;</p>
+<pre><code class="lang-conf"># If you just change the port or add more ports here, you will likely also
+# have to change the VirtualHost statement in
+# /etc/apache2/sites-enabled/000-default.conf
+
+Listen {{ http_port }}
+
+&lt;IfModule ssl_module&gt;
+    Listen 443
+&lt;/IfModule&gt;
+
+&lt;IfModule mod_gnutls.c&gt;
+    Listen 443
+&lt;/IfModule&gt;
+
+# vim: syntax=apache ts=4 sw=4 sts=4 sr noet
+</code></pre>
+<p>000-default.conf &#xB97C; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xC218;&#xC815;</p>
+<pre><code class="lang-conf">&lt;VirtualHost *:{{ http_port}}&gt;
+    # The ServerName directive sets the request scheme, hostname and port that
+    # the server uses to identify itself. This is used when creating
+    # redirection URLs. In the context of virtual hosts, the ServerName
+    # specifies what hostname must appear in the request&apos;s Host: header to
+    # match this virtual host. For the default virtual host (this file) this
+    # value is not decisive as it is used as a last resort host regardless.
+    # However, you must set it for any further virtual host explicitly.
+    #ServerName www.example.com
+
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/html
+
+    # Available loglevels: trace8, ..., trace1, debug, info, notice, warn,
+    # error, crit, alert, emerg.
+    # It is also possible to configure the loglevel for particular
+    # modules, e.g.
+    #LogLevel info ssl:warn
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+    # For most configuration files from conf-available/, which are
+    # enabled or disabled at a global level, it is possible to
+    # include a line for only one particular virtual host. For example the
+    # following line enables the CGI configuration for this host only
+    # after it has been globally disabled with &quot;a2disconf&quot;.
+    #Include conf-available/serve-cgi-bin.conf
+&lt;/VirtualHost&gt;
+
+# vim: syntax=apache ts=4 sw=4 sts=4 sr noet
+</code></pre>
+<p>playbook YAML &#xD30C;&#xC77C; &#xC791;&#xC131;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">- name:</span> Simple Web Deploy
+<span class="hljs-attr">  hosts:</span> <span class="hljs-number">192.168</span><span class="hljs-number">.200</span><span class="hljs-number">.101</span>
+<span class="hljs-attr">  vars:</span>
+<span class="hljs-attr">    http_port:</span> <span class="hljs-number">8080</span>
+
+<span class="hljs-attr">  tasks:</span>
+<span class="hljs-attr">  - template:</span>
+<span class="hljs-attr">      src:</span> ./ports.conf
+<span class="hljs-attr">      dest:</span> /etc/apache2/ports.conf
+<span class="hljs-attr">  - template:</span>
+<span class="hljs-attr">      src:</span> ./<span class="hljs-number">000</span>-default.conf
+<span class="hljs-attr">      dest:</span> /etc/apache2/sites-available/<span class="hljs-number">000</span>-default.conf
+<span class="hljs-attr">  - name:</span> Restart Service
+<span class="hljs-attr">    service:</span>
+<span class="hljs-attr">      name:</span> apache2
+<span class="hljs-attr">      state:</span> restarted
+<span class="hljs-attr">      enabled:</span> <span class="hljs-literal">true</span>
+
+<span class="hljs-attr">  - name:</span> Checking
+<span class="hljs-attr">    uri:</span>
+<span class="hljs-attr">      url:</span> <span class="hljs-string">&quot;http://192.168.200.101:<span class="hljs-template-variable">{{ http_port }}</span>&quot;</span>
+</code></pre>
+<ul>
+<li>&#xC120;&#xC0DD;&#xB2D8;&#xC758; &#xC2E4;&#xC2B5;
+```yaml</li>
+</ul>
+<hr>
+<ul>
+<li><p>name: Simple Web Deploy
+hosts: 192.168.200.101
+vars:
+  contents_file: index.php
+  apache_port: &quot;8080&quot;</p>
+<p>tasks:</p>
+<ul>
+<li><p>name: Install Pacakge
+apt:
+  name: apache2, libapache2-mod-php
+  update_cache: true
+  state: present</p>
+</li>
+<li><p>name: Copy PHP Contents
+copy:
+  src: &apos;&apos;
+  dest: &apos;/var/www/html/&apos;
+  backup: true</p>
+</li>
+<li><p>name: Configure Apache Port
+template:
+  src: ports.conf.j2
+  dest: &apos;/etc/apache2/ports.conf&apos;</p>
+</li>
+<li><p>name: Start Service
+service:
+  name: apache2
+  state: restarted
+  enabled: true</p>
+</li>
+<li><p>name: Checking
+uri:
+  url: &quot;<a href="http://192.168.200.101:/" target="_blank">http://192.168.200.101:/</a>&quot;
+```</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>&#xC124;&#xC815;&#xD30C;&#xC77C;&#xC744; &#xBC14;&#xAFE8;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC11C;&#xBE44;&#xC2A4; &#xC7AC;&#xC2DC;&#xC791;&#xC774; &#xD544;&#xC694; state &#xBD80;&#xBD84;&#xC774; started &#xAC00; &#xC544;&#xB2CC; restarted &#xAC00; &#xB418;&#xC5B4;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<p>&#xB2E8; &#xC774;&#xB807;&#xAC8C; &#xD558;&#xBA74; &#xBA71;&#xB4F1;&#xC131;&#xC774; &#xC801;&#xC6A9;&#xB418;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.
+&#xADFC;&#xB370; &#xADF8;&#xB807;&#xAC8C; &#xC624;&#xB798; &#xAC78;&#xB9AC;&#xC9C0; &#xC54A;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xBB50; &#xACC4;&#xC18D; &#xC7AC;&#xC2DC;&#xC791;&#xD558;&#xB3C4;&#xB85D; &#xC124;&#xC815;&#xD558;&#xC600;&#xB2E4;.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Part4/note.html" class="navigation navigation-prev " aria-label="Previous page: 4. 플레이북">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Part6/note.html" class="navigation navigation-next " aria-label="Next page: 6. 작업 제어 - 기본">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"5. 변수","level":"1.6","depth":1,"next":{"title":"6. 작업 제어 - 기본","level":"1.7","depth":1,"path":"pages/Part6/note.md","ref":"pages/Part6/note.md","articles":[]},"previous":{"title":"4. 플레이북","level":"1.5","depth":1,"path":"pages/Part4/note.md","ref":"pages/Part4/note.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/Part5/note.md","mtime":"2021-10-11T05:38:16.051Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-11T07:24:17.942Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

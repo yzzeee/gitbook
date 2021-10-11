@@ -1,0 +1,13 @@
+---
+- hosts:
+  tasks:
+  - template:
+      src: a.j2
+      dest: /etc/a.conf
+    notify:
+    - restart service
+
+  handlers:
+  - service:
+      name: apache
+      state: restarted

@@ -1,0 +1,927 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3. Ansible 기본 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Part4/note.html" />
+    
+    
+    <link rel="prev" href="../Part2/note.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Part1/note.html">
+            
+                <a href="../Part1/note.html">
+            
+                    
+                    1. IaC 개요
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Part2/note.html">
+            
+                <a href="../Part2/note.html">
+            
+                    
+                    2. Ansible 개요
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="note.html">
+            
+                <a href="note.html">
+            
+                    
+                    3. Ansible 기본
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Part4/note.html">
+            
+                <a href="../Part4/note.html">
+            
+                    
+                    4. 플레이북
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Part5/note.html">
+            
+                <a href="../Part5/note.html">
+            
+                    
+                    5. 변수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Part6/note.html">
+            
+                <a href="../Part6/note.html">
+            
+                    
+                    6. 작업 제어 - 기본
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Part7/note.html">
+            
+                <a href="../Part7/note.html">
+            
+                    
+                    7. 작업 제어 - 고급
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Part8/note.html">
+            
+                <a href="../Part8/note.html">
+            
+                    
+                    8. 아티팩트 재사용 - 파일
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Part9/note.html">
+            
+                <a href="../Part9/note.html">
+            
+                    
+                    9. 아티팩트 재사용 - 역할
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Part10/note.html">
+            
+                <a href="../Part10/note.html">
+            
+                    
+                    10. 암호화
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../Part11/note.html">
+            
+                <a href="../Part11/note.html">
+            
+                    
+                    11. AWX(AnsibleWorks)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../Part12/note.html">
+            
+                <a href="../Part12/note.html">
+            
+                    
+                    12. Terraform 기본
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../Part13/note.html">
+            
+                <a href="../Part13/note.html">
+            
+                    
+                    13. AWS CLI 및 Terraform 설치
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../Part14/note.html">
+            
+                <a href="../Part14/note.html">
+            
+                    
+                    14. 구성파일 작성
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../Part15/note.html">
+            
+                <a href="../Part15/note.html">
+            
+                    
+                    15. 리소스 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../Part16/note.html">
+            
+                <a href="../Part16/note.html">
+            
+                    
+                    16. 변수 및 값
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../Part17/note.html">
+            
+                <a href="../Part17/note.html">
+            
+                    
+                    17. 구성 관리 및 프로비저너
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../Part18/note.html">
+            
+                <a href="../Part18/note.html">
+            
+                    
+                    18. 모듈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../Part19/note.html">
+            
+                <a href="../Part19/note.html">
+            
+                    
+                    19. 반복
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../Part20/note.html">
+            
+                <a href="../Part20/note.html">
+            
+                    
+                    20. 원격 상태 저장
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >3. Ansible 기본</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="3-ansible-&#xAE30;&#xBCF8;">3. Ansible &#xAE30;&#xBCF8;</h1>
+<h2 id="31-&#xC778;&#xBCA4;&#xD1A0;&#xB9AC;">3.1 &#xC778;&#xBCA4;&#xD1A0;&#xB9AC;</h2>
+<p>&#xAD00;&#xB9AC;&#xB178;&#xB4DC;&#xC5D0; &#xC811;&#xC18D;&#xC744; &#xC704;&#xD55C; &#xD638;&#xC2A4;&#xD2B8; &#xD30C;&#xC77C;&#xC774;&#xB2E4;.<br>
+INI &#xD30C;&#xC77C;&#xD615;&#xC2DD;&#xACFC; Yaml &#xBC29;&#xC2DD;&#xC774; &#xC788;&#xB294;&#xB370; &#xC77C;&#xBC18;&#xC801;&#xC73C;&#xB85C;&#xB294; INI &#xBC29;&#xC2DD;&#xC744; &#xC0AC;&#xC6A9;&#xD568;<br>
+YAML &#xC740; &#xB744;&#xC5B4;&#xC4F0;&#xAE30; &#xB4E4;&#xC5EC;&#xC4F0;&#xAE30;&#xC5D0; &#xBBFC;&#xAC10;&#xD558;&#xAC8C; &#xBC18;&#xC751; &#xD558;&#xAE30; &#xB584;&#xBB38;&#xC5D0;<br>
+INI&#xAC00; &#xC791;&#xC131;&#xC774; &#xC27D;&#xACE0; &#xAD00;&#xC2B5;&#xC801;&#xC73C;&#xB85C; &#xB354; &#xB9CE;&#xC774; &#xC0AC;&#xC6A9;&#xD568;</p>
+<p>&#xC139;&#xC158; === &#xADF8;&#xB8F9;<br>
+<img src="../assets/img.png" alt="img.png"><br>
+&#xADF8;&#xB8F9;&#xC5D0; &#xC18D;&#xD55C; &#xD638;&#xC2A4;&#xD2B8;&#xB294; &#xD30C;&#xB780; &#xBC15;&#xC2A4;<br>
+&#xAC00;&#xC7A5; &#xC704;&#xC758; &#xC139;&#xC158;&#xC740; &#xADF8;&#xB8F9;&#xC774; &#xC5C6;&#xB294; &#xD638;&#xC2A4;&#xD2B8;</p>
+<p>&#xADF8;&#xB8F9;&#xC548;&#xC5D0; &#xADF8;&#xB8F9;&#xC774; &#xB4E4;&#xC5B4;&#xAC08; &#xC218; &#xC788;&#xACE0; &#xC911;&#xCCA9; &#xADF8;&#xB8F9;&#xC774;&#xB77C;&#xACE0; &#xD568;</p>
+<ul>
+<li>tip YAML &#xD30C;&#xC77C; &#xC124;&#xC815;&#xC744; &#xD558;&#xC790;!<br>
+.vimrc<br>
+```shell<h1 id="&#xBB38;&#xC11C;-&#xD615;&#xC2DD;&#xC5D0;-&#xBB38;&#xBC95;&#xC774;-&#xC874;&#xC7AC;&#xD55C;&#xB2E4;&#xBA74;-&#xD558;&#xC774;&#xB77C;&#xC774;&#xD2B8;&#xB97C;-&#xCF1C;&#xB77C;">&#xBB38;&#xC11C; &#xD615;&#xC2DD;&#xC5D0; &#xBB38;&#xBC95;&#xC774; &#xC874;&#xC7AC;&#xD55C;&#xB2E4;&#xBA74; &#xD558;&#xC774;&#xB77C;&#xC774;&#xD2B8;&#xB97C; &#xCF1C;&#xB77C;!</h1>
+if has(&quot;syntax&quot;)
+syntax on
+endif</li>
+</ul>
+<p>set tabstop=2 # set ts=2&#xC640; &#xB3D9;&#xC77C;, tab&#xC744; &#xB20C;&#xB800;&#xC744; &#xB54C; &#xC778;&#xC2DD;&#xD558;&#xB294; &#xCE78; &#xC218;
+set expandtab # tab&#xC758; &#xCE90;&#xB9AD;&#xD130;&#xB97C; space&#xB85C; &#xBCC0;&#xD658;
+set shiftwidth=2 # set sw=2&#xC640; &#xB3D9;&#xC77C;, &gt;, &lt;&#xB97C; &#xC0AC;&#xC6A9;&#xD55C; &#xD0ED; &#xC804;&#xD658;&#xC744; &#xC2A4;&#xD398;&#xC774;&#xC2A4;&#xB85C; &#xBCC0;&#xD658;</p>
+<pre><code>
+&#xD558;&#xB098;&#xC758; &#xD638;&#xC2A4;&#xD2B8;&#xAC00; &#xC5EC;&#xB7EC;&#xAC1C;&#xC758; &#xADF8;&#xB8F9;&#xC5D0; &#xC18D;&#xD560; &#xC218; &#xC788;&#xB2E4;.
+```shell
+all: # &#xAE30;&#xBCF8;&#xC73C;&#xB85C; all &#xADF8;&#xB8F9;&#xC774; &#xC788;&#xC74C;
+  hosts: # &#xC18D;&#xC131;&#xAC12; (&#xC815;&#xD574;&#xC9C4; &#xC18D;&#xC131;)
+    mail.example.com:
+    192.168.56.51:
+  children: # all &#xADF8;&#xB8F9;&#xC5D0; &#xC18D;&#xD55C; &#xD558;&#xC704; &#xADF8;&#xB8F9;&#xB4E4;
+   webservers: # &#xADF8;&#xB8F9;&#xC774;&#xB984; &#xC6D0;&#xD558;&#xB294; &#xC774;&#xB984;&#xC73C;&#xB85C; &#xC9C0;&#xC815; &#xAC00;&#xB2A5;
+     hosts:
+       foo.example.com
+       bar.example.com
+...
+</code></pre><ul>
+<li>&#xADF8;&#xB8F9;<br>
+Ungroup : INI &#xC5D0;&#xC11C; [] &#xB85C; &#xADF8;&#xB8F9;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xC9C0; &#xC54A;&#xC558;&#xAC70;&#xB098;<br>
+YAML &#xC5D0;&#xC11C; &#xADF8;&#xB8F9;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xC9C0; &#xC54A;&#xC740; &#xD638;&#xC2A4;&#xD2B8;&#xB4E4;<br>
+&#xADF8;&#xC678;&#xC758; Group &#xB4E4;&#xC740; &#xBAA8;&#xB450; all &#xADF8;&#xB8F9;&#xC5D0; &#xD3EC;&#xD568;&#xB428;</li>
+</ul>
+<p><code>&#xADF8;&#xB8F9;&#xBA85;</code>&#xC744; prod &#xB77C;&#xB294; &#xD558;&#xC704; &#xADF8;&#xB8F9; (children) &#xC73C;&#xB85C; &#xC124;&#xC815;</p>
+<pre><code class="lang-shell">[prod:children]
+&#xADF8;&#xB8F9;&#xBA85;
+</code></pre>
+<ul>
+<li><p>&#xD638;&#xC2A4;&#xD2B8; &#xBC94;&#xC704; &#xC9C0;&#xC815;</p>
+<pre><code class="lang-shell">[webservers]
+www[01:50].example.com
+</code></pre>
+<p>www01 www02 www03 ... www50</p>
+</li>
+<li><p>vagrant ssh &#xC811;&#xC18D;</p>
+<pre><code class="lang-shell">vagrant ssh &lt;vm&#xBA85;&gt;
+</code></pre>
+<p>&#xBCA0;&#xC774;&#xADF8;&#xB7F0;&#xD2B8; &#xC774;&#xBBF8;&#xC9C0;&#xB85C; &#xB9CC;&#xB4E4;&#xBA74; vagrant/vagrant &#xAC00; &#xB514;&#xD3F4;&#xD2B8; &#xC0AC;&#xC6A9;&#xC790;&#xB85C; &#xB418;&#xC5B4;&#xC788;&#xC74C;<br>
+ec2-user(aws), cloud-user(azure) : &#xAC01; &#xD074;&#xB77C;&#xC6B0;&#xB4DC; &#xBCC4; &#xB514;&#xD3F4;&#xD2B8; &#xC720;&#xC800;&#xBA85;</p>
+</li>
+<li><p>&#xC778;&#xBCA4;&#xD1A0;&#xB9AC; &#xD30C;&#xC77C; &#xC791;&#xC131;<br>
+vi inventory.ini</p>
+<pre><code class="lang-shell">[mgmt]
+192.168.200.101
+192.168.200.102
+</code></pre>
+</li>
+<li><p>&#xC778;&#xBCA4;&#xD1A0;&#xB9AC; &#xD30C;&#xC77C;&#xC744; &#xC9C0;&#xC815;&#xD574; &#xC8FC;&#xC9C0; &#xC54A;&#xC73C;&#xBA74;<br>
+<code>/etc/ansible/hosts</code> &#xC5D0; &#xC788;&#xB294; &#xD638;&#xC2A4;&#xD2B8; &#xBAA9;&#xB85D;&#xC774; &#xCD9C;&#xB825;&#xB428;</p>
+<pre><code class="lang-shell">$ ansible all --list-hosts 
+hosts (3):
+  10.10.10.10
+  10.10.10.20
+  10.10.10.30
+</code></pre>
+</li>
+<li><p>&#xC778;&#xBCA4;&#xD1A0;&#xB9AC; &#xD30C;&#xC77C;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xC5EC; &#xD638;&#xC2A4;&#xD2B8; &#xBAA9;&#xB85D; &#xCD9C;&#xB825;</p>
+<pre><code class="lang-shell">$ ansible all --list-hosts  -i inventory.ini 
+hosts (2):
+  192.168.200.101
+  192.168.200.102
+</code></pre>
+</li>
+<li><p>&#xADF8;&#xB8F9;&#xB0B4;&#xC758; &#xD638;&#xC2A4;&#xD2B8; &#xB9AC;&#xC2A4;&#xD2B8; &#xC870;&#xD68C;</p>
+<pre><code class="lang-shell">ansible &lt;&#xADF8;&#xB8F9;&#xBA85;&gt; --list-hosts
+</code></pre>
+</li>
+<li><p>ansible &#xC778;&#xBCA4;&#xD1A0;&#xB9AC;&#xC758; &#xBAA9;&#xB85D; &#xC870;&#xD68C;</p>
+<pre><code class="lang-shell">ansible-inventory -i inventory.init --list
+</code></pre>
+<p>```shell
+$ ansile-inventory --list
+{
+  &quot;_meta&quot;: {</p>
+<pre><code>  &quot;hostvars&quot;: {}
+</code></pre><p>  },
+  &quot;all&quot;: {</p>
+<pre><code>  &quot;children&quot;: [
+      &quot;ungrouped&quot;
+  ]
+</code></pre><p>  },
+  &quot;ungrouped&quot;: {</p>
+<pre><code>  &quot;hosts&quot;: [
+      &quot;10.10.10.10&quot;,
+      &quot;10.10.10.20&quot;,
+      &quot;10.10.10.30&quot;
+  ]
+</code></pre><p>  }
+}</p>
+</li>
+</ul>
+<pre><code>
+* &#xADF8;&#xB8F9;&#xC5D0; &#xB530;&#xB77C; &#xADF8;&#xB798;&#xD504; &#xD615;&#xD0DC;&#xB85C; &#xBCF4;&#xC5EC;&#xC8FC;&#xAE30;
+```shell
+ansible-inventory --graph
+</code></pre><ul>
+<li><p>&#xD638;&#xC2A4;&#xD2B8;&#xB098; &#xADF8;&#xB8F9;&#xC758; &#xBCC0;&#xC218; &#xBAA9;&#xB85D; &#xD655;&#xC778;</p>
+<pre><code class="lang-shell">ansible-inventory -i &lt;&#xC778;&#xBCA4;&#xD1A0;&#xB9AC;&#xBA85;&gt; --host &#xD638;&#xC2A4;&#xD2B8;&#xBA85;
+</code></pre>
+<pre><code class="lang-shell">$ ansible-inventory -i inventory.ini --host 192.168.200.101
+{}
+</code></pre>
+<p>&#xD604;&#xC7AC;&#xB294; &#xC544;&#xBB34;&#xB7F0; &#xBCC0;&#xC218;&#xAC00; &#xC5C6;&#xC5B4;&#xC11C; &#xB098;&#xC624;&#xB294; &#xAC83;&#xC774; &#xC5C6;&#xC74C;</p>
+</li>
+<li><p>&#xC815;&#xADDC;&#xD654; &#xD45C;&#xD604;&#xC2DD; &#xC774;&#xC6A9;</p>
+<pre><code class="lang-shell">ansible &apos;192.168.200.*&apos; --list-hosts -i inventory.ini
+</code></pre>
+</li>
+<li><p>&#xD328;&#xD134;
+<img src="../assets/inventory_pattern.png" alt="inventory pattern">
+&#xADF8;&#xB8F9;&#xACFC; &#xADF8;&#xB8F9;&#xC744; &#xC9EC;&#xBF55;&#xD558;&#xC9C0; &#xB9C8;&#xC138;&#xC694;! &#xC758;&#xB3C4; &#xD558;&#xC9C0; &#xC54A;&#xC740; &#xC77C;&#xC774; &#xC77C;&#xC5B4; &#xB0A0; &#xC218; &#xC788;&#xC74C;!<br>
+&#xD544;&#xC694;&#xD558;&#xBA74; &#xADF8;&#xB8F9;&#xC744; &#xB530;&#xB85C; &#xB9CC;&#xB4DC;&#xC138;&#xC694;!</p>
+</li>
+</ul>
+<h3 id="32-&#xAD6C;&#xC131;-&#xD30C;&#xC77C;">3.2 &#xAD6C;&#xC131; &#xD30C;&#xC77C;</h3>
+<p>ansible&#xC758; &#xC791;&#xB3D9;&#xBC29;&#xC2DD;&#xC744; &#xAD6C;&#xC131;&#xD558;&#xB294; &#xD30C;&#xC77C;&#xC774;&#xB2E4;.</p>
+<ul>
+<li>Ansible &#xAD6C;&#xC131; &#xD30C;&#xC77C; &#xC6B0;&#xC120; &#xC21C;&#xC704;</li>
+<li>ANSIBLE_CONFIG &#xD658;&#xACBD; &#xBCC0;&#xC218;</li>
+<li>&#xD604;&#xC7AC; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xC758; ansible.cfg</li>
+<li>&#xD648;&#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xC758; ~/.ansible.cfg</li>
+<li><p>/etc/ansible/ansible.cfg</p>
+</li>
+<li><p>&#xD604;&#xC7AC; &#xC124;&#xC815;&#xD30C;&#xC77C; &#xC704;&#xCE58; &#xD655;&#xC778;</p>
+<pre><code class="lang-shell">$ ansible --version
+ansible [core 2.11.5] 
+config file = /home/$USER/vagrant/ansible/ansible.cfg
+</code></pre>
+<pre><code class="lang-shell">$ touch /tmp/ansible.cfg
+$ export ANSIBLE_CONFIG=/tmp/ansible.cfg
+</code></pre>
+</li>
+<li>&#xAD6C;&#xC131; &#xD30C;&#xC77C; &#xC124;&#xC815;
+```text
+[defaults] &#xC139;&#xC158;</li>
+<li>inventory : &#xC778;&#xBCA4;&#xD1A0;&#xB9AC; &#xD30C;&#xC77C; &#xC704;&#xCE58; &#xC9C0;&#xC815;</li>
+<li>remote_user : SSH &#xC811;&#xC18D;&#xD560; &#xC0AC;&#xC6A9;&#xC790; &#xC774;&#xB984;</li>
+<li>ask_pass : SSH &#xBE44;&#xBC00;&#xBC88;&#xD638; &#xBB3C;&#xC5B4; &#xBCFC;&#xC9C0; &#xC124;&#xC815; (&#xAE30;&#xBCF8; false / &#xAE30;&#xBCF8;&#xC73C;&#xB85C; key &#xC778;&#xC99D; &#xBC29;&#xC2DD; &#xC0AC;&#xC6A9;)
+[privilege_escalation] # &#xAD8C;&#xD55C; &#xC0C1;&#xC2B9; (su&#xB294; &#xBCF4;&#xC548;&#xC0C1; &#xC548;&#xC88B;&#xC544; ! sudo&#xB97C; &#xC0AC;&#xC6A9;!)
+become = true # false&#xAC00; &#xAE30;&#xBCF8;&#xAC12;!
+become_method = sudo
+become_user = root
+become_ask_pass = false # &#xAE30;&#xBCF8;&#xC774; false&#xC774;&#xB2E4;! &#xD328;&#xC2A4;&#xC6CC;&#xB4DC; &#xC548;&#xBB3C;&#xC5B4;&#xBCF8;&#xB2E4;.
+&#xD328;&#xC2A4;&#xC6CC;&#xB4DC; &#xBB3C;&#xC5B4;&#xBCF4;&#xB294;&#xAC70;&#xB294; &#xC790;&#xB3D9;&#xD654;&#xC758; &#xC774;&#xC810;&#xC744; &#xC0B4;&#xB9AC;&#xC9C0; &#xBABB;&#xD558;&#xB2C8;&#xAE50; .. &#xCACC;.. 
+```</li>
+</ul>
+<p>[privilege_escalation]</p>
+<ul>
+<li>become : &#xAD8C;&#xD55C; &#xC0C1;&#xC2B9; &#xC5EC;&#xBD80; (&#xAE30;&#xBCF8; : false)</li>
+<li>become_method : &#xAD8C;&#xD55C; &#xC0C1;&#xC2B9; &#xBC29;&#xBC95; (&#xAE30;&#xBCF8; : sudo)</li>
+<li>become_user : &#xAD8C;&#xD55C; &#xC0C1;&#xC2B9;&#xD560; &#xC0AC;&#xC6A9;&#xC790; (&#xAE30;&#xBCF8; : root)</li>
+<li>become_ask_pass : &#xAD8C;&#xD55C; &#xC0C1;&#xC2B9; &#xBC29;&#xBC95;&#xC758; &#xD328;&#xC2A4;&#xC6CC;&#xB4DC; &#xC694;&#xCCAD;/&#xC785;&#xB825; &#xC5EC;&#xBD80; (&#xAE30;&#xBCF8; : false)</li>
+</ul>
+<p>Ansible&#xC740; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; root &#xACC4;&#xC815;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xB294;&#xB370; &#xAE30;&#xBCF8;&#xACC4;&#xC815;&#xC744; &#xC77C;&#xBC18; &#xC0AC;&#xC6A9;&#xC790;&#xB85C; &#xC811;&#xC18D; &#xD588;&#xB2E4;&#xBA74;<br>
+&#xAD00;&#xB9AC;&#xC790; &#xAD8C;&#xD55C; &#xD544;&#xC694;&#xD55C; &#xC791;&#xC5C5;&#xC744; &#xD574;&#xC57C;&#xD558;&#xB294;&#xB370;<br>
+&#xC774;&#xB97C; become &#xBAA8;&#xB4C8;&#xC774; &#xAC00;&#xB2A5;&#xD558;&#xAC8C; &#xD574;&#xC90C;.</p>
+<p>&#xAD00;&#xB9AC;&#xD558;&#xB294; &#xACC4;&#xC815;&#xC758; &#xACC4;&#xC815;&#xC815;&#xBCF4;&#xB294; &#xBCF4;&#xD1B5; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xC88B;&#xC744; &#xAC78;~~ &#xAC00;&#xB2A5;&#xD558;&#xBA74;!</p>
+<p>&#xBCA0;&#xC774;&#xADF8;&#xB7F0;&#xD2B8;&#xB85C; &#xC0DD;&#xC131;&#xD55C; vm&#xC740; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; passwd less sudo&#xAC00; &#xC124;&#xC815;&#xB418;&#xC5B4; /etc/sudoers.d/vagrant &#xC5EC;&#xAE30; &#xB4F1;&#xB85D;&#xB428;</p>
+<ul>
+<li><code>~/.ansible.cfg</code> &#xC791;&#xC131;
+```shell
+[defaults]
+remote_user = vagrant
+inventory = ~/inventory.ini
+ask_pass = false</li>
+</ul>
+<p>[privilege_escalation]
+become = false
+become_method = sudo
+become_user = root
+become_ask_pass = false</p>
+<pre><code>
+* `~/inventory.ini` &#xC791;&#xC131;
+```shell
+[mgmt]
+192.168.200.101
+192.168.200.102
+</code></pre><ul>
+<li><p>&#xD604;&#xC7AC;&#xAC00;&#xC7A5; &#xC6B0;&#xC120; &#xC21C;&#xC704;&#xAC00; &#xB192;&#xC740; config &#xD30C;&#xC77C; &#xBCF4;&#xC5EC;&#xC90C;</p>
+<pre><code class="lang-shell">ansible-config view
+</code></pre>
+</li>
+<li><p>ansible&#xC5D0;&#xC11C; &#xC124;&#xC815;&#xAC00;&#xB2A5;&#xD55C; &#xBAA8;&#xB4E0; &#xC124;&#xC815;&#xB4E4;&#xC744; &#xBCF4;&#xC5EC;&#xC90C;</p>
+<pre><code class="lang-shell">ansible-config list
+</code></pre>
+</li>
+<li><p>&#xD604;&#xC7AC; &#xC801;&#xC6A9;&#xB41C; &#xBAA8;&#xB4E0; &#xAD6C;&#xC131;&#xC815;&#xBCF4; &#xD655;&#xC778;</p>
+<pre><code class="lang-shell">ansible-config dump
+</code></pre>
+<p>&#xCD08;&#xB85D;&#xC774; : &#xBCC0;&#xACBD; &#xC5C6;&#xB294; &#xAE30;&#xBCF8;&#xAC12;</p>
+</li>
+</ul>
+<h2 id="33-&#xAD00;&#xB9AC;&#xB178;&#xB4DC;-&#xC5F0;&#xACB0;">3.3 &#xAD00;&#xB9AC;&#xB178;&#xB4DC; &#xC5F0;&#xACB0;</h2>
+<p>ansible&#xC758; &#xC81C;&#xC5B4;&#xB178;&#xB4DC;&#xB294; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; openssh&#xB85C; &#xAD00;&#xB9AC;&#xB178;&#xB4DC;&#xC5D0; &#xC811;&#xADFC;&#xD568;<br>
+OpenSSH &#xC5D0;&#xB294; ControlPersist (&#xC131;&#xB2A5; &#xD5A5;&#xC0C1; &#xAE30;&#xB2A5;) &#xC635;&#xC158;&#xC744; &#xC9C0;&#xC6D0;&#xD568;.<br></p>
+<p>&#xAC04;&#xD639; &#xC624;&#xB798;&#xB41C; OpenSSH &#xC758; &#xACBD;&#xC6B0; ControlPersist &#xC744; &#xC9C0;&#xC6D0;&#xD558;&#xC9C0; &#xC54A;&#xC751; &#xACBD;&#xC6B0;&#xAC00; &#xC788;&#xC74C;.<br>
+ansible &#xC0AC;&#xC6A9; &#xC2DC; Python &#xC790;&#xCCB4;&#xC5D0;&#xC11C; &#xAD6C;&#xD604;&#xB41C; paramiko &#xB77C;&#xB294; &#xC560;&#xAC00; SSH &#xAD6C;&#xD604;&#xC73C;&#xB85C; &#xB300;&#xCCB4;&#xB428;.</p>
+<h3 id="1-&#xC778;&#xC99D;">1) &#xC778;&#xC99D;</h3>
+<ul>
+<li><p>SSH &#xD0A4; &#xC0DD;&#xC131; &#xD6C4; &#xC811;&#xC18D; &#xB300;&#xC0C1;&#xC5D0; &#xACF5;&#xAC1C;&#xD0A4;&#xB97C; &#xBCF5;&#xC0AC;&#xD55C;&#xB2E4;.</p>
+<pre><code class="lang-shell">ssh-keygen -t rsa -f ~/.ssh/id_rsa -N &apos;&apos;
+ssh-copy-id vagrant@192.168.200.101
+ssh-copy-id vagrant@192.168.200.102
+</code></pre>
+</li>
+<li><p>&#xC811;&#xC18D;&#xD560; &#xB300;&#xC0C1;&#xC758; &#xACF5;&#xAC1C;&#xD0A4; &#xD655;&#xC778;&#xD558;&#xB294; &#xBA85;&#xB839;&#xC5B4;</p>
+<pre><code class="lang-shell">ssh-keyscan -t rsa 192.168.200.101
+</code></pre>
+</li>
+<li><p>SSH &#xC811;&#xC18D; &#xC0AC;&#xC6A9;&#xC790; &#xBCC0;&#xACBD;<br></p>
+</li>
+<li>Ansible &#xAD6C;&#xC131; &#xD30C;&#xC77C;<br>
+remote_user = &#xC0AC;&#xC6A9;&#xC790;&#xBA85;<br></li>
+<li>ansible &#xBA85;&#xB839; -u &#xC0AC;&#xC6A9;&#xC790;&#xBA85; &#xB610;&#xB294; --user &#xC0AC;&#xC6A9;&#xC790;&#xBA85;</li>
+</ul>
+<h3 id="2-&#xAD8C;&#xD55C;&#xC0C1;&#xC2B9;">2) &#xAD8C;&#xD55C;&#xC0C1;&#xC2B9;</h3>
+<p>  &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; become &#xC774; &#xB418;&#xC9C0; &#xC54A;&#xB3C4;&#xB85D; &#xB9C9;&#xC544; &#xB193;&#xB294;&#xB2E4;.<br>
+  -K, --ask-become-option</p>
+<h3 id="3-ssh-&#xC774;&#xC678;-&#xB2E4;&#xB978;-&#xC5F0;&#xACB0;-&#xBC29;&#xBC95;">3) SSH &#xC774;&#xC678; &#xB2E4;&#xB978; &#xC5F0;&#xACB0; &#xBC29;&#xBC95;</h3>
+<ul>
+<li><p>&#xC8FC;&#xC694; &#xC5F0;&#xACB0; &#xD50C;&#xB7EC;&#xADF8;&#xC778;<br>
+1) docker<br>
+2) kubectl<br>
+3) local : &#xB0B4;&#xAC00; &#xAD00;&#xB9AC; &#xB178;&#xB4DC;&#xC774;&#xC790; &#xCEE8;&#xD2B8;&#xB864;&#xD50C;&#xB808;&#xC778;&#xC778;&#xACBD;&#xC6B0; &#xC774;&#xAC78;&#xC4F0;&#xBA74; &#xBE60;&#xB97C; &#xC218; &#xC788;&#xC5B4;<br>
+ &#xC5F0;&#xACB0; &#xBC29;&#xC2DD;&#xC744; local &#xB85C; &#xD558;&#xBA74; SSH &#xC5F0;&#xACB0;&#xC744; &#xB530;&#xB85C; &#xD558;&#xC9C0; &#xC54A;&#xACE0; &#xD504;&#xB85C;&#xC138;&#xC2A4; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xC811;&#xC18D;&#xD55C;&#xB2E4;.<br>
+ SSH &#xB85C; &#xC778;&#xD55C; &#xC131;&#xB2A5; &#xC800;&#xD558; &#xBC29;&#xC9C0;<br>
+4) network_cli : &#xC77C;&#xBD80; &#xB124;&#xD2B8;&#xC6CC;&#xD06C; &#xC7A5;&#xBE44;&#xC5D0;&#xB294; &#xD30C;&#xC774;&#xC36C;&#xC774; &#xC5C6;&#xC5B4;! &#xACE0;&#xB7F4; &#xB54C; &#xC0AC;&#xC6A9;&#xD558;&#xB294;&#xAC70;<br>
+5) paramiko_ssh : &#xD30C;&#xC774;&#xC36C;&#xC758; ssh &#xAD6C;&#xD604;&#xCCB4;<br>
+6) ssh (&#xAE30;&#xBCF8;&#xAC12;)<br>
+7) winrm : &#xC708;&#xB3C4;&#xC6B0;&#xC758; &#xC811;&#xC18D;&#xBC29;&#xC2DD;</p>
+</li>
+<li><p>Ansible &#xC0AC;&#xC6A9;&#xBC95; &#xD655;&#xC778;<br>
+&#xACF5;&#xC2DD; &#xD648;&#xD398;&#xC774;&#xC9C0;&#xC5D0; &#xB098;&#xC624;&#xC9C0; &#xC54A;&#xC740; &#xC0C1;&#xC138;&#xD55C; &#xC815;&#xBCF4;&#xB3C4; &#xD655;&#xC778; &#xAC00;&#xB2A5;</p>
+<pre><code class="lang-shell">ansible-doc -t
+# t : &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xBA85;&#xC774;&#xB77C;&#xACE0; &#xD558;&#xAE30;&#xB3C4; &#xD568;
+# l : &#xB9AC;&#xC2A4;&#xD2B8;&#xB97C; &#xBCF4;&#xACA0;&#xB2E4;.
+</code></pre>
+</li>
+<li><p>conenction &#xD50C;&#xB7EC;&#xADF8;&#xC778; &#xBAA9;&#xB85D; &#xBCF4;&#xAE30;</p>
+<pre><code class="lang-shell">ansible-doc -t connection -l
+</code></pre>
+</li>
+<li><p>&#xD638;&#xC2A4;&#xD2B8;&#xB9C8;&#xB2E4; &#xC811;&#xC18D; &#xBC29;&#xC2DD;&#xC744; &#xC778;&#xBCA4;&#xD1A0;&#xB9AC; &#xD30C;&#xC77C;&#xC5D0; &#xC791;&#xC131;&#xD558;&#xC5EC; &#xBC14;&#xAFC0; &#xC218; &#xC788;&#xB31C;<br>
+ansible_connection=ssh &#xAC00; &#xAE30;&#xBCF8;&#xAC12;<br>
+ansible_connection=local &#xB85C; &#xD558;&#xBA74; local &#xC5F0;&#xACB0; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xBCC0;&#xACBD;&#xB428;<br>
+local &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xC124;&#xC815;&#xD558;&#xBA74; tcp &#xD1B5;&#xC2E0;&#xC744; &#xD558;&#xC9C0; &#xC54A;&#xACE0; &#xBC14;&#xB85C; &#xD504;&#xB85C;&#xC138;&#xC2A4;&#xB97C; &#xB744;&#xC6CC;&#xC11C; &#xC5F0;&#xACB0;&#xD558;&#xBBC0;&#xB85C; &#xB124;&#xD2B8;&#xC6CC;&#xD2B8; &#xC9C0;&#xC5F0;&#xC774; &#xBC1C;&#xC0DD;&#xD558;&#xC9C0; &#xC54A;&#xC74C;</p>
+</li>
+</ul>
+<pre><code class="lang-shell">192.168.200.1 ansible_connection=local
+
+[mgmt]
+192.168.200.101
+192.168.200.102
+</code></pre>
+<h2 id="34-&#xC774;&#xBC88;&#xC8FC;-&#xD559;&#xC2B5;&#xC758;-&#xD3EC;&#xC778;&#xD2B8;--&#x1F697;-&#xBAA8;&#xB4C8;-&#x1F697;">3.4 &#xC774;&#xBC88;&#xC8FC; &#xD559;&#xC2B5;&#xC758; &#xD3EC;&#xC778;&#xD2B8; !! &#x1F697; &#xBAA8;&#xB4C8; &#x1F697;</h2>
+<h3 id="1-ansible-doc-&#xBA85;&#xB839;&#xC5B4;-&#xC0AC;&#xC6A9;">1) ansible-doc &#xBA85;&#xB839;&#xC5B4; &#xC0AC;&#xC6A9;</h3>
+<pre><code class="lang-shell">ansible-doc -t module -l | wc -l
+3387
+</code></pre>
+<p>&#xC640;&#xC6B0; &#xBAA8;&#xB4C8;&#xC774; &#xBB34;&#xB824; 3000&#xAC1C; &#xC774;&#xC0C1;&#xC774;&#xB2E4;! </p>
+<ul>
+<li>&#xBAA8;&#xB4C8; &#xAC04;&#xB2E8;&#xD788; &#xC0AC;&#xC6A9;&#xD574;&#xBCF4;&#xAE30;<pre><code class="lang-shell">azwell@azwell-KVM:~$ ansible 192.168.200.101 -m command -a id
+192.168.200.101 | CHANGED | rc=0 &gt;&gt;
+uid=1000(vagrant) gid=1000(vagrant) groups=1000(vagrant)
+</code></pre>
+command &#xBAA9;&#xC801;&#xC740; &#xC6D0;&#xACA9;&#xC5D0;&#xB2E4;&#xAC00; &#xBA85;&#xB839;&#xC744; &#xC2E4;&#xD589;&#xD574;&#xC8FC;&#xB294; &#xBAA8;&#xB4C8;<br>
+-a : argument. &#xC2E4;&#xD589;&#xD560; &#xBA85;&#xB839;&#xC744; &#xC368;&#xB123;&#xB294;&#xB2E4;.</li>
+</ul>
+<p>&#xADF8;&#xB8F9;&#xBA85;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xC5EC; &#xD574;&#xB2F9; &#xADF8;&#xB8F9;&#xC5D0; &#xD574;&#xB2F9;&#xB418;&#xB294; &#xD638;&#xC2A4;&#xD2B8;&#xB4E4;&#xC5D0; &#xB2E4; &#xC2E4;&#xD589;&#xD558;&#xAC8C; &#xD560; &#xC218;&#xB3C4; &#xC788;&#xB2E4;!</p>
+<pre><code class="lang-shell">azwell@azwell-KVM:~$ ansible mgmt -m command -a hostname
+192.168.200.101 | CHANGED | rc=0 &gt;&gt;
+node1
+192.168.200.102 | CHANGED | rc=0 &gt;&gt;
+node2
+</code></pre>
+<p>-b &#xC635;&#xC158;&#xC744; &#xC8FC;&#xBA74; become &#xC744; &#xC218;&#xD589; (&#xAE30;&#xBCF8;&#xAC12; true)<br>
+&#xAD00;&#xB9AC;&#xC790; &#xAD8C;&#xD55C;&#xC744; &#xC218;&#xD589;&#xD55C;&#xB2E4;.<br>
+&#xBCF4;&#xC548;&#xC0C1; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xD558;&#xC9C0; &#xC54A;&#xB294; &#xAC83;&#xC744; &#xAD8C;&#xC7A5;.<br></p>
+<pre><code class="lang-shell">$ ansible mgmt -m command -a id -b
+192.168.200.101 | CHANGED | rc=0 &gt;&gt;
+uid=0(root) gid=0(root) &#xADF8;&#xB8F9;&#xB4E4;=0(root)
+192.168.200.102 | CHANGED | rc=0 &gt;&gt;
+uid=0(root) gid=0(root) &#xADF8;&#xB8F9;&#xB4E4;=0(root)
+</code></pre>
+<p>&#xC324;&#xACFC; &#xBC84;&#xC804;&#xCC28;&#xC774;&#xAC00; &#xB098;&#xC11C; &#xADF8;&#xB7F0;&#xC9C0; &#xBAA8;&#xB974;&#xACA0;&#xC9C0;&#xB9CC;<br>
+&#xC324;&#xC740; &#xC5D0;&#xB7EC;&#xB098;&#xACE0; &#xC6B0;&#xB9AC;&#xB294; sudo &#xAD8C;&#xD55C;&#xC774; &#xD328;&#xC2A4;&#xC6CC;&#xB4DC; &#xC5C6;&#xC774; &#xC798; &#xB428;<br>
+&#xD655;&#xC778;&#xD574;&#xBCF4;&#xB2C8; vagrant &#xAC00; sudoers &#xC5D0; &#xB4F1;&#xB85D; &#xB418;&#xC5B4; &#xC788;&#xC74C;<br></p>
+<pre><code class="lang-shell">$ sudo -i
+root@node1:~# cd /etc/sudoers.d/
+root@node1:/etc/sudoers.d# ls
+90-cloud-init-users  README  vagrant
+root@node1:/etc/sudoers.d# cat vagrant 
+vagrant ALL=(ALL) NOPASSWD:ALL
+</code></pre>
+<pre><code class="lang-shell">azwell@azwell-KVM:~$ ansible all -m command -a hostname --become
+192.168.200.1 | FAILED | rc=-1 &gt;&gt;
+Failed to set permissions on the temporary files Ansible needs to create when becoming an unprivileged user (rc: 1, err: chown: invalid user: &#x2018;vagrant&#x2019;
+}). For information on working around this, see https://docs.ansible.com/ansible/become.html#becoming-an-unprivileged-user
+192.168.200.101 | CHANGED | rc=0 &gt;&gt;
+node1
+192.168.200.102 | CHANGED | rc=0 &gt;&gt;
+node2
+</code></pre>
+<h3 id="2-&#xC790;&#xC8FC;-&#xC0AC;&#xC6A9;&#xB418;&#xB294;-&#xBAA8;&#xB4C8;">2) &#xC790;&#xC8FC; &#xC0AC;&#xC6A9;&#xB418;&#xB294; &#xBAA8;&#xB4C8;</h3>
+<ul>
+<li>&#xBA85;&#xB839; &#xBAA8;&#xB4C8;</li>
+<li>command</li>
+<li>script</li>
+<li>shell</li>
+<li><p>raw: &#xC61B;&#xB0A0; Cisco IOS &#xAC19;&#xC740; &#xC7A5;&#xBE44;&#xB4E4;&#xC5D0; &#xC258;&#xC774;&#xB098; &#xD30C;&#xC774;&#xC36C;&#xC774; &#xC5C6;&#xC5B4; &#xADF8;&#xB7F4; &#xACBD;&#xC6B0; &#xC0AC;&#xC6A9;<br>
+command &#xBAA8;&#xB4C8;&#xACFC; shell &#xBAA8;&#xB4C8;&#xC740; &#xC548;&#xC0AC;&#xC6A9;&#xD558;&#xB294;&#xAC8C; &#xC88B;&#xC74C;<br>
+&#xC65C;&#xB0D0;? &#xC774;&#xAC70; &#xC4F8;&#xAC70;&#xBA74; &#xBAA8;&#xD558;&#xB7EC; Ansible&#xC500;..?! &gt; &#xC6D0;&#xD558;&#xB294; &#xBAA8;&#xB4C8;&#xC774; &#xC5C6;&#xB294; &#xACBD;&#xC6B0; &#xC5B4;&#xCA54; &#xC218; &#xC5C6;&#xC774; &#xC0AC;&#xC6A9;&#xD558;&#xACE0;</p>
+</li>
+<li><p>&#xD30C;&#xC77C; &#xBAA8;&#xB4C8;</p>
+</li>
+<li>blockline: &#xD14D;&#xC2A4;&#xD2B8; &#xD30C;&#xC77C;&#xC5D0; &#xBE14;&#xB85D; &#xC0BD;&#xC785;/&#xC5C5;&#xB370;&#xC774;&#xD2B8;/&#xC0AD;&#xC81C;</li>
+<li>copy : &#xD30C;&#xC77C; &#xBCF5;&#xC0AC;</li>
+<li>lineinfile : &#xD14D;&#xC2A4;&#xD2B8; &#xD30C;&#xC77C;&#xC5D0; &#xD589;&#xAD11;&#xB9AC;</li>
+<li>replace : &#xD14D;&#xC2A4;&#xD2B8; &#xD30C;&#xC77C;&#xC758; &#xBB38;&#xC790;&#xC5F4; &#xAD00;&#xB9AC;</li>
+<li><p>synchronize : rsync &#xB3D9;&#xAE30;&#xD654;</p>
+</li>
+<li><p>&#xB124;&#xD2B8;&#xC6CC;&#xD06C; &#xBAA8;&#xB4C8;</p>
+</li>
+<li>get_url : HTTP/S, FTP &#xD30C;&#xC77C; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;(wget)</li>
+<li><p>uri : &#xC6F9; &#xC11C;&#xBE44;&#xC2A4;&#xC640; &#xC0C1;&#xD638;&#xC791;&#xC6A9; (curl)</p>
+</li>
+<li><p>&#xD328;&#xD0A4;&#xC9C0; &#xBAA8;&#xB4C8;</p>
+</li>
+<li>apt</li>
+<li>dnf</li>
+<li>yum</li>
+<li>npm</li>
+<li><p>pip
+...</p>
+</li>
+<li><p>&#xC18C;&#xC2A4;&#xC81C;&#xC5B4; &#xBAA8;&#xB4C8;</p>
+</li>
+<li>git</li>
+<li>github_</li>
+<li>gitlab_</li>
+<li><p>bitbucet_
+...</p>
+</li>
+<li><p>&#xC2DC;&#xC2A4;&#xD15C; &#xBAA8;&#xB4C8;</p>
+</li>
+<li>cron</li>
+<li>filesystem</li>
+<li>firewalld</li>
+<li>iptables</li>
+<li>lvg</li>
+<li>lvol</li>
+<li>mount</li>
+<li>parted</li>
+<li>ping</li>
+<li>reboot</li>
+<li>service</li>
+<li><p>ufw</p>
+</li>
+<li><p>cron &#xBAA8;&#xB4C8; &#xC608;&#xC2DC;<br>
+&#xD574;&#xB2F9; &#xB178;&#xB4DC;&#xC758; cron &#xC11C;&#xBE44;&#xC2A4;&#xB97C; stop &#xD574;&#xBCF4;&#xC790;
+```shell
+azwell@azwell-KVM:~$ ansible 192.168.200.101 -m service -a &apos;name=cron state=stopped&apos;
+192.168.200.101 | FAILED! =&gt; {
+  &quot;ansible_facts&quot;: {</p>
+<pre><code>  &quot;discovered_interpreter_python&quot;: &quot;/usr/bin/python3&quot;
+</code></pre><p>  },
+  &quot;changed&quot;: false,
+  &quot;msg&quot;: &quot;Unable to stop service cron: Failed to stop cron.service: Connection timed out\nSee system logs and &apos;systemctl status cron.service&apos; for details.\n&quot;
+}</p>
+</li>
+</ul>
+<pre><code>
+### 3) &#xAE30;&#xD0C0; &#xD50C;&#xB7EC;&#xADF8;&#xC778; &#xD655;&#xC778;
+- become
+- cache
+- callback
+- cliconf
+- connenction
+- httpapi
+- inventory
+- netconf
+- lookup
+- shell
+- module
+- strategy
+- vars
+
+ansible &#xBAA8;&#xB4C8; &#xC911;&#xC5D0;&#xC11C; free_form &#xC774;&#xB77C;&#xACE0; &#xBD99;&#xC740;&#xAC70;&#xB294;&lt;br/&gt;
+&#xC790;&#xC720;&#xC591;&#xC2DD;&#xC774;&#xB77C;&#xB294; &#xAC70;&#xC784; &#xB531;&#xD788; &#xBB50; &#xC544;&#xADDC;&#xBA3C;&#xD2B8;&#xB97C; &#xC758;&#xBBF8;&#xD558;&#xB294;&#xAC70;&#xAC00; &#xC544;&#xB2D8;&lt;br/&gt;
+command &#xBAA8;&#xB4C8;&#xC740; default &#xBAA8;&#xB4C8;&#xC774;&#xB77C;&#xC11C; &#xC548;&#xC801;&#xC5B4;&#xB3C4; &#xB428;&lt;br/&gt;
+-m command &#xC635;&#xC158;&#xC744; &#xC8FC;&#xC9C0; &#xC54A;&#xACE0; -a &apos;&#xBA85;&#xB839;&#xC5B4;&apos; &#xB9CC; &#xC8FC;&#xC5B4;&#xB3C4; &#xD574;&#xB2F9; &#xB178;&#xB4DC;&#xC5D0;&#xC11C; &#xBA85;&#xB839;&#xC774; &#xC2E4;&#xD589;&#xB41C;&#xB2E4;!
+
+* &#xB178;&#xB4DC; &#xC7AC;&#xBD80;&#xD305; &#xB54C;&#xB9AC;&#xAE30;!
+```shell
+ansible 192.168.200.101 -a &apos;/sbin/reboot&apos; -b
+</code></pre><p>&#xB610;&#xB294; reboot &#xBAA8;&#xB4C8; &#xC0AC;&#xC6A9;&#xD558;&#xAE30;</p>
+<pre><code class="lang-shell">ansible 192.168.200.101 -m reboot -b
+</code></pre>
+<p>&#xAE30;&#xBCF8;&#xC73C;&#xB85C; 600&#xCD08; (10&#xBD84;)&#xB97C; &#xB300;&#xAE30;&#xD574;&#xC11C; &#xB420;&#xB54C; &#xAE4C;&#xC9C0; &#xC7AC;&#xBD80;&#xD305;&#xC744; &#xC2DC;&#xB3C4;&#xD55C;&#xB2E4;.</p>
+<ul>
+<li>&#xC2E4;&#xC2B5;&#xC6A9; ini
+```shell
+192.168.200.1 ansible_connection=local</li>
+</ul>
+<p>[mgmt]
+192.168.200.101
+192.168.200.102</p>
+<pre><code>
+* &#xC2E4;&#xC2B5;&#xC6A9; cfg
+```shell
+[defaults]
+remote_user = varant
+inventory = ~/inventory.ini
+ask_pass = false
+
+[privilege_Escalation]
+become = false
+become_method = sudo
+become_user = root
+become_ask_pass = false
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Part2/note.html" class="navigation navigation-prev " aria-label="Previous page: 2. Ansible 개요">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Part4/note.html" class="navigation navigation-next " aria-label="Next page: 4. 플레이북">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3. Ansible 기본","level":"1.4","depth":1,"next":{"title":"4. 플레이북","level":"1.5","depth":1,"path":"pages/Part4/note.md","ref":"pages/Part4/note.md","articles":[]},"previous":{"title":"2. Ansible 개요","level":"1.3","depth":1,"path":"pages/Part2/note.md","ref":"pages/Part2/note.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/Part3/note.md","mtime":"2021-10-11T05:38:16.051Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-11T07:24:17.942Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

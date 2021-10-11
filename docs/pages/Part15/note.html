@@ -1,0 +1,1060 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>15. 리소스 관리 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Part16/note.html" />
+    
+    
+    <link rel="prev" href="../Part14/note.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Part1/note.html">
+            
+                <a href="../Part1/note.html">
+            
+                    
+                    1. IaC 개요
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Part2/note.html">
+            
+                <a href="../Part2/note.html">
+            
+                    
+                    2. Ansible 개요
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Part3/note.html">
+            
+                <a href="../Part3/note.html">
+            
+                    
+                    3. Ansible 기본
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Part4/note.html">
+            
+                <a href="../Part4/note.html">
+            
+                    
+                    4. 플레이북
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Part5/note.html">
+            
+                <a href="../Part5/note.html">
+            
+                    
+                    5. 변수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Part6/note.html">
+            
+                <a href="../Part6/note.html">
+            
+                    
+                    6. 작업 제어 - 기본
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Part7/note.html">
+            
+                <a href="../Part7/note.html">
+            
+                    
+                    7. 작업 제어 - 고급
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Part8/note.html">
+            
+                <a href="../Part8/note.html">
+            
+                    
+                    8. 아티팩트 재사용 - 파일
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Part9/note.html">
+            
+                <a href="../Part9/note.html">
+            
+                    
+                    9. 아티팩트 재사용 - 역할
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Part10/note.html">
+            
+                <a href="../Part10/note.html">
+            
+                    
+                    10. 암호화
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../Part11/note.html">
+            
+                <a href="../Part11/note.html">
+            
+                    
+                    11. AWX(AnsibleWorks)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../Part12/note.html">
+            
+                <a href="../Part12/note.html">
+            
+                    
+                    12. Terraform 기본
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../Part13/note.html">
+            
+                <a href="../Part13/note.html">
+            
+                    
+                    13. AWS CLI 및 Terraform 설치
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../Part14/note.html">
+            
+                <a href="../Part14/note.html">
+            
+                    
+                    14. 구성파일 작성
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.16" data-path="note.html">
+            
+                <a href="note.html">
+            
+                    
+                    15. 리소스 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../Part16/note.html">
+            
+                <a href="../Part16/note.html">
+            
+                    
+                    16. 변수 및 값
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../Part17/note.html">
+            
+                <a href="../Part17/note.html">
+            
+                    
+                    17. 구성 관리 및 프로비저너
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../Part18/note.html">
+            
+                <a href="../Part18/note.html">
+            
+                    
+                    18. 모듈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../Part19/note.html">
+            
+                <a href="../Part19/note.html">
+            
+                    
+                    19. 반복
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../Part20/note.html">
+            
+                <a href="../Part20/note.html">
+            
+                    
+                    20. 원격 상태 저장
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >15. 리소스 관리</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="15-&#xB9AC;&#xC18C;&#xC2A4;-&#xAD00;&#xB9AC;">15. &#xB9AC;&#xC18C;&#xC2A4; &#xAD00;&#xB9AC;</h1>
+<h2 id="151-&#xB9AC;&#xC18C;&#xC2A4;-&#xBC30;&#xD3EC;">15.1 &#xB9AC;&#xC18C;&#xC2A4; &#xBC30;&#xD3EC;</h2>
+<h3 id="1-&#xCD08;&#xAE30;&#xD654;">1) &#xCD08;&#xAE30;&#xD654;</h3>
+<p>&#xCD5C;&#xCD08;&#xC758; &#xC791;&#xC5C5;&#xC744; &#xD558;&#xBA74; &#xD504;&#xB85C;&#xBC29;&#xC774;&#xB354; &#xBAA8;&#xB4C8; &#xC124;&#xCE58;&#xD568;</p>
+<h3 id="3-&#xBCC0;&#xACBD;-&#xC0AC;&#xD56D;-&#xACC4;&#xD68D;">3) &#xBCC0;&#xACBD; &#xC0AC;&#xD56D; &#xACC4;&#xD68D;</h3>
+<p><code>terraform plan</code>
+dry run &#xC774;&#xB2E4; ansible&#xC758; --check&#xC640; &#xAC19;&#xC740; &#xC5ED;&#xD560;</p>
+<h3 id="5-&#xC0C1;&#xD0DC;-&#xD655;&#xC778;">5) &#xC0C1;&#xD0DC; &#xD655;&#xC778;</h3>
+<p><code>terraform.tfstate</code> &#xD30C;&#xC77C; &#xB9E4;&#xC6B0; &#xB9E4;&#xC6B0; &#xB9E4;&#xC6B0; &#xC911;&#xC694;&#xD568;</p>
+<ul>
+<li>&#xBA3C;&#xC800; &#xC2E4;&#xC2B5;&#xC744; &#xD574;&#xBCF4;&#xC790;&#xC544;~ ^^?! 193 ~ 202
+&#xC368;!
+```tf
+terraform {
+required_providers {
+  aws = {<pre><code>source = &quot;hashicorp/aws&quot;
+version = &quot;~&gt; 3.34&quot;
+</code></pre>  }
+}
+}</li>
+</ul>
+<p>provider &quot;aws&quot; {
+  profile = &quot;default&quot;
+  region = &quot;ap-northeast-2&quot;
+}</p>
+<p>resource &quot;aws_instance&quot; &quot;my_instance&quot; {
+  ami = &quot;ami-013b765873d42324a&quot; # Ubuntu 18.04 amd64 ami
+  instance_type = &quot;t3.micro&quot;</p>
+<p>  tags = {
+    Name = &quot;MyInstance&quot;
+  }
+}</p>
+<pre><code>&#xC815;&#xC758;&#xD560; &#xBA54;&#xD0C0;&#xC18D;&#xC131;(&#xD14C;&#xB77C;&#xD3FC;&#xC5D0;&#xC11C; &#xAD00;&#xB9AC;)&#xC774; &#xD544;&#xC694;&#xD558;&#xB2E4;&#xBA74; &#xBA3C;&#xC800; &#xC120;&#xC5B8;&#xD55C;&#xB2E4;. resource &#xBD80;&#xBD84; &#xC0C1;&#xB2E8;&#xC5D0; &#xC791;&#xC131;.
+
+&#xD14C;&#xB77C;&#xD3FC; &#xD30C;&#xC77C; &#xC790;&#xB3D9; &#xC815;&#xB82C;
+```shell
+terraform fmt
+</code></pre><ul>
+<li>&#xD504;&#xB85C;&#xBC14;&#xC774;&#xB354; &#xD50C;&#xB7EC;&#xADF8;&#xC778; &#xC124;&#xCE58;
+```shell
+terraform init # &#xC774;&#xAC70; &#xD558;&#xACE0;&#xB098;&#xBA74; &#xD574;&#xB2F9; &#xACBD;&#xB85C;&#xC5D0; file &#xC0DD;&#xACA8;&#xB0A8;</li>
+</ul>
+<p>azwell@azwell-KVM:~/terraform_prac$ file .terraform/providers/registry.terraform.io/hashicorp/aws/3.61.0/linux_amd64/terraform-provider-aws_v3.61.0_x5 
+.terraform/providers/registry.terraform.io/hashicorp/aws/3.61.0/linux_amd64/terraform-provider-aws_v3.61.0_x5: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, Go BuildID=m7TB9_vbkn6LKW2gtylx/A0DMvtaaRSewe8HULVvb/p05pEP56Ho6SF2FBNWdE/HxiWMsIxG0ome_rvdbVI, stripped</p>
+<pre><code>
+
+&#xC798; &#xC37B;&#xB2E4;&#xACE0; &#xD568;
+```shell
+$ terraform validate
+Success! The configuration is valid.
+</code></pre><p>&#xC0DD;&#xD034; &#xC5B4;&#xB5BB;&#xAC8C; &#xD560;&#xC9C0; &#xD568; &#xBCF4;&#xC790;</p>
+<pre><code class="lang-shell">$ terraform plan
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the
+following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_instance.my_instance will be created
+  + resource &quot;aws_instance&quot; &quot;my_instance&quot; {
+      + ami                                  = &quot;ami-013b765873d42324a&quot;
+      + arn                                  = (known after apply)
+      + associate_public_ip_address          = (known after apply)
+      + availability_zone                    = (known after apply)
+      + cpu_core_count                       = (known after apply)
+      + cpu_threads_per_core                 = (known after apply)
+      + disable_api_termination              = (known after apply)
+      + ebs_optimized                        = (known after apply)
+      + get_password_data                    = false
+      + host_id                              = (known after apply)
+      + id                                   = (known after apply)
+      + instance_initiated_shutdown_behavior = (known after apply)
+      + instance_state                       = (known after apply)
+      + instance_type                        = &quot;t3.micro&quot;
+      + ipv6_address_count                   = (known after apply)
+      + ipv6_addresses                       = (known after apply)
+      + key_name                             = (known after apply)
+      + monitoring                           = (known after apply)
+      + outpost_arn                          = (known after apply)
+      + password_data                        = (known after apply)
+      + placement_group                      = (known after apply)
+      + primary_network_interface_id         = (known after apply)
+      + private_dns                          = (known after apply)
+      + private_ip                           = (known after apply)
+      + public_dns                           = (known after apply)
+      + public_ip                            = (known after apply)
+      + secondary_private_ips                = (known after apply)
+      + security_groups                      = (known after apply)
+      + source_dest_check                    = true
+      + subnet_id                            = (known after apply)
+      + tags                                 = {
+          + &quot;Name&quot; = &quot;MyInstance&quot;
+        }
+      + tags_all                             = {
+          + &quot;Name&quot; = &quot;MyInstance&quot;
+        }
+      + tenancy                              = (known after apply)
+      + user_data                            = (known after apply)
+      + user_data_base64                     = (known after apply)
+      + vpc_security_group_ids               = (known after apply)
+
+      + capacity_reservation_specification {
+          + capacity_reservation_preference = (known after apply)
+
+          + capacity_reservation_target {
+              + capacity_reservation_id = (known after apply)
+            }
+        }
+
+      + ebs_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + snapshot_id           = (known after apply)
+          + tags                  = (known after apply)
+          + throughput            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      + enclave_options {
+          + enabled = (known after apply)
+        }
+
+      + ephemeral_block_device {
+          + device_name  = (known after apply)
+          + no_device    = (known after apply)
+          + virtual_name = (known after apply)
+        }
+
+      + metadata_options {
+          + http_endpoint               = (known after apply)
+          + http_put_response_hop_limit = (known after apply)
+          + http_tokens                 = (known after apply)
+        }
+
+      + network_interface {
+          + delete_on_termination = (known after apply)
+          + device_index          = (known after apply)
+          + network_interface_id  = (known after apply)
+        }
+
+      + root_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + tags                  = (known after apply)
+          + throughput            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+
+&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;
+
+Note: You didn&apos;t use the -out option to save this plan, so Terraform can&apos;t guarantee to take exactly these actions if you run
+&quot;terraform apply&quot; now.
+</code></pre>
+<p>apply &#xB54C;&#xB824;&#xBCF4;&#xC790;
+&#xC704;&#xC5D0; plan &#xCE60;&#xB54C; &#xB0B4;&#xC6A9; &#xB611;&#xAC19;&#xC774; &#xB098;&#xC624;&#xACE0; &#xC9C4;&#xC9DC; &#xD560;&#xAEBC;&#xB0D0;&#xACE0; &#xBB3C;&#xC5B4;&#xBCF8;&#xB2E4;.
+yes &#xB584;&#xB54C;&#xB8CC; &#xB54C;&#xB824;&#xBC84;&#xB837;!</p>
+<pre><code class="lang-shell">$ terraform plan
+...plan &#xB0B4;&#xC6A9;
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only &apos;yes&apos; will be accepted to approve.
+
+  Enter a value: yes
+
+aws_instance.my_instance: Creating...
+aws_instance.my_instance: Still creating... [10s elapsed]
+aws_instance.my_instance: Creation complete after 13s [id=i-01072fc03c31b7870]
+
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+</code></pre>
+<p>&#xC778;&#xC2A4;&#xD134;&#xC2A4; &#xC885;&#xB958;
+<img src="../assets/aws_instance_types.png" alt="aws_instance_types.png"></p>
+<p>&#xC798; &#xCD94;&#xAC00; &#xB418;&#xC5C8;&#xC74C;!
+<img src="../assets/terraform_aws_instance.png" alt="terraform_aws_instance.png"></p>
+<p>&#xD604;&#xC7AC; &#xC0C1;&#xD0DC; &#xAC80;&#xC0AC;</p>
+<pre><code class="lang-shell">$ terraform show
+# aws_instance.my_instance:
+resource &quot;aws_instance&quot; &quot;my_instance&quot; {
+    ami                                  = &quot;ami-013b765873d42324a&quot;
+    arn                                  = &quot;arn:aws:ec2:ap-northeast-2:766915375560:instance/i-01072fc03c31b7870&quot;
+    associate_public_ip_address          = true
+    availability_zone                    = &quot;ap-northeast-2d&quot;
+    cpu_core_count                       = 1
+    cpu_threads_per_core                 = 2
+    disable_api_termination              = false
+    ebs_optimized                        = false
+    get_password_data                    = false
+    hibernation                          = false
+    id                                   = &quot;i-01072fc03c31b7870&quot;
+    instance_initiated_shutdown_behavior = &quot;stop&quot;
+    instance_state                       = &quot;running&quot;
+    instance_type                        = &quot;t3.micro&quot;
+    ipv6_address_count                   = 0
+    ipv6_addresses                       = []
+    monitoring                           = false
+    primary_network_interface_id         = &quot;eni-0f1829a53074eb85c&quot;
+    private_dns                          = &quot;ip-172-31-52-6.ap-northeast-2.compute.internal&quot;
+    private_ip                           = &quot;172.31.52.6&quot;
+    public_dns                           = &quot;ec2-3-38-28-58.ap-northeast-2.compute.amazonaws.com&quot;
+    public_ip                            = &quot;3.38.28.58&quot;
+    secondary_private_ips                = []
+    security_groups                      = [
+        &quot;default&quot;,
+    ]
+    source_dest_check                    = true
+    subnet_id                            = &quot;subnet-0328abd3c1fcaca2a&quot;
+    tags                                 = {
+        &quot;Name&quot; = &quot;MyInstance&quot;
+    }
+    tags_all                             = {
+        &quot;Name&quot; = &quot;MyInstance&quot;
+    }
+    tenancy                              = &quot;default&quot;
+    vpc_security_group_ids               = [
+        &quot;sg-0dd3742b1a21e3740&quot;,
+    ]
+
+    capacity_reservation_specification {
+        capacity_reservation_preference = &quot;open&quot;
+    }
+
+    credit_specification {
+        cpu_credits = &quot;unlimited&quot;
+    }
+
+    enclave_options {
+        enabled = false
+    }
+
+    metadata_options {
+        http_endpoint               = &quot;enabled&quot;
+        http_put_response_hop_limit = 1
+        http_tokens                 = &quot;optional&quot;
+    }
+
+    root_block_device {
+        delete_on_termination = true
+        device_name           = &quot;/dev/sda1&quot;
+        encrypted             = false
+        iops                  = 100
+        tags                  = {}
+        throughput            = 0
+        volume_id             = &quot;vol-0bbbf7ca0bedf9a34&quot;
+        volume_size           = 8
+        volume_type           = &quot;gp2&quot;
+    }
+}
+</code></pre>
+<p>&#xD56D;&#xC0C1; apply &#xD558;&#xACE0; &#xB098;&#xBA74; terraform.tfstate &#xD30C;&#xC77C;&#xC774; &#xC0DD;&#xAE40;.
+&#xC911;&#xC694;&#xD55C; &#xD30C;&#xC77C;&#xC784;.</p>
+<p>&#xC774;&#xC804;&#xC758; &#xC0C1;&#xD0DC;&#xB294; terraform.tfstate.backup &#xD30C;&#xC77C;&#xC5D0; &#xC800;&#xC7A5;&#xB41C;&#xB2E4;.</p>
+<h2 id="152-&#xB9AC;&#xC18C;&#xC2A4;-&#xBCC0;&#xACBD;">15.2 &#xB9AC;&#xC18C;&#xC2A4; &#xBCC0;&#xACBD;</h2>
+<p>ami &#xB97C; ami-0a0ac042031ba59d1 (Ubuntu 20.04 focal) &#xB85C; &#xBCC0;&#xACBD; &#xD558;&#xACE0; &#xD655;&#xC778;&#xD574;&#xBCF4;&#xC790;
+&#xC774;&#xBBF8;&#xC9C0;&#xB97C; &#xAD50;&#xCCB4;&#xD560; &#xC218;&#xB294; &#xC5C6;&#xAE30; &#xB584;&#xBB38;&#xC5D0;
+&#xC0AD;&#xC81C;&#xD558;&#xACE0; &#xB2E4;&#xC2DC; &#xC0DD;&#xC131;&#xD55C;&#xB2E4;.</p>
+<pre><code class="lang-shell">$ terraform plan
+aws_instance.my_instance: Refreshing state... [id=i-01072fc03c31b7870]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the
+following symbols:
+-/+ destroy and then create replacement
+
+Terraform will perform the following actions:
+
+  # aws_instance.my_instance must be replaced
+-/+ resource &quot;aws_instance&quot; &quot;my_instance&quot; {
+      ~ ami                                  = &quot;ami-013b765873d42324a&quot; -&gt; &quot;ami-0a0ac042031ba59d1&quot; # forces replacement
+      ~ arn                                  = &quot;arn:aws:ec2:ap-northeast-2:766915375560:instance/i-01072fc03c31b7870&quot; -&gt; (known after apply)
+      ~ associate_public_ip_address          = true -&gt; (known after apply)
+      ~ availability_zone                    = &quot;ap-northeast-2d&quot; -&gt; (known after apply)
+      ~ cpu_core_count                       = 1 -&gt; (known after apply)
+      ~ cpu_threads_per_core                 = 2 -&gt; (known after apply)
+      ~ disable_api_termination              = false -&gt; (known after apply)
+      ~ ebs_optimized                        = false -&gt; (known after apply)
+      - hibernation                          = false -&gt; null
+      + host_id                              = (known after apply)
+      ~ id                                   = &quot;i-01072fc03c31b7870&quot; -&gt; (known after apply)
+      ~ instance_initiated_shutdown_behavior = &quot;stop&quot; -&gt; (known after apply)
+      ~ instance_state                       = &quot;running&quot; -&gt; (known after apply)
+      ~ ipv6_address_count                   = 0 -&gt; (known after apply)
+      ~ ipv6_addresses                       = [] -&gt; (known after apply)
+      + key_name                             = (known after apply)
+      ~ monitoring                           = false -&gt; (known after apply)
+      + outpost_arn                          = (known after apply)
+      + password_data                        = (known after apply)
+      + placement_group                      = (known after apply)
+      ~ primary_network_interface_id         = &quot;eni-0f1829a53074eb85c&quot; -&gt; (known after apply)
+      ~ private_dns                          = &quot;ip-172-31-52-6.ap-northeast-2.compute.internal&quot; -&gt; (known after apply)
+      ~ private_ip                           = &quot;172.31.52.6&quot; -&gt; (known after apply)
+      ~ public_dns                           = &quot;ec2-3-38-28-58.ap-northeast-2.compute.amazonaws.com&quot; -&gt; (known after apply)
+      ~ public_ip                            = &quot;3.38.28.58&quot; -&gt; (known after apply)
+      ~ secondary_private_ips                = [] -&gt; (known after apply)
+      ~ security_groups                      = [
+          - &quot;default&quot;,
+        ] -&gt; (known after apply)
+      ~ subnet_id                            = &quot;subnet-0328abd3c1fcaca2a&quot; -&gt; (known after apply)
+        tags                                 = {
+            &quot;Name&quot; = &quot;MyInstance&quot;
+        }
+      ~ tenancy                              = &quot;default&quot; -&gt; (known after apply)
+      + user_data                            = (known after apply)
+      + user_data_base64                     = (known after apply)
+      ~ vpc_security_group_ids               = [
+          - &quot;sg-0dd3742b1a21e3740&quot;,
+        ] -&gt; (known after apply)
+        # (4 unchanged attributes hidden)
+
+      ~ capacity_reservation_specification {
+          ~ capacity_reservation_preference = &quot;open&quot; -&gt; (known after apply)
+
+          + capacity_reservation_target {
+              + capacity_reservation_id = (known after apply)
+            }
+        }
+
+      - credit_specification {
+          - cpu_credits = &quot;unlimited&quot; -&gt; null
+        }
+
+      + ebs_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + snapshot_id           = (known after apply)
+          + tags                  = (known after apply)
+          + throughput            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      ~ enclave_options {
+          ~ enabled = false -&gt; (known after apply)
+        }
+
+      + ephemeral_block_device {
+          + device_name  = (known after apply)
+          + no_device    = (known after apply)
+          + virtual_name = (known after apply)
+        }
+
+      ~ metadata_options {
+          ~ http_endpoint               = &quot;enabled&quot; -&gt; (known after apply)
+          ~ http_put_response_hop_limit = 1 -&gt; (known after apply)
+          ~ http_tokens                 = &quot;optional&quot; -&gt; (known after apply)
+        }
+
+      + network_interface {
+          + delete_on_termination = (known after apply)
+          + device_index          = (known after apply)
+          + network_interface_id  = (known after apply)
+        }
+
+      ~ root_block_device {
+          ~ delete_on_termination = true -&gt; (known after apply)
+          ~ device_name           = &quot;/dev/sda1&quot; -&gt; (known after apply)
+          ~ encrypted             = false -&gt; (known after apply)
+          ~ iops                  = 100 -&gt; (known after apply)
+          + kms_key_id            = (known after apply)
+          ~ tags                  = {} -&gt; (known after apply)
+          ~ throughput            = 0 -&gt; (known after apply)
+          ~ volume_id             = &quot;vol-0bbbf7ca0bedf9a34&quot; -&gt; (known after apply)
+          ~ volume_size           = 8 -&gt; (known after apply)
+          ~ volume_type           = &quot;gp2&quot; -&gt; (known after apply)
+        }
+    }
+
+Plan: 1 to add, 0 to change, 1 to destroy.
+
+&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;
+
+Note: You didn&apos;t use the -out option to save this plan, so Terraform can&apos;t guarantee to take exactly these actions if you run
+&quot;terraform apply&quot; now.
+</code></pre>
+<pre><code class="lang-shell">...plan &#xB0B4;&#xC6A9;
+aws_instance.my_instance: Destroying... [id=i-01072fc03c31b7870]
+aws_instance.my_instance: Still destroying... [id=i-01072fc03c31b7870, 10s elapsed]
+aws_instance.my_instance: Still destroying... [id=i-01072fc03c31b7870, 20s elapsed]
+aws_instance.my_instance: Still destroying... [id=i-01072fc03c31b7870, 30s elapsed]
+aws_instance.my_instance: Still destroying... [id=i-01072fc03c31b7870, 40s elapsed]
+aws_instance.my_instance: Still destroying... [id=i-01072fc03c31b7870, 50s elapsed]
+aws_instance.my_instance: Destruction complete after 50s
+aws_instance.my_instance: Creating...
+aws_instance.my_instance: Still creating... [10s elapsed]
+aws_instance.my_instance: Creation complete after 13s [id=i-0ac6810094d1ff76e]
+
+Apply complete! Resources: 1 added, 0 changed, 1 destroyed.
+</code></pre>
+<h2 id="153-&#xB9AC;&#xC18C;&#xC2A4;-&#xC0AD;&#xC81C;">15.3 &#xB9AC;&#xC18C;&#xC2A4; &#xC0AD;&#xC81C;</h2>
+<pre><code class="lang-shell">$ terraform destroy 
+aws_instance.my_instance: Refreshing state... [id=i-0ac6810094d1ff76e]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the
+following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # aws_instance.my_instance will be destroyed
+  - resource &quot;aws_instance&quot; &quot;my_instance&quot; {
+      - ami                                  = &quot;ami-0a0ac042031ba59d1&quot; -&gt; null
+      - arn                                  = &quot;arn:aws:ec2:ap-northeast-2:766915375560:instance/i-0ac6810094d1ff76e&quot; -&gt; null
+      - associate_public_ip_address          = true -&gt; null
+      - availability_zone                    = &quot;ap-northeast-2d&quot; -&gt; null
+      - cpu_core_count                       = 1 -&gt; null
+      - cpu_threads_per_core                 = 2 -&gt; null
+      - disable_api_termination              = false -&gt; null
+      - ebs_optimized                        = false -&gt; null
+      - get_password_data                    = false -&gt; null
+      - hibernation                          = false -&gt; null
+      - id                                   = &quot;i-0ac6810094d1ff76e&quot; -&gt; null
+      - instance_initiated_shutdown_behavior = &quot;stop&quot; -&gt; null
+      - instance_state                       = &quot;running&quot; -&gt; null
+      - instance_type                        = &quot;t3.micro&quot; -&gt; null
+      - ipv6_address_count                   = 0 -&gt; null
+      - ipv6_addresses                       = [] -&gt; null
+      - monitoring                           = false -&gt; null
+      - primary_network_interface_id         = &quot;eni-098fa8ccd2752a7ad&quot; -&gt; null
+      - private_dns                          = &quot;ip-172-31-48-164.ap-northeast-2.compute.internal&quot; -&gt; null
+      - private_ip                           = &quot;172.31.48.164&quot; -&gt; null
+      - public_dns                           = &quot;ec2-3-38-112-209.ap-northeast-2.compute.amazonaws.com&quot; -&gt; null
+      - public_ip                            = &quot;3.38.112.209&quot; -&gt; null
+      - secondary_private_ips                = [] -&gt; null
+      - security_groups                      = [
+          - &quot;default&quot;,
+        ] -&gt; null
+      - source_dest_check                    = true -&gt; null
+      - subnet_id                            = &quot;subnet-0328abd3c1fcaca2a&quot; -&gt; null
+      - tags                                 = {
+          - &quot;Name&quot; = &quot;MyInstance&quot;
+        } -&gt; null
+      - tags_all                             = {
+          - &quot;Name&quot; = &quot;MyInstance&quot;
+        } -&gt; null
+      - tenancy                              = &quot;default&quot; -&gt; null
+      - vpc_security_group_ids               = [
+          - &quot;sg-0dd3742b1a21e3740&quot;,
+        ] -&gt; null
+
+      - capacity_reservation_specification {
+          - capacity_reservation_preference = &quot;open&quot; -&gt; null
+        }
+
+      - credit_specification {
+          - cpu_credits = &quot;unlimited&quot; -&gt; null
+        }
+
+      - enclave_options {
+          - enabled = false -&gt; null
+        }
+
+      - metadata_options {
+          - http_endpoint               = &quot;enabled&quot; -&gt; null
+          - http_put_response_hop_limit = 1 -&gt; null
+          - http_tokens                 = &quot;optional&quot; -&gt; null
+        }
+
+      - root_block_device {
+          - delete_on_termination = true -&gt; null
+          - device_name           = &quot;/dev/sda1&quot; -&gt; null
+          - encrypted             = false -&gt; null
+          - iops                  = 100 -&gt; null
+          - tags                  = {} -&gt; null
+          - throughput            = 0 -&gt; null
+          - volume_id             = &quot;vol-02e51bd29bcd752bd&quot; -&gt; null
+          - volume_size           = 8 -&gt; null
+          - volume_type           = &quot;gp2&quot; -&gt; null
+        }
+    }
+
+Plan: 0 to add, 0 to change, 1 to destroy.
+
+Do you really want to destroy all resources?
+  Terraform will destroy all your managed infrastructure, as shown above.
+  There is no undo. Only &apos;yes&apos; will be accepted to confirm.
+
+  Enter a value: yes
+
+aws_instance.my_instance: Destroying... [id=i-0ac6810094d1ff76e]
+aws_instance.my_instance: Still destroying... [id=i-0ac6810094d1ff76e, 10s elapsed]
+aws_instance.my_instance: Destruction complete after 19s
+
+Destroy complete! Resources: 1 destroyed.
+</code></pre>
+<h2 id="154-&#xB9AC;&#xC18C;&#xC2A4;-&#xC885;&#xC18D;&#xC131;">15.4 &#xB9AC;&#xC18C;&#xC2A4; &#xC885;&#xC18D;&#xC131;</h2>
+<h3 id="3-&#xC554;&#xC2DC;&#xC801;-&#xC885;&#xC18D;&#xC131;">3) &#xC554;&#xC2DC;&#xC801; &#xC885;&#xC18D;&#xC131;</h3>
+<p>  &#xD14C;&#xB77C;&#xD3FC;&#xC774; &#xB9AC;&#xC18C;&#xC2A4; &#xAC04;&#xC758; &#xC758;&#xC874;&#xC131;&#xC744; &#xBD84;&#xC11D;&#xD574;&#xC11C; &#xC54C;&#xC544;&#xC11C; &#xB9AC;&#xC18C;&#xC2A4;&#xB97C; &#xC0DD;&#xC131;, &#xBCC0;&#xACBD;, &#xC0AD;&#xC81C;&#xB4F1;&#xC758; &#xC21C;&#xC11C;&#xB97C; &#xACB0;&#xC815;&#xD568;.
+  &#xC758;&#xC874;&#xB418;&#xB294; &#xB300;&#xC0C1;&#xC758; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xB97C; &#xBA3C;&#xC800; &#xB9CC;&#xB4E0;&#xB2E4;.</p>
+<h3 id="4-&#xBA85;&#xC2DC;&#xC801;-&#xC885;&#xC18D;&#xC131;">4) &#xBA85;&#xC2DC;&#xC801; &#xC885;&#xC18D;&#xC131;</h3>
+<p>depends_on : &#xBA54;&#xD0C0;&#xC18D;&#xC131;. &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xB9AC;&#xC18C;&#xC2A4; &#xAC04;&#xC5D0; &#xC758;&#xC874;&#xC131;&#xC744; &#xBA85;&#xD655;&#xD558;&#xAC8C; &#xC815;&#xC758;</p>
+<h3 id="5-&#xBE44;-&#xC885;&#xC18D;&#xC131;">5) &#xBE44; &#xC885;&#xC18D;&#xC131;</h3>
+<p>&#xB2E4;&#xB978; &#xB9AC;&#xC18C;&#xC2A4;&#xC640; &#xC758;&#xC874;&#xC131;&#xC744; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xC9C0; &#xC54A;&#xC740; &#xB9AC;&#xC18C;&#xC2A4;&#xB294; &#xB3D9;&#xC2DC;&#xC5D0; &#xC0DD;&#xC131;&#xB428;.</p>
+<ul>
+<li>&#xC2E4;&#xC2B5; &#xB530;&#xB77C;&#xD558;&#xAE30;</li>
+<li>provider.tf
+```tf
+terraform {
+required_providers {
+  aws = {<pre><code>source  = &quot;hashicorp/aws&quot;
+version = &quot;~&gt; 3.34&quot;
+</code></pre>  }
+}
+}</li>
+</ul>
+<p>provider &quot;aws&quot; {
+  profile = &quot;default&quot;
+  region  = &quot;ap-northeast-2&quot;
+}</p>
+<pre><code>
+- main.tf
+```tf
+resource &quot;aws_instance&quot; &quot;my_instance_a&quot; {
+  ami           = &quot;ami-013b765873d42324a&quot; # Ubuntu 18.04 amd64 ami
+  instance_type = &quot;t3.micro&quot;
+
+  tags = {
+    Name = &quot;MyInstanceA&quot;
+  }
+}
+
+
+resource &quot;aws_instance&quot; &quot;my_instance_b&quot; {
+  ami           = &quot;ami-013b765873d42324a&quot; # Ubuntu 18.04 amd64 ami
+  instance_type = &quot;t3.micro&quot;
+
+  tags = {
+    Name = &quot;MyInstanceB&quot;
+  }
+
+  depends_on = [aws_s3_bucket.my_bucket]
+}
+
+
+resource &quot;aws_eip&quot; &quot;my_eip&quot; {
+  vpc      = true
+  instance = aws_instance.my_instance_a.id
+
+  tags = {
+    Name = &quot;MyInstanceA&quot;
+  }
+}
+
+resource &quot;aws_s3_bucket&quot; &quot;my_bucket&quot; {
+  acl = &quot;private&quot;
+}
+</code></pre><p>20.04 &#xD558;&#xACE0;&#xC2F6;&#xC73C;&#xBA74;
+&quot;ami-0a0ac042031ba59d1&quot; # Ubuntu 20.04 focal</p>
+<ul>
+<li>&#xC65C; &#xAE43;&#xD5D9;&#xC5D0; tfstate &#xD30C;&#xC77C; &#xC62C;&#xB824;&#xC11C; &#xAD00;&#xB9AC;&#xD558;&#xBA74; &#xC548;&#xB418;&#xB0D0;?!!!
+&#xC678;&#xBD80;&#xC544;&#xC774;&#xD53C; &#xB0B4;&#xBD80;&#xC544;&#xC774;&#xD53C; &#xC800;&#xC7A5;&#xC18C; &#xADF8;&#xB7F0;&#xAC70; &#xC815;&#xBCF4; &#xC788;&#xC5B4;&#xC11C; &#xADF8;&#xB7F0;&#xAC70; &#xC544;&#xB2D0;&#xAE5C;?</li>
+<li>&#xC624;&#xB8CC;&#xC624;..</li>
+<li>&#xC544;&#xD56D; &#xC11C;&#xB85C; &#xB2EC;&#xB77C;&#xC11C;!</li>
+<li>&#xB0B4;&#xAC00; &#xC791;&#xC5C5;&#xD55C; &#xC0C1;&#xD0DC;&#xAC00; &#xC788;&#xC5B4;&#xC57C; &#xD558;&#xB294;&#xB370; &#xB534;&#xB188;&#xC774; &#xC791;&#xC5C5;&#xD55C; &#xC0C1;&#xD0DC;&#xAC00; &#xB0B4;&#xCABD;&#xC73C;&#xB85C; &#xC640;&#xC11C; &#xAF2C;&#xC778;&#xB2E4;&#xB294;&#xAC70; &#xAC19;&#xC74C;
+&#xC624;&#xD64D;.. &#xC624;&#xCF00;&#xC774;(&#xC77C;&#xB2E8;..)</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Part14/note.html" class="navigation navigation-prev " aria-label="Previous page: 14. 구성파일 작성">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Part16/note.html" class="navigation navigation-next " aria-label="Next page: 16. 변수 및 값">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"15. 리소스 관리","level":"1.16","depth":1,"next":{"title":"16. 변수 및 값","level":"1.17","depth":1,"path":"pages/Part16/note.md","ref":"pages/Part16/note.md","articles":[]},"previous":{"title":"14. 구성파일 작성","level":"1.15","depth":1,"path":"pages/Part14/note.md","ref":"pages/Part14/note.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/Part15/note.md","mtime":"2021-10-11T04:32:37.691Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-11T07:24:17.942Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

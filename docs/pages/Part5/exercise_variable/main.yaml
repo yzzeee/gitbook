@@ -1,0 +1,43 @@
+---
+- name: Simple Web Deploy
+  hosts: 192.168.200.101
+  vars:
+    contents_file: index.php
+    apache_port: "8080"
+
+  tasks:
+  - name: Install Pacakge for Ubuntu
+    apt:
+      name: apache2, libapache2-mod-php
+      update_cache: true
+      state: present
+    when: ansible_distribution == "Ubuntu"
+  
+  - name: Install Package for CentOS
+    yum:
+      name: httpd, mod-php
+      state: present
+    when: ansible_distribution == "CentOS"
+
+  - name: Copy PHP Contents
+    copy:
+      src: '{{ contents_file }}'
+      dest: '/var/www/html/{{ contents_file }}'
+      backup: true
+
+  - name: Configure Apache Port
+    template:
+      src: ports.conf.j2
+      dest: '/etc/apache2/ports.conf'
+
+  - name: Start Service
+    service:
+      name: apache2
+      state: restarted
+      enabled: true
+
+  - name: Checking
+    uri:
+      url: "http://192.168.200.101:{{ apache_port }}/{{ contents_file }}"
+
+

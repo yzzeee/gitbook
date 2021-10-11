@@ -1,0 +1,29 @@
+- hosts: 192.168.200.101
+  tasks:
+  - name: T1
+    ping:
+  
+  - name: T2 - async
+    command: sleep 1m
+    async: 200
+    poll: 0
+    register: async_result # register 모듈로 현재 task의 반환값을 참조하도록 변수 지정
+
+  - name: T3
+    ping:
+
+  - name: T4
+    ping:
+
+  - name: T5 - sync
+    async_status:
+      jid: "{{ async_result.ansible_job_id }}" # register 모듈에 등록된 변수를 참조
+    register: job_result
+    until: job_result.finished # 현재 task의 상태가 finished 될 때까지 retry
+    retries: 100
+    delay: 10
+
+  - name: T6
+    ping:
+
+ 

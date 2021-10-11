@@ -1,0 +1,967 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6. 작업 제어 - 기본 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Part7/note.html" />
+    
+    
+    <link rel="prev" href="../Part5/note.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Part1/note.html">
+            
+                <a href="../Part1/note.html">
+            
+                    
+                    1. IaC 개요
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Part2/note.html">
+            
+                <a href="../Part2/note.html">
+            
+                    
+                    2. Ansible 개요
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Part3/note.html">
+            
+                <a href="../Part3/note.html">
+            
+                    
+                    3. Ansible 기본
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Part4/note.html">
+            
+                <a href="../Part4/note.html">
+            
+                    
+                    4. 플레이북
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Part5/note.html">
+            
+                <a href="../Part5/note.html">
+            
+                    
+                    5. 변수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="note.html">
+            
+                <a href="note.html">
+            
+                    
+                    6. 작업 제어 - 기본
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Part7/note.html">
+            
+                <a href="../Part7/note.html">
+            
+                    
+                    7. 작업 제어 - 고급
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Part8/note.html">
+            
+                <a href="../Part8/note.html">
+            
+                    
+                    8. 아티팩트 재사용 - 파일
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Part9/note.html">
+            
+                <a href="../Part9/note.html">
+            
+                    
+                    9. 아티팩트 재사용 - 역할
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Part10/note.html">
+            
+                <a href="../Part10/note.html">
+            
+                    
+                    10. 암호화
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../Part11/note.html">
+            
+                <a href="../Part11/note.html">
+            
+                    
+                    11. AWX(AnsibleWorks)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../Part12/note.html">
+            
+                <a href="../Part12/note.html">
+            
+                    
+                    12. Terraform 기본
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../Part13/note.html">
+            
+                <a href="../Part13/note.html">
+            
+                    
+                    13. AWS CLI 및 Terraform 설치
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../Part14/note.html">
+            
+                <a href="../Part14/note.html">
+            
+                    
+                    14. 구성파일 작성
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../Part15/note.html">
+            
+                <a href="../Part15/note.html">
+            
+                    
+                    15. 리소스 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../Part16/note.html">
+            
+                <a href="../Part16/note.html">
+            
+                    
+                    16. 변수 및 값
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../Part17/note.html">
+            
+                <a href="../Part17/note.html">
+            
+                    
+                    17. 구성 관리 및 프로비저너
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../Part18/note.html">
+            
+                <a href="../Part18/note.html">
+            
+                    
+                    18. 모듈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../Part19/note.html">
+            
+                <a href="../Part19/note.html">
+            
+                    
+                    19. 반복
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../Part20/note.html">
+            
+                <a href="../Part20/note.html">
+            
+                    
+                    20. 원격 상태 저장
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >6. 작업 제어 - 기본</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#xC791;&#xC5C5;-&#xC81C;&#xC5B4;---&#xAE30;&#xBCF8;">&#xC791;&#xC5C5; &#xC81C;&#xC5B4; - &#xAE30;&#xBCF8;</h1>
+<h2 id="61-&#xBC18;&#xBCF5;&#xBB38;">6.1 &#xBC18;&#xBCF5;&#xBB38;</h2>
+<p>ansible 2.4 &#xAE4C;&#xC9C0;&#xB294; with_* &#xC0AC;&#xC6A9;&#xD558;&#xC600;&#xC5C8;&#xB294;&#xB370;<br>
+ansible 2.5 &#xBD80;&#xD130; loop&#xB97C; &#xCD94;&#xAC00;&#xD568;</p>
+<p>loop &#xD0A4;&#xC6CC;&#xB4DC;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xAE30;&#xC874;&#xC758; with_* &#xD0A4;&#xC6CC;&#xB4DC;&#xB85C; &#xD588;&#xB358;&#xAC8C; &#xC77C;&#xBD80; &#xC548;&#xB418;&#xB294; &#xACBD;&#xC6B0;&#xAC00; &#xC788;&#xC74C;.</p>
+<p>&#xBCC0;&#xC218;&#xC758; &#xAC12;&#xC744; &#xBC1B;&#xB294; &#xBCC0;&#xC218;&#xBA85;&#xC740; &#xD56D;&#xC0C1; item &#xC774;&#xB2E4;!<br>
+&#xBC18;&#xBCF5;&#xBB38;&#xC5D0;&#xC11C; &#xC81C;&#xACF5;&#xB418;&#xB294; &#xBAA9;&#xB85D;&#xC744; &#xCC38;&#xC870;&#xD558;&#xB294; &#xBCC0;&#xC218;&#xB294; &#xD56D;&#xC0C1; item &#xC774;&#xB2E4;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">- hosts:</span> <span class="hljs-number">192.168</span><span class="hljs-number">.200</span><span class="hljs-number">.101</span>
+<span class="hljs-attr">  tasks:</span>
+<span class="hljs-attr">    - debug:</span>
+<span class="hljs-attr">        msg:</span> <span class="hljs-string">&quot;<span class="hljs-template-variable">{{ item }}</span>&quot;</span>
+<span class="hljs-attr">      loop:</span>
+<span class="hljs-bullet">        -</span> one
+<span class="hljs-bullet">        -</span> two
+<span class="hljs-bullet">        -</span> three
+</code></pre>
+<pre><code class="lang-shell">$ ansible-playbook loop.yaml 
+PLAY [192.168.200.101] *********************************************************************************
+
+TASK [Gathering Facts] *********************************************************************************
+ok: [192.168.200.101]
+
+TASK [debug] *******************************************************************************************
+ok: [192.168.200.101] =&gt; (item=one) =&gt; {
+    &quot;msg&quot;: &quot;one&quot;
+}
+ok: [192.168.200.101] =&gt; (item=two) =&gt; {
+    &quot;msg&quot;: &quot;two&quot;
+}
+ok: [192.168.200.101] =&gt; (item=three) =&gt; {
+    &quot;msg&quot;: &quot;three&quot;
+}
+
+PLAY RECAP *********************************************************************************************
+192.168.200.101            : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+</code></pre>
+<pre><code class="lang-yaml"><span class="hljs-attr">- hosts:</span> <span class="hljs-number">192.168</span><span class="hljs-number">.200</span><span class="hljs-number">.101</span>
+<span class="hljs-attr">  vars:</span>
+<span class="hljs-attr">    loop_list:</span>
+<span class="hljs-bullet">      -</span> one
+<span class="hljs-bullet">      -</span> two
+<span class="hljs-bullet">      -</span> three
+<span class="hljs-attr">  tasks:</span>
+<span class="hljs-attr">    - debug:</span>
+<span class="hljs-attr">        msg:</span> <span class="hljs-string">&quot;<span class="hljs-template-variable">{{ item }}</span>&quot;</span>
+<span class="hljs-attr">      loop:</span>
+        <span class="hljs-string">&quot;<span class="hljs-template-variable">{{ loop_list }}</span>&quot;</span>
+</code></pre>
+<h3 id="1-&#xB2E8;&#xC21C;&#xBC18;&#xBCF5;">1) &#xB2E8;&#xC21C;&#xBC18;&#xBCF5;</h3>
+<p>&#xD328;&#xD0A4;&#xC9C0;&#xB97C; &#xC124;&#xCE58;&#xD558;&#xB294; &#xACF3;&#xC5D0; &#xBC18;&#xBCF5;&#xBB38;&#xC744; &#xC2E4;&#xD589;&#xD558;&#xBA74; &#xC624;&#xD788;&#xB824; &#xC624;&#xB798;&#xAC78;&#xB9BC;, &#xAC4D; &#xCEF4;&#xB9C8;&#xB85C; &#xB098;&#xC5F4;&#xD558;&#xC148;!</p>
+<p>&#xBA85;&#xB839;&#xC774; &#xD55C;&#xBC88;&#xB9CC; &#xC2E4;&#xD589;&#xB428;: apt install apache2,php
+&#xBA85;&#xB839;&#xC774; 2&#xBC88; &#xC2E4;&#xD589;&#xB428;: apt install apache2; apt install php # &#xBC18;&#xBCF5;&#xBB38; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xC694;&#xB85C;&#xCF00;.. &#xC131;&#xB2A5;&#xC5D0; &#xB9C8;&#xC774;&#xB108;&#xC2A4;~</p>
+<p>&#xBAA8;&#xB4C8;&#xC5D0; &#xB530;&#xB77C;&#xC11C; &#xB9AC;&#xC2A4;&#xD2B8;&#xB85C; &#xBC1B;&#xC744;&#xC218; &#xC788;&#xB294; &#xBAA8;&#xB4C8;&#xC774; &#xC788;&#xACE0; &#xC548;&#xB418;&#xB294; &#xBAA8;&#xB4C8;&#xC774; &#xC788;&#xC74C;</p>
+<h3 id="2-&#xC0AC;&#xC804;-&#xBAA9;&#xB85D;-&#xBC18;&#xBCF5;">2) &#xC0AC;&#xC804; &#xBAA9;&#xB85D; &#xBC18;&#xBCF5;</h3>
+<pre><code class="lang-yaml"><span class="hljs-attr">- name:</span> add several users
+<span class="hljs-attr">  user:</span>
+<span class="hljs-attr">    name:</span> <span class="hljs-string">&quot;<span class="hljs-template-variable">{{ item.name }}</span>&quot;</span>
+<span class="hljs-attr">    state:</span> present
+<span class="hljs-attr">    groups:</span> <span class="hljs-string">&quot;<span class="hljs-template-variable">{{ item.groups }}</span>&quot;</span>
+<span class="hljs-attr">  loop:</span>
+<span class="hljs-bullet">    -</span> { name: <span class="hljs-string">&apos;testuser1&apos;</span>, groups: <span class="hljs-string">&apos;wheel&apos;</span> }
+<span class="hljs-bullet">    -</span> { name: <span class="hljs-string">&apos;testuser2&apos;</span>, groups: <span class="hljs-string">&apos;root&apos;</span> }
+</code></pre>
+<p>item.<dict_key> &#xD615;&#xC2DD;&#xC73C;&#xB85C; &#xCC38;&#xC870;
+user &#xBAA8;&#xB4C8;&#xC774; 2&#xBC88; &#xC2E4;&#xD589;&#xB428;</dict_key></p>
+<h3 id="3-&#xC911;&#xCCA9;-&#xBAA9;&#xB85D;-&#xBC18;&#xBCF5;">3) &#xC911;&#xCCA9; &#xBAA9;&#xB85D; &#xBC18;&#xBCF5;</h3>
+<p>&#xB370;&#xCE74;&#xB974;&#xD2B8;&#xC758; &#xACF1;... product</p>
+<p>&#xCD1D; 6&#xBC88;&#xC774; &#xC2E4;&#xD589;&#xB428;</p>
+<p>alice &#xC758; clientdb8<br>
+alice &#xC758; employeedb<br>
+alice &#xC758; providerdb<br>
+bob &#xC758; clientdb<br>
+bob &#xC758; employeedb<br>
+bob &#xC758; providerdb<br></p>
+<h3 id="4-&#xC778;&#xBCA4;&#xD1A0;&#xB9AC;-&#xBC18;&#xBCF5;">4) &#xC778;&#xBCA4;&#xD1A0;&#xB9AC; &#xBC18;&#xBCF5;</h3>
+<pre><code class="lang-yaml"><span class="hljs-attr">- debug:</span>
+<span class="hljs-attr">    msg:</span> <span class="hljs-string">&quot;<span class="hljs-template-variable">{{ }}</span>&quot;</span>
+</code></pre>
+<p>&#xC778;&#xBCA4;&#xD1A0;&#xB9AC; &#xD638;&#xC2A4;&#xD2B8; &#xCFFC;&#xB9AC;&#xD558;&#xC5EC; &#xC0AC;&#xC6A9; &#xAC00;&#xB2A5;</p>
+<h2 id="62-&#xC870;&#xAC74;&#xBB38;">6.2 &#xC870;&#xAC74;&#xBB38;</h2>
+<p>&#xBCC0;&#xC218;&#xC758; &#xAC12;&#xC774; test_name &#xC774;&#xBA74; &#xC2E4;&#xD589;&#xC744; &#xD558;&#xAC70;&#xB77C;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">- debug:</span>
+<span class="hljs-attr">    msg:</span> hello world
+<span class="hljs-attr">  when:</span> variable is test_name
+</code></pre>
+<h3 id="1-&#xD14C;&#xC2A4;&#xD2B8;">1) &#xD14C;&#xC2A4;&#xD2B8;</h3>
+<p>&#xCC38;&#xC778;&#xC9C0; &#xAC70;&#xC9D3;&#xC778;&#xC9C0; &#xD3C9;&#xAC00;<br>
+Ansible &#xD50C;&#xB808;&#xC774;&#xBD81; &#xC2E4;&#xD589; &#xD6C4; &#xB9C8;&#xC9C0;&#xB9C9;&#xC5D0; recap &#xBD80;&#xBD84;&#xC5D0; skip &#xC774;&#xB728;&#xBA74; &#xB118;&#xC5B4;&#xAC04; task&#xC784;</p>
+<h4 id="2-&#xBC84;&#xC804;-&#xBE44;&#xAD50;-&#xD14C;&#xC2A4;&#xD2B8;">(2) &#xBC84;&#xC804; &#xBE44;&#xAD50; &#xD14C;&#xC2A4;&#xD2B8;</h4>
+<pre><code class="lang-yaml"><span class="hljs-attr">when:</span> ansible_facts[<span class="hljs-string">&apos;distribution_version&apos;</span>] is version(<span class="hljs-string">&apos;12.04&apos;</span>, <span class="hljs-string">&apos;&gt;=&apos;</span>)
+</code></pre>
+<h4 id="3-&#xACBD;&#xB85C;-&#xD14C;&#xC2A4;&#xD2B8;">(3) &#xACBD;&#xB85C; &#xD14C;&#xC2A4;&#xD2B8;</h4>
+<ul>
+<li>dir: is directory</li>
+<li>file: is file</li>
+<li>symlink: is link</li>
+<li>exist: is exist</li>
+<li>same compare: is samefile(path)</li>
+<li>mount: is mount</li>
+</ul>
+<h4 id="4-&#xC774;&#xC804;-&#xC791;&#xC5C5;&#xC758;-&#xACB0;&#xACFC;-&#xD14C;&#xC2A4;&#xD2B8;">(4) &#xC774;&#xC804; &#xC791;&#xC5C5;&#xC758; &#xACB0;&#xACFC; &#xD14C;&#xC2A4;&#xD2B8;</h4>
+<p>ignore_errors: True<br>
+&#xC774;&#xC804; &#xC791;&#xC5C5;&#xC774; &#xC2E4;&#xD328;&#xD558;&#xB4E0; &#xB9D0;&#xB4E0;~ &#xB2E4;&#xC74C;&#xC73C;&#xB85C; &#xB118;&#xC5B4;&#xAC04;&#xB2E4;</p>
+<p>result is successed &#xBCC0;&#xACBD; &#xC0AC;&#xD56D; &#xC5C6;&#xC9C0;&#xB9CC; &#xC131;&#xACF5;</p>
+<ul>
+<li>failed: result is failed</li>
+<li>changes: is changes</li>
+<li>succeeded: result is succeeded</li>
+<li>skipped: result is skipped</li>
+</ul>
+<h3 id="2-&#xC870;&#xAC74;&#xBB38;">2) &#xC870;&#xAC74;&#xBB38;</h3>
+<p>&#xB108;&#xBB34;&#xB098;&#xB3C4; &#xB9CE;&#xC774; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;.</p>
+<h4 id="1-&#xAE30;&#xBCF8;-&#xC870;&#xAC74;&#xBB38;">(1) &#xAE30;&#xBCF8; &#xC870;&#xAC74;&#xBB38;</h4>
+<h4 id="2-&#xD329;&#xD2B8;-&#xBCC0;&#xC218;-&#xAE30;&#xBC18;&#xC758;-&#xC870;&#xAC74;&#xBB38;">(2) &#xD329;&#xD2B8; &#xBCC0;&#xC218; &#xAE30;&#xBC18;&#xC758; &#xC870;&#xAC74;&#xBB38;</h4>
+<p>&#xBA40;&#xD2F0; os &#xAE30;&#xBC18;&#xC758; &#xBAA8;&#xB4C8;&#xC744; &#xC2E4;&#xD589;&#xD574;&#xC57C;&#xD560; &#xB54C; &#xC815;&#xB9D0; &#xB9CE;&#xC774; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xC870;&#xAC74;&#xBB38;
+<code>when: ansible_facts[&apos;os_family&apos;]</code> == &quot;Debian&quot;
+distribution &#xB3C4; &#xCCB4;&#xD06C;</p>
+<ul>
+<li><p>OS&#xAC00; &#xC5B4;&#xB5A4; &#xACC4;&#xC5F4; &#xC778;&#xC9C0; &#xD655;&#xC778; (Debian/Redhat)
+<code>ansible_facts[&apos;os_family&apos;] == &apos;Debian&apos;</code></p>
+</li>
+<li><p>OS &#xBC30;&#xD3EC;&#xD310; &#xD655;&#xC778;
+<code>ansible_facts[&apos;distribution&apos;] == &apos;CentOS&apos;</code></p>
+</li>
+<li><p>OS &#xBC30;&#xD3EC;&#xD310; &#xBC84;&#xC83C; &#xD655;&#xC778;
+<code>ansible_facts[&apos;distribution_major_version&apos;] == &apos;7&apos;</code></p>
+</li>
+</ul>
+<p>&#xC5EC;&#xB7EC; &#xC870;&#xAC74; &#xBAA9;&#xB85D;&#xC73C;&#xB85C; &#xD45C;&#xD604;&#xD558;&#xBA74; and &#xC5F0;&#xC0B0;&#xC774; &#xC801;&#xC6A9; or &#xC5F0;&#xC0B0;&#xC740; &#xC5C6;&#xC74C;</p>
+<h4 id="3-&#xB4F1;&#xB85D;-&#xBCC0;&#xC218;-&#xAE30;&#xBC18;&#xC758;-&#xC870;&#xAC74;&#xBB38;">(3) &#xB4F1;&#xB85D; &#xBCC0;&#xC218; &#xAE30;&#xBC18;&#xC758; &#xC870;&#xAC74;&#xBB38;</h4>
+<h2 id="3-&#xC870;&#xAC74;&#xBB38;&#xC5D0;-&#xC790;&#xC8FC;-&#xC0AC;&#xC6A9;&#xB418;&#xB294;-&#xD329;&#xD2B8;&#xC640;-&#xBCC0;&#xC218;&#xAC12;">3) &#xC870;&#xAC74;&#xBB38;&#xC5D0; &#xC790;&#xC8FC; &#xC0AC;&#xC6A9;&#xB418;&#xB294; &#xD329;&#xD2B8;&#xC640; &#xBCC0;&#xC218;&#xAC12;</h2>
+<p><img src="../assets/distribution.png" alt="&#xBC30;&#xD3EC;&#xD310;"></p>
+<p><img src="../assets/major_version.png" alt="&#xBC84;&#xC804;"></p>
+<p><img src="../assets/family.png" alt="&#xD328;&#xBC00;&#xB9AC;"></p>
+<ul>
+<li>&#xC2E4;&#xC2B5;
+```yaml</li>
+</ul>
+<hr>
+<ul>
+<li><p>name: Simple Web Deploy
+hosts: 192.168.200.101
+vars:
+  contents_file: index.php
+  apache_port: &quot;8080&quot;</p>
+<p>tasks:</p>
+<ul>
+<li><p>name: Install Pacakge for Ubuntu
+apt:
+  name: apache2, libapache2-mod-php
+  update_cache: true
+  state: present
+when: ansible_distribution == &quot;Ubuntu&quot;</p>
+</li>
+<li><p>name: Install Package for CentOS
+yum:
+  name: httpd, mod-php
+  state: present
+when: ansible_distribution == &quot;CentOS&quot;</p>
+</li>
+<li><p>name: Copy PHP Contents
+copy:
+  src: &apos;&apos;
+  dest: &apos;/var/www/html/&apos;
+  backup: true</p>
+</li>
+<li><p>name: Configure Apache Port
+template:
+  src: ports.conf.j2
+  dest: &apos;/etc/apache2/ports.conf&apos;</p>
+</li>
+<li><p>name: Start Service
+service:
+  name: apache2
+  state: restarted
+  enabled: true</p>
+</li>
+<li><p>name: Checking
+uri:
+  url: &quot;<a href="http://192.168.200.101:/" target="_blank">http://192.168.200.101:/</a>&quot;
+```</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="63-&#xD578;&#xB4E4;&#xB7EC;">6.3 &#xD578;&#xB4E4;&#xB7EC;</h2>
+<p>&#xC791;&#xC5C5;&#xC744; &#xC2E4;&#xD589;&#xD558;&#xACE0; &#xC2DC;&#xC2A4;&#xD15C;&#xC5D0; &#xBC18;&#xB4DC;&#xC2DC; &#xBCC0;&#xACBD;(Change)&#xC774; &#xC788;&#xC744; &#xB54C; &#xBCC4;&#xB3C4;&#xC758; &#xC791;&#xC5C5;&#xC744; &#xD638;&#xCD9C;&#xD558;&#xACE0; &#xC2E4;&#xD589;</p>
+<h3 id="1-&#xD578;&#xB4E4;&#xB7EC;-&#xC608;">1) &#xD578;&#xB4E4;&#xB7EC; &#xC608;</h3>
+<pre><code class="lang-yaml"><span class="hljs-meta">---</span>
+<span class="hljs-attr">- name:</span> Verify apache installation
+<span class="hljs-attr">  hosts:</span> webservers
+<span class="hljs-attr">  vars:</span>
+<span class="hljs-attr">    http_port:</span> <span class="hljs-number">80</span>
+<span class="hljs-attr">    max_clients:</span> <span class="hljs-number">200</span>
+<span class="hljs-attr">  remote_user:</span> root
+
+<span class="hljs-attr">  tasks:</span>
+<span class="hljs-attr">    - name:</span> Ensure apache is at the latest version
+<span class="hljs-attr">      yum:</span>
+<span class="hljs-attr">        name:</span> httpd
+<span class="hljs-attr">        state:</span> latest
+<span class="hljs-attr">    - name:</span> Write the apache config file
+<span class="hljs-attr">      template:</span>
+<span class="hljs-attr">        src:</span> /src/httpd.j2
+    ....
+</code></pre>
+<p>apache &#xD3EC;&#xD2B8;&#xB97C; &#xBCC0;&#xACBD;&#xD558;&#xACE0; &#xADF8;&#xB54C;&#xC5D0;&#xB9CC; restart &#xD558;&#xACE0; &#xC2F6;&#xB2E4;?! &#xADF8;&#xB7F4;&#xB54C; &#xC0AC;&#xC6A9;</p>
+<pre><code class="lang-yaml"><span class="hljs-meta">---</span>
+<span class="hljs-attr">- hosts:</span>
+<span class="hljs-attr">  tasks:</span>
+<span class="hljs-attr">  - template:</span>
+<span class="hljs-attr">      src:</span> a.j2
+<span class="hljs-attr">      dest:</span> /etc/a.conf
+<span class="hljs-attr">    notify:</span>
+<span class="hljs-bullet">    -</span> restart service
+
+<span class="hljs-attr">  handlers:</span>
+<span class="hljs-attr">  - name:</span> restart service
+<span class="hljs-attr">    service:</span>
+<span class="hljs-attr">      name:</span> apache
+<span class="hljs-attr">      state:</span> restarted
+~
+</code></pre>
+<ul>
+<li>&#xC2E4;&#xC2B5;
+```yaml</li>
+</ul>
+<hr>
+<ul>
+<li><p>name: Simple Web Deploy
+hosts: 192.168.200.101
+vars:
+  contents_file: index.php
+  apache_port: &quot;8080&quot;</p>
+<p>tasks:</p>
+<ul>
+<li><p>name: Install Pacakge for Ubuntu
+apt:
+  name: apache2, libapache2-mod-php
+  update_cache: true
+  state: present
+when: ansible_distribution == &quot;Ubuntu&quot;</p>
+</li>
+<li><p>name: Install Package for CentOS
+yum:
+  name: httpd, mod-php
+  state: present
+when: ansible_distribution == &quot;CentOS&quot;</p>
+</li>
+<li><p>name: Copy PHP Contents
+copy:
+  src: &apos;&apos;
+  dest: &apos;/var/www/html/&apos;
+  backup: true</p>
+</li>
+<li><p>name: Configure Apache Port
+template:
+  src: ports.conf.j2
+  dest: &apos;/etc/apache2/ports.conf&apos;
+notify:</p>
+<ul>
+<li>Restart Service</li>
+</ul>
+</li>
+<li><p>name: Start Service
+service:
+  name: apache2
+  state: started
+  enabled: true</p>
+</li>
+<li><p>name: Checking
+uri:
+  url: &quot;<a href="http://192.168.200.101:/" target="_blank">http://192.168.200.101:/</a>&quot;
+ignore_errors: true</p>
+</li>
+</ul>
+<p>handlers:</p>
+<ul>
+<li>name: Restart Service
+service:
+  name: apache2
+  state: restarted
+```
+ignore_errors: &#xC774;&#xAC70; &#xB9D0;&#xACE0; &#xB2E4;&#xB978; &#xC6B0;&#xD68C; &#xBC29;&#xBC95;&#xC744; &#xB098;&#xC911;&#xC5D0; &#xD574;&#xC900;&#xB2E4;.</li>
+</ul>
+</li>
+</ul>
+<p>template &#xBAA8;&#xB4C8;&#xC774; change &#xC0C1;&#xD0DC;&#xC77C; &#xB54C; notify &#xB418;&#xBA74;&#xC11C; handler&#xAC00; &#xB3D9;&#xC791;&#xD568;<br>
+Ansible&#xC5D0;&#xC11C; &#xD578;&#xB4E4;&#xB7EC;&#xB294; &#xB300;&#xBD80;&#xBD84; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xC7AC;&#xC2DC;&#xC791;&#xD558;&#xB294;&#xAC70; &#xB9D0;&#xACE0;&#xB294; &#xC5C6;&#xB2E4;.<br>
+&#xB2E4;&#xB978; &#xC6A9;&#xB3C4;&#xB85C;&#xB3C4; &#xC4F8; &#xC218; &#xC788;&#xB2E4;&#xACE0; &#xD55C;&#xB2E4;.</p>
+<p>task&#xAC00; &#xBAA8;&#xB450; &#xB05D;&#xB098;&#xC57C;&#xB9CC; &#xD578;&#xB4E4;&#xB7EC;&#xAC00; &#xB3D9;&#xC791;&#xD55C;&#xB2E4;! &#xC774;&#xAC78; &#xAF2D; &#xAE30;&#xC5B5;&#xD558;&#xC790;!</p>
+<h4 id="2-&#xB2E4;&#xC911;-&#xC54C;&#xB9BC;-&#xC218;&#xC2E0;">(2) &#xB2E4;&#xC911; &#xC54C;&#xB9BC; (&#xC218;&#xC2E0;)</h4>
+<p>&#xC54C;&#xB9BC;&#xC744; &#xBCF4;&#xB0BC; notify&#xAC00; &#xC5EC;&#xB7EC;&#xAC1C;&#xC77C; &#xB54C;&#xB294; listen &#xD0A4;&#xC6CC;&#xB4DC;&#xB97C; &#xC0AC;&#xC6A9;&#xD574;&#xB3C4; &#xC88B;&#xB2E4;.<br>
+&#xC774;&#xB984;&#xC744; &#xB530;&#xB85C; &#xC8FC;&#xACE0; &#xC2F6;&#xAE30; &#xB54C;&#xBB38;.</p>
+<p>&#xC791;&#xC5C5; &#xC54C;&#xB9BC;&#xC5D0; &#xBCC0;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC9C0;&#xB9CC; &#xC6D0;&#xCE59;&#xC801;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xD558;&#xC9C0; &#xC54A;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xB2E4;.<br>
+&#xC65C;&#xB0D0;&#xBA74; &#xC54C;&#xB9BC;&#xC774; &#xC548; &#xAC08; &#xC6B0;&#xB824;&#xAC00; &#xC788;&#xB2E4;.</p>
+<h3 id="2-&#xC791;&#xC5C5;&#xACFC;-&#xD578;&#xB4E4;&#xB7EC;&#xC758;-&#xC2E4;&#xD589;-&#xC21C;&#xC11C;">2) &#xC791;&#xC5C5;&#xACFC; &#xD578;&#xB4E4;&#xB7EC;&#xC758; &#xC2E4;&#xD589; &#xC21C;&#xC11C;</h3>
+<ul>
+<li>&#xD578;&#xB4E4;&#xB7EC;&#xB294; &#xD50C;&#xB808;&#xC774;&#xC758; &#xBAA8;&#xB4E0; &#xC791;&#xC5C5;&#xC774; &#xC644;&#xB8CC;&#xB41C; &#xD6C4; &#xD578;&#xB4E4;&#xB7EC; &#xC791;&#xC5C5;&#xC744; &#xC2E4;&#xD589;&#xD55C;&#xB2E4;.<br></li>
+<li>&#xD578;&#xB4E4;&#xB7ED; &#xC791;&#xC5C5;&#xC758; &#xC21C;&#xC11C;&#xB294; &#xC54C;&#xB9BC;&#xC744; &#xBC1B;&#xC740; &#xC21C;&#xC11C;&#xAC00; &#xC544;&#xB2C8;&#xB77C; &#xC21C;&#xCC28;&#xC801;&#xC73C;&#xB85C; &#xC2E4;&#xD589;&#xB41C;&#xB2E4;.<br></li>
+<li>&#xC54C;&#xB9BC;&#xC744; &#xBC1B;&#xC740; &#xD578;&#xB4E4;&#xB7EC;&#xB9CC; &#xC2E4;&#xD589;&#xB41C;&#xB2E4;.<br></li>
+<li>&#xC54C;&#xB9BC;&#xC744; 2&#xBC88; &#xC774;&#xC0C1; &#xBC1B;&#xB354;&#xB77C;&#xB3C4; &#xD55C;&#xBC88;&#xB9CC; &#xC2E4;&#xD589;&#xB41C;&#xB2E4;.<br></li>
+<li>&#xC815;&#xC801;, &#xB3D9;&#xC801; &#xD578;&#xB4E4;&#xB7EC; &#xAD00;&#xB828;&#xC740; &#xC774;&#xD6C4;&#xC5D0;... (to be continue...)</li>
+</ul>
+<h2 id="64-&#xC704;&#xC784;">6.4 &#xC704;&#xC784;</h2>
+<p>&#xC800;&#xAE30; &#xC704;&#xC5D0; &#xC608;&#xC2DC;&#xB97C; &#xBCF4;&#xBA74; uri &#xBAA8;&#xB4C8;&#xC5D0;&#xC11C; &#xC790;&#xAE30;&#xAC00; &#xC790;&#xC2E0;&#xD55C;&#xD14C; &#xCCB4;&#xD06C;&#xB97C; &#xD558;&#xACE0; &#xC788;&#xB2E4;. <br>
+&#xADF8;&#xB7F0;&#xB370; &#xBC29;&#xD654;&#xBCBD; &#xC124;&#xC815; &#xACE0;&#xB7F0;&#xAC70; &#xC788;&#xC73C;&#xBA74; &#xC800;&#xB807;&#xAC8C; &#xCCB4;&#xD06C;&#xD558;&#xB294;&#xAC8C; &#xC758;&#xBBF8;&#xAC00; &#xC788;&#xB098;? <br>
+&#xB2E8;&#xC21C;&#xD558;&#xAC8C; &#xC0C8;&#xB85C;&#xC6B4; &#xD50C;&#xB808;&#xC774;&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC11C; &#xD560; &#xC218;&#xB3C4; &#xC788;&#xC9C0;&#xB9CC;<br>
+delegate_to &#xC18D;&#xC131;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xBA74; &#xB2E4;&#xB978; &#xC2DC;&#xC2A4;&#xD15C;&#xC5D0;&#xB2E4;&#xAC00; &#xC9C4;&#xD589;&#xC744; &#xC2DC;&#xD0AC; &#xC218; &#xC788;&#xB2E4;&#xC544;.<br>
+&#xADF8;&#xB9AC;&#xACE0; &#xB2E4;&#xB978; &#xC608;&#xC2DC;&#xB85C;&#xB294; &#xB85C;&#xB4DC;&#xBC38;&#xB7F0;&#xC2F1; &#xB418;&#xACE0; &#xC788;&#xB358; &#xC11C;&#xBC84;&#xC758; &#xD3EC;&#xD2B8;&#xB97C; &#xBC14;&#xAFB8;&#xB294; &#xC791;&#xC5C5;&#xC744; &#xC791;&#xC131;&#xD588;&#xB2E4; &#xCE58;&#xC790;<br>
+&#xADF8;&#xB7EC;&#xBA74; &#xD3EC;&#xD2B8;&#xC758; &#xC124;&#xC815;&#xC744; &#xBC14;&#xAFB8;&#xB294; &#xC791;&#xC5C5;&#xC744; &#xD558;&#xACE0; &#xB85C;&#xB4DC; &#xBC38;&#xB7F0;&#xC11C; &#xD55C;&#xD14C; &#xC124;&#xC815; &#xC801;&#xC6A9;&#xC744; &#xC704;&#xC784;&#xD558;&#xB294; &#xC2DD;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;.</p>
+<p>&#xB2E4;&#xB978; &#xB178;&#xB4DC; &#xB610;&#xB294; &#xB85C;&#xB4DC;&#xBC38;&#xB7F0;&#xC11C;&#xC5D0;&#xC11C; &#xBA85;&#xB839;&#xC744; <br>
+&#xB300;&#xC2E0; &#xC0D0;&#xD589;&#xD558;&#xB3C4;&#xB85D; &#xD568;.</p>
+<h3 id="1-&#xC704;&#xC784;-&#xD560;-&#xC218;-&#xC5C6;&#xB294;-&#xBAA8;&#xB4C8;">1) &#xC704;&#xC784; &#xD560; &#xC218; &#xC5C6;&#xB294; &#xBAA8;&#xB4C8;</h3>
+<ul>
+<li>include</li>
+<li>add_host</li>
+<li>debug</li>
+</ul>
+<h3 id="2-&#xC791;&#xC5C5;&#xC758;-&#xC704;&#xC784;">2) &#xC791;&#xC5C5;&#xC758; &#xC704;&#xC784;</h3>
+<h3 id="3-&#xD329;&#xD2B8;-&#xC218;&#xC9D1;-&#xC704;&#xC784;">3) &#xD329;&#xD2B8; &#xC218;&#xC9D1; &#xC704;&#xC784;</h3>
+<pre><code class="lang-yaml">...
+<span class="hljs-attr">setup:</span>
+<span class="hljs-attr">delegate_to:</span> <span class="hljs-string">&quot;<span class="hljs-template-variable">{{ item }}</span>&quot;</span>
+<span class="hljs-attr">delegate_facts:</span> <span class="hljs-literal">true</span>
+...
+</code></pre>
+<p>setup &#xBAA8;&#xB4C8;&#xC744; &#xC0AC;&#xC6A9;&#xD574;&#xC11C; &#xB2E4;&#xB978; &#xC2DC;&#xC2A4;&#xD15C;&#xC758; facts &#xBCC0;&#xC218;&#xB4E4;&#xC744; &#xAC00;&#xC838; &#xC62C; &#xC218; &#xC788;&#xB2E4;.<br>
+&#xB2E8; &#xC774;&#xB807;&#xAC8C; &#xD560; &#xACBD;&#xC6B0; delegate_facts: true &#xB97C; &#xBC18;&#xB4DC;&#xC2DC; &#xC9C0;&#xC815;&#xD574; &#xC8FC;&#xC5B4;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<h2 id="65-&#xBE14;&#xB85D;">6.5 &#xBE14;&#xB85D;</h2>
+<p>&#xC791;&#xC5C5;&#xC744; &#xD558;&#xB098;&#xC758; &#xB17C;&#xB9AC;&#xC801;&#xC778; &#xC791;&#xC5C5;&#xC73C;&#xB85C; &#xBB36;&#xB294; &#xAE30;&#xB2A5;&#xC744; &#xD568;</p>
+<p>task &#xB4E4;&#xC744; &#xD558;&#xB098;&#xC758; &#xBE14;&#xB85D;&#xC73C;&#xB85C; &#xBB36;&#xC5B4;&#xC11C; &#xC870;&#xAC74;&#xBB38;&#xC744; &#xAC78;&#xACE0;<br>
+&#xD2B9;&#xC815; OS, &#xD2B9;&#xC815; &#xBC30;&#xD3EC;&#xD310; &#xBC84;&#xC83C;&#xC5D0;&#xC11C;&#xB9CC; &#xC2E4;&#xD589;&#xB418;&#xB294; &#xC2DD;&#xC73C;&#xB85C; &#xD560; &#xC218; &#xC788;&#xB2E4;!</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">tasks:</span>
+<span class="hljs-attr">  - name:</span> Multiple tasks..
+<span class="hljs-attr">  block:</span>
+<span class="hljs-attr">   - name:</span> Install Apache2
+<span class="hljs-attr">     apt:</span>
+<span class="hljs-attr">       name:</span> apache2
+<span class="hljs-attr">   - name:</span> ~~~
+<span class="hljs-attr">      apt:</span>
+<span class="hljs-attr">        name:</span> ~~~
+<span class="hljs-attr"> when:</span> ansible_facts[<span class="hljs-string">&apos;distribution&apos;</span>] == <span class="hljs-string">&apos;Ubuntu&apos;</span>
+<span class="hljs-attr"> become:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr"> ignore_errors:</span> <span class="hljs-literal">yes</span>
+</code></pre>
+<p>block, rescue, always &#xC139;&#xC158;&#xC774; &#xC874;&#xC7AC;</p>
+<ul>
+<li><p>rescue
+&#xBE14;&#xB85D;&#xC758; &#xC791;&#xC5C5;&#xC911; &#xD558;&#xB098;&#xB77C;&#xB3C4; &#xC2E4;&#xD328;&#xAC00; &#xC788;&#xC73C;&#xBA74;<br>
+rescue &#xC139;&#xC158;&#xC73C;&#xB85C; &#xC2E4;&#xD589;&#xB428;.<br>
+&#xBAA8;&#xB450; &#xC131;&#xACF5;&#xD558;&#xBA74; &#xC2E4;&#xD589; &#xC548;&#xD568;.</p>
+</li>
+<li><p>always
+&#xC131;&#xACF5;&#xD558;&#xB358; &#xC2E4;&#xD328;&#xD558;&#xB358; &#xD56D;&#xC0C1; &#xC2E4;&#xD589;</p>
+</li>
+<li><p>rescue + always
+&#xC2E4;&#xD328; &#xC788;&#xC73C;&#xBA74; rescue &#xC2E4;&#xD589;<br>
+&#xD56D;&#xC0C1; &#xC2E4;&#xD589; &#xD560; &#xAC83;&#xC740; always &#xC5D0; &#xC368;</p>
+</li>
+</ul>
+<h3 id="5-&#xC2E4;&#xD328;&#xCC98;&#xB9AC;---&#xD578;&#xB4E4;&#xB7EC;">5) &#xC2E4;&#xD328;&#xCC98;&#xB9AC; - &#xD578;&#xB4E4;&#xB7EC;</h3>
+<p>handler&#xAC00; &#xB2EC;&#xB9B0; &#xD14C;&#xC2A4;&#xD06C;&#xAC00; &#xC131;&#xACF5;&#xC804;&#xC5D0; &#xC2E4;&#xD328;&#xD55C;&#xB2E4;&#xBB1C;?<br>
+&#xADF8;&#xB7FC; &#xD578;&#xB4E4;&#xB7EC;&#xAC00; &#xC2E4;&#xD589;&#xB418;&#xC9C0; &#xC54A;&#xC544;&#xC694;!<br>
+&#xADF8;&#xB798;&#xC11C; rescue&#xC5D0; meta&#xC5D0; flush_handlers<br>
+&#xC774;&#xAC70; &#xC4F0;&#xBA74;&#xC740; &#xC5B4;&#xB5BB;&#xAC8C;&#xB4E0; &#xD578;&#xB4E4;&#xB7EC;&#xAC00; &#xC2E4;&#xD589;&#xB428;<br>
+&#xC774; &#xD615;&#xD0DC;&#xB294; &#xC790;&#xC8FC;&#xC0AC;&#xC6A9;&#xB418;&#xB294; &#xD615;&#xD0DC;&#xC774;&#xB2E4;! &#xC54C;&#xC544;&#xB450;&#xBA74; &#xC368;&#xBA39;&#xAE30; &#xC88B;&#xB2E4;.</p>
+<p>meta &#xBAA8;&#xB4C8;<br>
+meta action : Ansible &#xC758; &#xB3D9;&#xC791;&#xC744; &#xB85C;&#xC6B0; &#xB808;&#xBCA8;&#xC5D0;&#xC11C; &#xC81C;&#xC5B4;<br>
+meta: flush_handlers &#xB97C; &#xD558;&#xBA74; &#xD578;&#xB4E4;&#xB7EC;&#xAC00; &#xBB34;&#xC870;&#xAC74; &#xC2E4;&#xD589;&#xB41C;&#xB2E4;.<br>
+&#xB9CE;&#xC774; &#xC0AC;&#xC6A9;&#xD558;&#xB2C8; &#xAF2D; &#xC54C;&#xC544; &#xB450;&#xB77C;&#xACE0; &#xD558;&#xC2E0;&#xB2E4;.</p>
+<p>&#xBA85;&#xB839;&#xC5B4; &#xC5EC;&#xB7EC;&#xAC1C; &#xC788;&#xAE34;&#xD55C;&#xB370; &#xC394;&#xC740;<br>
+flush_handlers &#xB9CC; &#xC8FC;&#xB85C; &#xC368;&#xBD24;&#xB2E4;&#xD558;&#xC2EC;!</p>
+<ul>
+<li>rescue &#xC2E4;&#xD589;&#xB428; task3&#xC5D0;&#xC11C; &#xC2E4;&#xD328;
+```yaml</li>
+<li>hosts: 192.168.200.101
+tasks:<ul>
+<li>block:<ul>
+<li>name: TASK1
+debug:</li>
+<li>name: TASK2
+debug:</li>
+<li>name: TASK3
+command: xxx
+rescue:<ul>
+<li>name: RESCUE1
+debug:</li>
+<li>name: RESCUE2
+debug:
+always:</li>
+</ul>
+</li>
+<li>name: ALWAYS1
+debug:
+<code>
+</code>shell
+PLAY [192.168.200.101] <strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>*</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>TASK [Gathering Facts] <strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>*</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>
+ok: [192.168.200.101]</p>
+<p>TASK [TASK1] <strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>
+ok: [192.168.200.101] =&gt; {
+    &quot;msg&quot;: &quot;Hello world!&quot;
+}</p>
+<p>TASK [TASK2] <strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>
+ok: [192.168.200.101] =&gt; {
+    &quot;msg&quot;: &quot;Hello world!&quot;
+}</p>
+<p>TASK [TASK3] <strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>
+fatal: [192.168.200.101]: FAILED! =&gt; {&quot;changed&quot;: false, &quot;cmd&quot;: &quot;xxx&quot;, &quot;msg&quot;: &quot;[Errno 2] No such file or directory: b&apos;xxx&apos;&quot;, &quot;rc&quot;: 2, &quot;stderr&quot;: &quot;&quot;, &quot;stderr_lines&quot;: [], &quot;stdout&quot;: &quot;&quot;, &quot;stdout_lines&quot;: []}</p>
+<p>TASK [RESCUE1] <strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>*</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>
+ok: [192.168.200.101] =&gt; {
+    &quot;msg&quot;: &quot;Hello world!&quot;
+}</p>
+<p>TASK [RESCUE2] <strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>*</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>
+ok: [192.168.200.101] =&gt; {
+    &quot;msg&quot;: &quot;Hello world!&quot;
+}</p>
+<p>TASK [ALWAYS1] <strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>*</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>
+ok: [192.168.200.101] =&gt; {
+    &quot;msg&quot;: &quot;Hello world!&quot;
+}</p>
+<p>PLAY RECAP <strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>*</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>
+192.168.200.101            : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=1    ignored=0  </p>
+<pre><code>
+* rescue &#xC2E4;&#xD589; &#xC548;&#xB428; task &#xBAA8;&#xB450; &#xC131;&#xACF5;
+```yaml
+- hosts: 192.168.200.101
+  tasks:
+  - block:
+    - name: TASK1
+      debug:
+    - name: TASK2
+      debug:
+    - name: TASK3
+      debug:
+    rescue:
+      - name: RESCUE1
+        debug:
+      - name: RESCUE2
+        debug:
+    always:
+    - name: ALWAYS1
+      debug:
+</code></pre><pre><code class="lang-shell">
+PLAY [192.168.200.101] ***************************************************************************************************
+
+TASK [Gathering Facts] ***************************************************************************************************
+ok: [192.168.200.101]
+
+TASK [TASK1] *************************************************************************************************************
+ok: [192.168.200.101] =&gt; {
+    &quot;msg&quot;: &quot;Hello world!&quot;
+}
+
+TASK [TASK2] *************************************************************************************************************
+ok: [192.168.200.101] =&gt; {
+    &quot;msg&quot;: &quot;Hello world!&quot;
+}
+
+TASK [TASK3] *************************************************************************************************************
+ok: [192.168.200.101] =&gt; {
+    &quot;msg&quot;: &quot;Hello world!&quot;
+}
+
+TASK [ALWAYS1] ***********************************************************************************************************
+ok: [192.168.200.101] =&gt; {
+    &quot;msg&quot;: &quot;Hello world!&quot;
+}
+
+PLAY RECAP ***************************************************************************************************************
+192.168.200.101            : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Part5/note.html" class="navigation navigation-prev " aria-label="Previous page: 5. 변수">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Part7/note.html" class="navigation navigation-next " aria-label="Next page: 7. 작업 제어 - 고급">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6. 작업 제어 - 기본","level":"1.7","depth":1,"next":{"title":"7. 작업 제어 - 고급","level":"1.8","depth":1,"path":"pages/Part7/note.md","ref":"pages/Part7/note.md","articles":[]},"previous":{"title":"5. 변수","level":"1.6","depth":1,"path":"pages/Part5/note.md","ref":"pages/Part5/note.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/Part6/note.md","mtime":"2021-10-11T05:38:16.051Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-11T07:24:17.942Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

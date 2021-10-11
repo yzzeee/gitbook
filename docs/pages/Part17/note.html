@@ -1,0 +1,655 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>17. 구성 관리 및 프로비저너 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Part18/note.html" />
+    
+    
+    <link rel="prev" href="../Part16/note.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Part1/note.html">
+            
+                <a href="../Part1/note.html">
+            
+                    
+                    1. IaC 개요
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Part2/note.html">
+            
+                <a href="../Part2/note.html">
+            
+                    
+                    2. Ansible 개요
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Part3/note.html">
+            
+                <a href="../Part3/note.html">
+            
+                    
+                    3. Ansible 기본
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Part4/note.html">
+            
+                <a href="../Part4/note.html">
+            
+                    
+                    4. 플레이북
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Part5/note.html">
+            
+                <a href="../Part5/note.html">
+            
+                    
+                    5. 변수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Part6/note.html">
+            
+                <a href="../Part6/note.html">
+            
+                    
+                    6. 작업 제어 - 기본
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Part7/note.html">
+            
+                <a href="../Part7/note.html">
+            
+                    
+                    7. 작업 제어 - 고급
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Part8/note.html">
+            
+                <a href="../Part8/note.html">
+            
+                    
+                    8. 아티팩트 재사용 - 파일
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Part9/note.html">
+            
+                <a href="../Part9/note.html">
+            
+                    
+                    9. 아티팩트 재사용 - 역할
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Part10/note.html">
+            
+                <a href="../Part10/note.html">
+            
+                    
+                    10. 암호화
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../Part11/note.html">
+            
+                <a href="../Part11/note.html">
+            
+                    
+                    11. AWX(AnsibleWorks)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../Part12/note.html">
+            
+                <a href="../Part12/note.html">
+            
+                    
+                    12. Terraform 기본
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../Part13/note.html">
+            
+                <a href="../Part13/note.html">
+            
+                    
+                    13. AWS CLI 및 Terraform 설치
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../Part14/note.html">
+            
+                <a href="../Part14/note.html">
+            
+                    
+                    14. 구성파일 작성
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../Part15/note.html">
+            
+                <a href="../Part15/note.html">
+            
+                    
+                    15. 리소스 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../Part16/note.html">
+            
+                <a href="../Part16/note.html">
+            
+                    
+                    16. 변수 및 값
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.18" data-path="note.html">
+            
+                <a href="note.html">
+            
+                    
+                    17. 구성 관리 및 프로비저너
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../Part18/note.html">
+            
+                <a href="../Part18/note.html">
+            
+                    
+                    18. 모듈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../Part19/note.html">
+            
+                <a href="../Part19/note.html">
+            
+                    
+                    19. 반복
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../Part20/note.html">
+            
+                <a href="../Part20/note.html">
+            
+                    
+                    20. 원격 상태 저장
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >17. 구성 관리 및 프로비저너</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="17&#xC7A5;-&#xAD6C;&#xC131;-&#xAD00;&#xB9AC;-&#xBC0F;-&#xD504;&#xB85C;&#xBE44;&#xC800;&#xB108;">17&#xC7A5; &#xAD6C;&#xC131; &#xAD00;&#xB9AC; &#xBC0F; &#xD504;&#xB85C;&#xBE44;&#xC800;&#xB108;</h1>
+<h2 id="171-cloud-init-&#xAD6C;&#xC131;-&#xAD00;&#xB9AC;">17.1 Cloud-init &#xAD6C;&#xC131; &#xAD00;&#xB9AC;</h2>
+<p><a href="https://cloudinit.readthedocs.io/en/latest/" target="_blank">https://cloudinit.readthedocs.io/en/latest/</a></p>
+<p>&#xB300;&#xBD80;&#xBD84;&#xC758; &#xD074;&#xB77C;&#xC6B0;&#xB4DC; &#xAC00;&#xC0C1;&#xD654; &#xC194;&#xB8E8;&#xC158; &#xBC30;&#xD3EC; &#xC774;&#xBBF8;&#xC9C0;&#xC5D0;<br>
+cloud-init &#xC774;&#xB77C;&#xB294; &#xC18C;&#xD504;&#xD2B8;&#xC6E8;&#xC5B4;&#xAC00; &#xD3EC;&#xD568;&#xB418;&#xC5B4; &#xC788;&#xB2E4;.<br>
+&#xC2DC;&#xC2A4;&#xD15C; &#xAD6C;&#xC131; &#xAD00;&#xB9AC;&#xB97C; &#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>&#x1F697;&#x1F697; 234&#xCABD; 1) &#xC2E4;&#xC2B5;</p>
+<ul>
+<li><p>data_source.tf</p>
+<pre><code class="lang-tf">data &quot;aws_ami&quot; &quot;amazon_linux&quot; {
+most_recent = true
+owners      = [&quot;amazon&quot;]
+
+filter {
+  name   = &quot;name&quot;
+  values = [&quot;amzn2-ami-hvm-*-x86_64-ebs&quot;]
+}
+}
+</code></pre>
+</li>
+<li><p>local.tf</p>
+<pre><code class="lang-tf">locals {
+common_tags = {
+  Service = &quot;forum&quot;
+  Owner   = &quot;Community Team&quot;
+}
+}
+</code></pre>
+</li>
+<li><p>main.tf
+```tf
+resource &quot;aws_instance&quot; &quot;jolla_instance&quot; {
+ami                    = data.aws_ami.amazon_linux.id
+instance_type          = var.instance_type
+vpc_security_group_ids = [aws_security_group.my_sg_web.id]</p>
+<p>user_data = &lt;&lt;-EOF</p>
+<h1 id="binbash">!/bin/bash</h1>
+<p>  sudo yum install -y httpd
+  sudo systemctl --now enable httpd
+  echo &quot;</p><h1 id="hello-world--sudo-tee-varwwwhtmlindexhtml
+eof
+tags--localcommontags
+
+">Hello world<h1 id="-sudo-tee-varwwwhtmlindexhtml
+eof
+tags--localcommontags
+
+">&quot; | sudo tee /var/www/html/index.html
+EOF<p></p>
+<p>tags = local.common_tags
+}</p>
+</h1></h1></li>
+</ul>
+<p>resource &quot;aws_eip&quot; &quot;my_eip&quot; {
+  vpc      = true</p>
+<pre><code>
+* provider.tf
+
+* security-group.tf
+
+* terraform.tfvars
+
+* variable.tf
+
+* web_deploy.sh
+
+
+`terraform apply -auto-approve` &#xB85C; &#xC801;&#xC6A9;
+
+## 17.2 Cloud-init&#xC744; &#xC0AC;&#xC6A9;&#xD55C; &#xAD6C;&#xC131; &#xD30C;&#xC77C;
+
+
+## 17.3 &#xD504;&#xB85C;&#xBE44;&#xC800;&#xB108;
+
+cloud-init&#xC744; &#xC8FC;&#xB85C; &#xC0AC;&#xC6A9;&#xD558;&#xACE0; terraform&#xC758; &#xD504;&#xB85C;&#xBE44;&#xC800;&#xB108;&#xB294; &#xCD5C;&#xD6C4;&#xC758; &#xC218;&#xB2E8;&#xC73C;&#xB85C;&#xB9CC; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;.&lt;br/&gt;
+&#xC65C;&#xB0D0;&#xD558;&#xBA74; ssh &#xC811;&#xC18D; &#xB418;&#xBBC0;&#xB85C; &#xBCF4;&#xC548;&#xC0C1; &#xADF8;&#xB807;&#xB2E4;.
+
+- &#xC77C;&#xBC18; &#xD504;&#xB85C;&#xBE44;&#xC800;&#xB108;
+  file : &#xD30C;&#xC77C; &#xBC0F; &#xB514;&#xB809;&#xD1A0;&#xB9AC; &#xBCF5;&#xC0AC; (Ansible &#xC758; copy&#xC640; &#xBE44;&#xC2B7;)
+  local-exec : Terraform&#xC774; &#xC2E4;&#xD589;&#xB418;&#xB294; &#xB85C;&#xCEEC;&#xC5D0;&#xC11C; &#xC2E4;&#xD589;
+  remote-exec : &#xC6D0;&#xACA9; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xC5D0;&#xC11C; &#xC2E4;&#xD589;
+
+- &#xBCA4;&#xB354; &#xD504;&#xB85C;&#xBE44;&#xC800;&#xB108;
+  chef
+  habitat
+  puppet
+  salt-masterless
+  Ansible&#xC740; &#xC5C6;&#xB2E4; &#x3160;&#x3160;
+
+### 1) &#xD504;&#xB85C;&#xBE44;&#xC800;&#xB108; &#xC815;&#xC758;
+```tf
+resource &quot;aws_instance&quot; &quot;web&quot; {
+...
+</code></pre><p>self &#xB294; &#xC790;&#xAE30; &#xC790;&#xC2E0;&#xC744; &#xC758;&#xBBF8; (aws_instance.web)</p>
+<p>(2) &#xD14C;&#xC778;&#xD2B8;
+&#xD14C;&#xC778;&#xD2B8; &#xB418;&#xC5B4;&#xC788;&#xB358; &#xB9AC;&#xC18C;&#xC2A4;&#xB294; &#xB2E4;&#xC74C;&#xBC88; &#xBC30;&#xD3EC; &#xC2DC;&#xC5D0; &#xAD50;&#xCCB4;&#xB41C;&#xB2E4;.</p>
+<ul>
+<li>&#xD14C;&#xC778;&#xD2B8; &#xD574;&#xC81C;
+<code>terrafform untain aws instance.my_instance</code></li>
+</ul>
+<h2 id="175">17.5</h2>
+<p>Ansible &#xD480;&#xBAA8;&#xB4DC;!!
+<code>ansible-pull -U https://github.com/c1t1d0s7/ansible-pull-example.git -C main -i hosts.ini playbook.yaml</code></p>
+<p>&#xAE30;&#xC874;&#xC758; &#xC608;&#xC81C;&#xC5D0;&#xC11C; SSH &#xD0A4;&#xB97C; &#xB4F1;&#xB85D;&#xD558;&#xACE0; aws &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xC5D0; ansible &#xC744; &#xC124;&#xCE58;&#xD558;&#xC5EC; playbook.yaml &#xC744; &#xC2E4;&#xD589;&#xD558;&#xB3C4;&#xB85D; &#xBCC0;&#xACBD;.</p>
+<pre><code class="lang-tf">resource &quot;aws_instance&quot; &quot;my_instance&quot; {
+  ami                    = data.aws_ami.amazon_linux.id
+  instance_type          = var.instance_type
+  vpc_security_group_ids = [aws_security_group.my_sg_web.id]
+  key_name               = aws_key_pair.my_sshkey.key_name
+
+  connection {
+    type        = &quot;ssh&quot;
+    user        = &quot;ec2-user&quot;
+    private_key = file(&quot;./my_sshkey&quot;)
+    host        = self.public_ip
+  }
+
+  provisioner &quot;file&quot; {
+    source      = &quot;playbook.yaml&quot;
+    destination = &quot;/home/ec2-user/playbook.yaml&quot;
+  }
+
+  provisioner &quot;remote-exec&quot; {
+    inline = [
+      &quot;sudo amazon-linux-extras install ansible2 -y&quot;,
+      &quot;sudo yum install git -y&quot;,
+      &quot;ansible-pull -U https://github.com/c1t1d0s7/ansible-pull-example.git -C main -i hosts.ini playbook.yaml&quot;,
+    ]
+  }
+
+  provisioner &quot;local-exec&quot; {
+    command = &lt;&lt;-EOF
+      echo &quot;${self.public_ip} ansible_ssh_user=ec2-user ansible_ssh_private_key_file=./my_sshkey&quot; &gt; inventory.ini
+    EOF
+  }
+
+  provisioner &quot;local-exec&quot; {
+    command = &quot;ssh-keyscan -t rsa ${self.public_ip} &gt;&gt; ~/.ssh/known_hosts&quot;    
+  }
+
+  provisioner &quot;local-exec&quot; {
+    command = &quot;ansible-playbook -i inventory.ini playbook.yaml&quot;
+  }
+}
+
+resource &quot;aws_key_pair&quot; &quot;my_sshkey&quot; {
+  key_name   = &quot;my_sshkey&quot;
+  public_key = file(&quot;./my_sshkey.pub&quot;)
+}
+
+resource &quot;aws_eip&quot; &quot;my_eip&quot; {
+  vpc      = true
+  instance = aws_instance.my_instance.id
+}
+</code></pre>
+<p>taint &#xB97C; &#xAC78;&#xC5B4;&#xC11C; &#xAE30;&#xC874;&#xC758; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xB97C; &#xC81C;&#xAC70;&#xD558;&#xACE0; &#xB2E4;&#xC2DC; &#xC62C;&#xB9AC;&#xC790;!</p>
+<ul>
+<li>&#xC0DD;&#xC131;&#xD55C; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xC5D0; &#xB0B4; &#xACF5;&#xAC1C;&#xD0A4;&#xB97C; &#xB4F1;&#xB85D;&#xD558;&#xAE30;
+1) &#xC0DD;&#xC131;&#xD55C; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xC758; &#xC544;&#xC774;&#xD53C; &#xC870;&#xD68C;<pre><code class="lang-shell">terraform show | grep -i public_ip
+</code></pre>
+</li>
+</ul>
+<p>2) &#xC0DD;&#xC131;&#xD55C; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xC5D0; &#xC811;&#xC18D;</p>
+<pre><code class="lang-shell">ssh-copy-id ec2-user@3.37.217.207
+ssh -i my_sshkey.pub ec2-user@3.37.217.207
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Part16/note.html" class="navigation navigation-prev " aria-label="Previous page: 16. 변수 및 값">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Part18/note.html" class="navigation navigation-next " aria-label="Next page: 18. 모듈">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"17. 구성 관리 및 프로비저너","level":"1.18","depth":1,"next":{"title":"18. 모듈","level":"1.19","depth":1,"path":"pages/Part18/note.md","ref":"pages/Part18/note.md","articles":[]},"previous":{"title":"16. 변수 및 값","level":"1.17","depth":1,"path":"pages/Part16/note.md","ref":"pages/Part16/note.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/Part17/note.md","mtime":"2021-10-11T05:38:16.051Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-11T07:24:17.942Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

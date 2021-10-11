@@ -1,0 +1,8 @@
+---
+# vars file for mysql
+mysql_socket: /var/run/mysqld/mysqld.sock
+db:
+  db: wordpress
+  user: wordpress
+  password: P@ssw0rd
+  priv: 'wordpress.*:ALL,GRANT'

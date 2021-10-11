@@ -1,0 +1,28 @@
+- name: apache php practice
+  hosts: mgmt
+  vars:
+    port: 9999
+  tasks:
+  - name: install apache2
+    apt:
+      name: apache2
+      update_cache: yes
+      state: latest
+  - name: install php
+    apt: 
+      name: php
+  - name: copy index.php
+    copy:
+      src: ~/index.php
+      dest: /var/www/html
+  - name: apply apache port
+    template:
+      src: ports.conf.jinja2
+      dest: /etc/apache2/ports.conf
+  - name: start apache2 service
+    service: 
+      name: apache2
+      state: started
+  - name: curl test
+    uri:
+      url: http://localhost

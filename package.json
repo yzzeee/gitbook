@@ -1,0 +1,11 @@
+{
+  "name": "eta-gitbook",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gitbook-cli": "^2.3.2",
+    "graceful-fs": "^4.2.0"
+  }
+}

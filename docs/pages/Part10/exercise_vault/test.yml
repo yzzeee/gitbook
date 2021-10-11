@@ -1,0 +1,4 @@
+- hosts: 192.168.200.101
+  tasks:
+  - import_tasks: taskdev.yml
+  - import_tasks: taskprod.yml
