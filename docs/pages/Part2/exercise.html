@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>14. 구성파일 작성 · GitBook</title>
+        <title>실습 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../Part15/note.html" />
+    <link rel="next" href="../Part3/note.html" />
     
     
-    <link rel="prev" href="../Part13/note.html" />
+    <link rel="prev" href="note.html" />
     
 
     </head>
@@ -115,9 +115,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../Part2/note.html">
+        <li class="chapter " data-level="1.3" data-path="note.html">
             
-                <a href="../Part2/note.html">
+                <a href="note.html">
             
                     
                     2. Ansible 개요
@@ -129,9 +129,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../Part2/exercise.html">
+        <li class="chapter active" data-level="1.3.1" data-path="exercise.html">
             
-                <a href="../Part2/exercise.html">
+                <a href="exercise.html">
             
                     
                     실습
@@ -290,9 +290,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.15" data-path="note.html">
+        <li class="chapter " data-level="1.15" data-path="../Part14/note.html">
             
-                <a href="note.html">
+                <a href="../Part14/note.html">
             
                     
                     14. 구성파일 작성
@@ -411,7 +411,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >14. 구성파일 작성</a>
+        <a href="../.." >실습</a>
     </h1>
 </div>
 
@@ -426,80 +426,10 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="14-&#xAD6C;&#xC131;&#xD30C;&#xC77C;-&#xC791;&#xC131;">14. &#xAD6C;&#xC131;&#xD30C;&#xC77C; &#xC791;&#xC131;</h1>
-<h2 id="141-&#xAD6C;&#xC131;-&#xD30C;&#xC77C;-&#xBC0F;-&#xB514;&#xB809;&#xD1A0;&#xB9AC;">14.1 &#xAD6C;&#xC131; &#xD30C;&#xC77C; &#xBC0F; &#xB514;&#xB809;&#xD1A0;&#xB9AC;</h2>
-<p>&#xD14C;&#xB77C;&#xD3FC;&#xC740; &#xD604;&#xC7AC; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xC5D0; &#xC788;&#xB294; &#xBAA8;&#xB4E0; .tf or tf.json &#xD30C;&#xC77C; &#xB2E4; &#xC77D;&#xC5B4; &#xB4E4;&#xC784;.</p>
-<p>UTF8 &#xC778;&#xCF54;&#xB529;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xBA70; Windows &#xC758; CRLF &#xB3C4; &#xD5C8;&#xC6A9;&#xD55C;&#xB2E4;.
-&#xB2E4;&#xB9CC;, &#xAC00;&#xB2A5;&#xD558;&#xBA74; LF &#xD0C0;&#xC785;&#xC744; &#xC4F0;&#xC790;.</p>
-<h2 id="142-&#xAD6C;&#xC131;-&#xD30C;&#xC77C;-&#xAE30;&#xBCF8;">14.2 &#xAD6C;&#xC131; &#xD30C;&#xC77C; &#xAE30;&#xBCF8;</h2>
-<p>&#xAD6C;&#xC131; &#xD30C;&#xC77C;&#xC5D0;&#xB294; &#xD504;&#xB85C;&#xBC14;&#xC774;&#xB354;, &#xD504;&#xB85C;&#xBC14;&#xC774;&#xB354; &#xC694;&#xAD6C;&#xC0AC;&#xD56D;, &#xB9AC;&#xC18C;&#xC2A4; &#xB4F1;&#xC744; &#xC815;&#xC758;&#xD568;.
-&#xB2E4;&#xB9CC; &#xD504;&#xB85C;&#xBC14;&#xC774;&#xB354;&#xB294; &#xAF2D; &#xC548;&#xB4E4;&#xC5B4; &#xAC00;&#xB3C4; &#xB428;.</p>
-<p>&#xD504;&#xB85C;&#xBC14;&#xC774;&#xB354;&#xB294; &#xBE14;&#xB85D;&#xC73C;&#xB85C; &#xC815;&#xC758;&#xD568;.
-&#xBE14;&#xB85D; &#xD558;&#xB098;&#xAC00; &#xD504;&#xB85C;&#xBC14;&#xC774;&#xB354; &#xD558;&#xB098;&#xB97C; &#xC815;&#xC758;&#xD568;.</p>
-<p>&#xB4E4;&#xC5EC;&#xC4F0;&#xAE30;&#xC5D0; &#xBBFC;&#xAC10;&#xD558;&#xC9C0; &#xC54A;&#xC74C;.</p>
-<h3 id="3-&#xD504;&#xB85C;&#xBC14;&#xC774;&#xB354;">3) &#xD504;&#xB85C;&#xBC14;&#xC774;&#xB354;</h3>
-<ul>
-<li>&#xD504;&#xB85C;&#xBC14;&#xC774;&#xB354; &#xC608;&#xC2DC;<pre><code class="lang-tf">terraform {
-required_providers {
-  aws = {
-    source = &quot;hashicopr/aws&quot;
-    version = &quot;~&gt; 3.34&quot;
-  }
-}
-}
-</code></pre>
-~/.aws/config &#xD3F4;&#xB354;&#xC5D0; &#xC788;&#xC74C;<pre><code class="lang-shell">cat .aws/config
-[default]
-region = ap-northeast-2
-</code></pre>
-</li>
-<li>aws &#xC124;&#xC815; &#xBAA9;&#xB85D; &#xBCF4;&#xAE30;<pre><code class="lang-shell">$ aws configure list
-    Name                    Value             Type    Location
-    ----                    -----             ----    --------
- profile                &lt;not set&gt;             None    None
-access_key     ****************AXUH shared-credentials-file    
-secret_key     ****************EESP shared-credentials-file    
-  region           ap-northeast-2      config-file    ~/.aws/config
-</code></pre>
-</li>
-</ul>
-<p><a href="https://registry.terraform.io/browse/providers" target="_blank">https://registry.terraform.io/browse/providers</a></p>
-<ul>
-<li>&#xB9AC;&#xC18C;&#xC2A4; &#xBE14;&#xB85D; &#xC815;&#xC758; &#xD615;&#xC2DD;<pre><code class="lang-tf">resource &quot;&lt;RESOURCE_TYPE&gt;&quot; &quot;&lt;NAME&gt;&quot; {
-&lt;IDENTIFIER&gt; = &lt;EXPRESSION&gt; #ARGUMENT
-}
-</code></pre>
-</li>
-</ul>
-<h2 id="143">14.3</h2>
-<h2 id="143-&#xAD6C;&#xC131;-&#xD30C;&#xC77C;-&#xC791;&#xC131;">14.3 &#xAD6C;&#xC131; &#xD30C;&#xC77C; &#xC791;&#xC131;</h2>
-<ul>
-<li>aws ami(amazon machine image) &#xC6B0;&#xBD84;&#xD22C; &#xC778;&#xC2A4;&#xD134;&#xC2A4; &#xC774;&#xBBF8;&#xC9C0; &#xCC3E;&#xAE30;
-<a href="https://cloud-images.ubuntu.com/locator/ec2/" target="_blank">https://cloud-images.ubuntu.com/locator/ec2/</a></li>
-</ul>
-<pre><code class="lang-tf">terraform {
-  required_providers {
-    aws = {
-      source = &quot;hashicorp/aws&quot;
-      version = &quot;~&gt; 3.34&quot;
-    }
-  }
-}
-
-provider &quot;aws&quot; {
-  profile = &quot;default&quot;
-  region = &quot;ap-northeast-2&quot;
-}
-
-resource &quot;aws_instance&quot; &quot;my_instance&quot; {
-  ami = &quot;ami-05784cd9865e31efd&quot; # Ubuntu 18.04 amd64 ami
-  instance_type = &quot;t3.micro&quot;
-
-  tags = {
-    Name = &quot;MyInstance&quot;
-  }
-}
-</code></pre>
+                                <ol>
+<li>exercise_vagrant<br>
+<a href="exercise_vagrant/Vagrantfile" target="_blank">VM &#xB0B4;&#xC5D0;&#xC11C; VirtualBox&#xC5D0; Vagrant&#xB85C; 2&#xAC1C;&#xC758; &#xB178;&#xB4DC;&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC11C; &#xC2E4;&#xC2B5;</a></li>
+</ol>
 
                                 
                                 </section>
@@ -527,12 +457,12 @@ resource &quot;aws_instance&quot; &quot;my_instance&quot; {
 
             
                 
-                <a href="../Part13/note.html" class="navigation navigation-prev " aria-label="Previous page: 13. AWS CLI 및 Terraform 설치">
+                <a href="note.html" class="navigation navigation-prev " aria-label="Previous page: 2. Ansible 개요">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../Part15/note.html" class="navigation navigation-next " aria-label="Next page: 15. 리소스 관리">
+                <a href="../Part3/note.html" class="navigation navigation-next " aria-label="Next page: 3. Ansible 기본">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -543,7 +473,7 @@ resource &quot;aws_instance&quot; &quot;my_instance&quot; {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"14. 구성파일 작성","level":"1.15","depth":1,"next":{"title":"15. 리소스 관리","level":"1.16","depth":1,"path":"pages/Part15/note.md","ref":"pages/Part15/note.md","articles":[]},"previous":{"title":"13. AWS CLI 및 Terraform 설치","level":"1.14","depth":1,"path":"pages/Part13/note.md","ref":"pages/Part13/note.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/Part14/note.md","mtime":"2021-10-11T08:08:45.622Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-11T15:13:02.975Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"실습","level":"1.3.1","depth":2,"next":{"title":"3. Ansible 기본","level":"1.4","depth":1,"path":"pages/Part3/note.md","ref":"pages/Part3/note.md","articles":[]},"previous":{"title":"2. Ansible 개요","level":"1.3","depth":1,"path":"pages/Part2/note.md","ref":"pages/Part2/note.md","articles":[{"title":"실습","level":"1.3.1","depth":2,"path":"pages/Part2/exercise.md","ref":"pages/Part2/exercise.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/Part2/exercise.md","mtime":"2021-10-11T08:46:38.346Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-11T15:13:02.975Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
