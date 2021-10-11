@@ -1,5 +1,6 @@
 * [1. IaC 개요](pages/Part1/note.md)
 * [2. Ansible 개요](pages/Part2/note.md)
+  * [실습](pages/Part2/exercise.md)
 * [3. Ansible 기본](pages/Part3/note.md)
 * [4. 플레이북](pages/Part4/note.md)
 * [5. 변수](pages/Part5/note.md)
